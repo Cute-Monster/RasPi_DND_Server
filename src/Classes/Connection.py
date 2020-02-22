@@ -18,10 +18,13 @@ class Connection:
             self.ssh_username = self.config['Connection']['SSH']['username']
             self.ssh_password = self.config['Connection']['SSH']['password']
             self.ssh_connection = self.ssh_connect()
+            self.db_port = self.ssh_connection.local_bind_port
+            print(self.ssh_connection.local_bind_port)
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']
         self.db_password = self.config['Connection']['DataBase']['password']
         self.db_name = self.config['Connection']['DataBase']['database_name']
+
         self.database_connection = self.database_connect()
         if self.check_database_connection():
             self.cursor = self.database_connection.cursor()
@@ -93,7 +96,7 @@ class Connection:
             self.database_connection.close()
             print("Cursor closed\n"
                   "Database Connection closed")
-        if not self.raspi or self.ssh_connection is None:
+        if (not self.raspi) or (self.ssh_connection is None):
             if self.ssh_connection.is_active:
                 self.ssh_connection.close()
                 print("SSH tunnel closed")
