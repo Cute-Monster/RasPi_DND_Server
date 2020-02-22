@@ -18,8 +18,9 @@ class Connection:
             self.ssh_username = self.config['Connection']['SSH']['username']
             self.ssh_password = self.config['Connection']['SSH']['password']
             self.ssh_connection = self.ssh_connect()
-            self.db_port = self.ssh_connection.local_bind_port
-            print(self.ssh_connection.local_bind_port)
+            if self.ssh_connection is not None:
+                self.db_port = self.ssh_connection.local_bind_port
+                print("Local bind port: ", self.ssh_connection.local_bind_port)
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']
         self.db_password = self.config['Connection']['DataBase']['password']
