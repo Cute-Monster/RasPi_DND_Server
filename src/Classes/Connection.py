@@ -97,9 +97,10 @@ class Connection:
             self.database_connection.close()
             print("Cursor closed\n"
                   "Database Connection closed")
-
-        if (not self.raspi) or (self.ssh_connection is not None):
-            if self.ssh_connection.is_active:
-                self.ssh_connection.close()
-                print("SSH tunnel closed")
-
+        try:
+            if (not self.raspi) or (self.ssh_connection is not None):
+                if self.ssh_connection.is_active:
+                    self.ssh_connection.close()
+                    print("SSH tunnel closed")
+        except AttributeError as e:
+            print("Attribute error: {}".format(e))
