@@ -71,18 +71,22 @@ class Connection:
         print(dict(animals))
 
     def ssh_connect(self):
-        from sshtunnel import SSHTunnelForwarder
-        ssh_connection = SSHTunnelForwarder(
-            (self.ssh_host, self.ssh_port),
-            ssh_username=self.ssh_username,
-            ssh_password=self.ssh_password,
-            remote_bind_address=(
-                self.config['Connection']['SSH']['remote_bind_address']['host'],
-                self.config['Connection']['SSH']['remote_bind_address']['port']
+        try:
+            from sshtunnel import SSHTunnelForwarder
+            ssh_connection = SSHTunnelForwarder(
+                (self.ssh_host, self.ssh_port),
+                ssh_username=self.ssh_username,
+                ssh_password=self.ssh_password,
+                remote_bind_address=(
+                    self.config['Connection']['SSH']['remote_bind_address']['host'],
+                    self.config['Connection']['SSH']['remote_bind_address']['port']
+                )
             )
-        )
-        ssh_connection.start()
-        return ssh_connection
+            ssh_connection.start()
+            return ssh_connection
+        except ImportError as e:
+            print("Import Error :\n",e)
+            return None
 
     def disconnect(self):
         if self.database_connection.is_connected():
