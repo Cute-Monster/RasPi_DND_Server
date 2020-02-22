@@ -1,7 +1,7 @@
 import os
 import json
 import mysql.connector as maria_db
-from sshtunnel import SSHTunnelForwarder
+
 
 
 class Connection:
@@ -72,6 +72,7 @@ class Connection:
         print(dict(animals))
 
     def ssh_connect(self):
+        from sshtunnel import SSHTunnelForwarder
         ssh_connection = SSHTunnelForwarder(
             (self.ssh_host, self.ssh_port),
             ssh_username=self.ssh_username,
