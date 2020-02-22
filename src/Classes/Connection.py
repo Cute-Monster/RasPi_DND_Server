@@ -98,8 +98,8 @@ class Connection:
             print("Cursor closed\n"
                   "Database Connection closed")
 
-            if (not self.raspi) or (self.ssh_connection is not None):
-                if self.ssh_connection.is_active:
-                    self.ssh_connection.close()
-                    print("SSH tunnel closed")
+        if (not self.raspi) or (self.ssh_connection is not None):
+            if self.ssh_connection.is_active:
+                self.ssh_connection.close()
+                print("SSH tunnel closed")
 
