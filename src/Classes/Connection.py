@@ -3,13 +3,15 @@ import json
 import mysql.connector as maria_db
 
 
-
 class Connection:
     def __init__(self, file):
         self.arch = os.system('arch')
         self.config = self.get_config(file)
         file.close()
-        if self.arch is not "armv71":
+        if self.arch is "armv71":
+            self.raspi = True
+            self.db_port = 3306
+        else:
             self.raspi = False
             self.ssh_host = self.config['Connection']['SSH']['host']
             self.ssh_port = self.config['Connection']['SSH']['port']
@@ -17,9 +19,6 @@ class Connection:
             self.ssh_password = self.config['Connection']['SSH']['password']
             self.ssh_connection = self.ssh_connect()
             self.db_port = self.ssh_connection.local_bind_port
-        else:
-            self.raspi = True
-            self.db_port = 3306
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']
         self.db_password = self.config['Connection']['DataBase']['password']
