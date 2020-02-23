@@ -1,10 +1,11 @@
 import os
 import json
 import mysql.connector as maria_db
+from datetime import datetime
 
 
 class Connection:
-    def __init__(self, file):
+    def __init__(self, file, error_log_file):
         self.arch = os.system('arch')
         self.db_port = 3306
         self.config = self.get_config(file)
@@ -21,6 +22,7 @@ class Connection:
             if self.ssh_connection is not None:
                 self.db_port = self.ssh_connection.local_bind_port
                 print("Local bind port: ", self.ssh_connection.local_bind_port)
+        self.error_log_file = error_log_file
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']
         self.db_password = self.config['Connection']['DataBase']['password']
@@ -49,7 +51,7 @@ class Connection:
                 port=self.db_port
             )
         except maria_db.Error as e:
-            print("Connection error: " + str(e))
+            self.error_log_file.writelines("{}: Connection error: {}".format(datetime.now(), str(e)))
             self.disconnect()
             return None
         finally:
@@ -88,7 +90,7 @@ class Connection:
             ssh_connection.start()
             return ssh_connection
         except ImportError as e:
-            print("sshtunnel import Error: {}\n".format(e))
+            self.error_log_file.writelines("{}: sshtunnel import Error: {}\n".format(datetime.now(), str(e)))
             return None
 
     def disconnect(self):
@@ -103,4 +105,7 @@ class Connection:
                     self.ssh_connection.close()
                     print("SSH tunnel closed")
         except AttributeError as e:
-            print("Attribute error: {}".format(e))
+            self.error_log_file.writelines("{}: Attribute error in Connection class disconnect method: {}"
+                                           .format(datetime.now(), str(e)))
+        finally:
+            self.error_log_file.close()
