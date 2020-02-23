@@ -5,11 +5,12 @@ from datetime import datetime
 
 
 class Connection:
-    def __init__(self, file, error_log_file):
+    def __init__(self, file, errors_log_file):
         self.arch = os.system('arch')
         self.db_port = 3306
         self.config = self.get_config(file)
         file.close()
+        self.error_log_file = errors_log_file
         if self.arch is "armv71":
             self.raspi = True
         else:
@@ -22,7 +23,6 @@ class Connection:
             if self.ssh_connection is not None:
                 self.db_port = self.ssh_connection.local_bind_port
                 print("Local bind port: ", self.ssh_connection.local_bind_port)
-        self.error_log_file = error_log_file
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']
         self.db_password = self.config['Connection']['DataBase']['password']
