@@ -51,7 +51,7 @@ class Connection:
                 port=self.db_port
             )
         except maria_db.Error as e:
-            self.error_log_file.writelines("{}: Connection error: {}".format(datetime.now(), str(e)))
+            self.error_log_file.writelines("{}: Connection error: {}\n".format(datetime.now(), str(e)))
             self.disconnect()
             return None
         finally:
@@ -105,7 +105,7 @@ class Connection:
                     self.ssh_connection.close()
                     print("SSH tunnel closed")
         except AttributeError as e:
-            self.error_log_file.writelines("{}: Attribute error in Connection class disconnect method: {}"
+            self.error_log_file.writelines("{}: Attribute error in Connection class disconnect method: {}\n"
                                            .format(datetime.now(), str(e)))
         finally:
             self.error_log_file.close()
