@@ -10,7 +10,7 @@ class Connection:
         self.db_port = 3306
         self.config = self.get_config()
         # file.close()
-        self.error_log_file = open("src/logs/errors.log", "w")
+        self.error_log_file = open("src/logs/errors.log", "a")
         if self.arch is "armv71":
             self.raspberry = True
         else:
