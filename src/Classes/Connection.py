@@ -5,16 +5,16 @@ from datetime import datetime
 
 
 class Connection:
-    def __init__(self, file, errors_log_file):
+    def __init__(self):
         self.arch = os.system('arch')
         self.db_port = 3306
-        self.config = self.get_config(file)
-        file.close()
-        self.error_log_file = errors_log_file
+        self.config = self.get_config()
+        # file.close()
+        self.error_log_file = open("src/logs/errors.log", "w")
         if self.arch is "armv71":
-            self.raspi = True
+            self.raspberry = True
         else:
-            self.raspi = False
+            self.raspberry = False
             self.ssh_host = self.config['Connection']['SSH']['host']
             self.ssh_port = self.config['Connection']['SSH']['port']
             self.ssh_username = self.config['Connection']['SSH']['username']
@@ -34,9 +34,9 @@ class Connection:
         self.database_info()
 
     @staticmethod
-    def get_config(file):
-        # with open(r"configs/config.txt", "r") as file:
-        config = json.load(file)
+    def get_config():
+        with open(r"src/Classes/configs/config.json", "r") as file:
+            config = json.load(file)
         print("GET")
         return config
 
@@ -100,7 +100,7 @@ class Connection:
             print("Cursor closed\n"
                   "Database Connection closed")
         try:
-            if (not self.raspi) or (self.ssh_connection is not None):
+            if (not self.raspberry) or (self.ssh_connection is not None):
                 if self.ssh_connection.is_active:
                     self.ssh_connection.close()
                     print("SSH tunnel closed")
