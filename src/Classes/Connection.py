@@ -8,8 +8,9 @@ class Connection:
     def __init__(self):
         self.arch = os.system('arch')
         self.db_port = 3306
+        # Getting computer inet address
+        self.computerAddress = self.get_ip_address('wlan0')
         self.config = self.get_config()
-        # file.close()
         self.error_log_file = open("src/logs/errors.log", "a")
         if self.arch is "armv71":
             self.raspberry = True
@@ -34,8 +35,23 @@ class Connection:
         self.database_info()
 
     @staticmethod
-    def get_config():
-        with open(r"src/Classes/configs/config.json", "r") as file:
+    def get_ip_address(ifname):
+        import socket
+        import fcntl
+        import struct
+
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        return socket.inet_ntoa(fcntl.ioctl(
+            s.fileno(),
+            0x8915,  # SIOCGIFADDR
+            struct.pack('256s', bytes(ifname[:15], 'utf-8'))
+        )[20:24])
+
+    def get_config(self):
+        with open(
+                r"src/Classes/configs/{}.json".format(
+                    "homeConnectionConfig" if '192.168.' in self.computerAddress else "config"),
+                "r") as file:
             config = json.load(file)
         print("GET")
         return config
@@ -90,7 +106,7 @@ class Connection:
             ssh_connection.start()
             return ssh_connection
         except ImportError as e:
-            self.error_log_file.writelines("{}: sshtunnel import Error: {}\n".format(datetime.now(), str(e)))
+            self.error_log_file.writelines("{}: SSHTunnel import Error: {}\n".format(datetime.now(), str(e)))
             return None
 
     def disconnect(self):
