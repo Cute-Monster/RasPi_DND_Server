@@ -6,6 +6,7 @@ if __name__ == '__main__':
     # with open(r"../config.json", "r+") as file:
         # creating connection to the database
     connection = classes.Connection()
-
-    connection.test_cursor()
+    testing_cursors = connection.cursor.get_armor()
+    print(*testing_cursors, sep='\n')
+    # connection.test_cursor()
     connection.disconnect()

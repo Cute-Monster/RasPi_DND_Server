@@ -2,6 +2,7 @@ import os
 import json
 import mysql.connector as maria_db
 from datetime import datetime
+from src.Helps.DBCursors import Cursor as DBCursor
 
 
 class Connection:
@@ -31,7 +32,7 @@ class Connection:
 
         self.database_connection = self.database_connect()
         if self.check_database_connection():
-            self.cursor = self.database_connection.cursor()
+            self.cursor = DBCursor(self.database_connection)
         self.database_info()
 
     @staticmethod
@@ -81,15 +82,14 @@ class Connection:
 
     def database_info(self):
         print("connected to MariaDB version: ", self.database_connection.get_server_info())
-        self.cursor = self.database_connection.cursor()
-        self.cursor.execute("select database();")
-        record = self.cursor.fetchone()
-        print("connected to Database: ", record[0])
+        # self.cursor = self.database_connection.cursor()
+        # self.cursor.execute("select database();")
+        # record = self.cursor.fetchone()
+        print("connected to Database: ", self.cursor.check_cursor())
 
     def test_cursor(self):
-        self.cursor.execute("SELECT name, speed FROM Animals;")
-        animals = self.cursor.fetchall()
-        print(dict(animals))
+        animals = self.cursor.get_animals()
+        print(animals)
 
     def ssh_connect(self):
         try:
@@ -106,12 +106,12 @@ class Connection:
             ssh_connection.start()
             return ssh_connection
         except ImportError as e:
-            self.error_log_file.writelines("{}: SSHTunnel import Error: {}\n".format(datetime.now(), str(e)))
+            self.error_log_file.writelines("{}: {}\n".format(datetime.now(), str(e)))
             return None
 
     def disconnect(self):
         if self.database_connection.is_connected():
-            self.cursor.close()
+            self.cursor.cursor_close()
             self.database_connection.close()
             print("Cursor closed\n"
                   "Database Connection closed")
@@ -121,7 +121,6 @@ class Connection:
                     self.ssh_connection.close()
                     print("SSH tunnel closed")
         except AttributeError as e:
-            self.error_log_file.writelines("{}: Attribute error in Connection class disconnect method: {}\n"
-                                           .format(datetime.now(), str(e)))
+            self.error_log_file.writelines("{}: {}\n" .format(datetime.now(), str(e)))
         finally:
             self.error_log_file.close()
