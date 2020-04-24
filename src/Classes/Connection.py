@@ -9,10 +9,10 @@ class Connection:
     def __init__(self):
         self.arch = os.system('arch')
         self.db_port = 3306
+        self.error_log_file = open("{}/errors.log".format(os.path.abspath('logs')), "a")
         # Getting computer inet address
         self.computerAddress = self.get_ip_address()
         self.config = self.get_config()
-        self.error_log_file = open("logs/errors.log", "a")
         if self.arch is "armv71":
             self.raspberry = True
         else:
@@ -36,29 +36,33 @@ class Connection:
         self.database_info()
 
     def get_ip_address(self):
-        import socket
-        import fcntl
-        import struct
-
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        try:
-            return socket.inet_ntoa(fcntl.ioctl(
-                s.fileno(),
-                0x8915,  # SIOCGIFADDR
-                struct.pack('256s', bytes("wlan0"[:15], 'utf-8'))
-            )[20:24])
-        except Exception as exception:
-            self.error_log_file.writelines("{}: {}".format(datetime.now(), exception))
-            return socket.inet_ntoa(fcntl.ioctl(
-                s.fileno(),
-                0x8915,  # SIOCGIFADDR
-                struct.pack('256s', bytes("eth0"[:15], 'utf-8'))
-            )[20:24])
+        # import socket
+        # import fcntl
+        # import struct
+        #
+        # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        # try:
+        #     return socket.inet_ntoa(fcntl.ioctl(
+        #         s.fileno(),
+        #         0x8915,  # SIOCGIFADDR
+        #         struct.pack('256s', bytes("wlan0"[:15], 'utf-8'))
+        #     )[20:24])
+        # except Exception as exception:
+        #     self.error_log_file.writelines("{}: {}".format(datetime.now(), exception))
+        #     return socket.inet_ntoa(fcntl.ioctl(
+        #         s.fileno(),
+        #         0x8915,  # SIOCGIFADDR
+        #         struct.pack('256s', bytes("eth0"[:15], 'utf-8'))
+        #     )[20:24])
+        from requests import get
+        # ip = get('https://api.ipify.org').text
+        return get('https://api.ipify.org').text
 
     def get_config(self):
         with open(
-                r"Classes/configs/{}.json".format(
-                    "homeConnectionConfig" if '192.168.' in self.computerAddress else "config"),
+                "{}/{}.json".format(
+                    os.path.abspath('Classes/configs'),
+                    'home_connection_config' if '178.132.' in self.computerAddress else 'config'),
                 "r") as file:
             config = json.load(file)
         print("GET")

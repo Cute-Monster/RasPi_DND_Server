@@ -53,8 +53,8 @@ class Cursor:
 
     def get_armor(self):
         self.cursor.execute(
-            'select name, armor_price, armor_weight ' +
-            'from Armor;'
+            'select CodeDungeon.Armor.name, CodeDungeon.Armor.armor_price, CodeDungeon.Armor.armor_weight ' +
+            'from CodeDungeon.Armor;'
         )
         self.record = self.cursor.fetchall()
         return self.record

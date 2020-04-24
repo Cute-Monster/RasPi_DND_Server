@@ -1,6 +1,9 @@
 import sys
+from os import path
 from Classes import Connection as classes
 if __name__ == '__main__':
+    # path = path.abspath('logs')
+    # print(path)
     # error_log_file = open("src/logs/errors.log", "w")
     # with open(r"config.txt", "r+") as file:
     # with open(r"../config.json", "r+") as file:
