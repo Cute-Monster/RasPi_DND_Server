@@ -4,7 +4,9 @@ from .Connection import Connection
 class Cursor(Connection):
     def __init__(self):
         super(Cursor, self).__init__()
-        self.cursor = self.database_connection.cursor()
+        self.cursor.execute("select database();")
+        print(self.cursor.fetchone())
+        # self.cursor = self.database_connection.cursor()
         self.record = None
 
     def database_info(self):
