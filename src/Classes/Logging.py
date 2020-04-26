@@ -14,12 +14,13 @@ class Log:
             3:"INFO",
             4:"DEBUG"
         }
-    def log_all(self, priority, str):
+
+    def log_all(self, priority, string):
         (self.access_log_file if priority == 3 or priority == 4 else self.error_log_file).writelines("{}: {}: {}: {}\n".format(
             datetime.now(),
             self.module,
             self.priority.get(priority),
-            str
+            string
         ))
 
     def log_close(self):
