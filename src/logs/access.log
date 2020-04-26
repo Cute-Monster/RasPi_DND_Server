@@ -7,3 +7,5 @@
 2020-04-26 19:37:11.127687: <class 'Classes.DBCore.DBCore'>: INFO: Connected to Database: CodeDungeon
 2020-04-26 19:37:11.132023: <class 'Classes.DBCore.DBCore'>: INFO: Database Connection closed
 2020-04-26 19:41:51.454804: <class 'Classes.DBCore.DBCore'>: INFO: Database Connection closed
+2020-04-26 19:59:25.209920: <class 'Classes.DBCore.DBCore'>: INFO: Database Connection closed
+2020-04-26 20:08:28.365334: <class 'Classes.DBCore.DBCore'>: INFO: Database Connection closed
