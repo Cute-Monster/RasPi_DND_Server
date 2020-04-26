@@ -1,6 +1,7 @@
 import sys
 from os import path
 from Classes import Connection as classes
+from Classes.DBCursors import Cursor as dbcur
 if __name__ == '__main__':
     # path = path.abspath('logs')
     # print(path)
@@ -8,8 +9,10 @@ if __name__ == '__main__':
     # with open(r"config.txt", "r+") as file:
     # with open(r"../config.json", "r+") as file:
         # creating connection to the database
-    connection = classes.Connection()
-    testing_cursors = connection.cursor.get_armor()
+    # connection = classes.Connection()
+    cursor = dbcur()
+    print(cursor.database_info())
+    testing_cursors = cursor.get_armor()
     print(*testing_cursors, sep='\n')
     # connection.test_cursor()
-    connection.disconnect()
+    cursor.disconnect()

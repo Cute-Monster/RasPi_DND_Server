@@ -1,7 +1,15 @@
-class Cursor:
-    def __init__(self, connection):
-        self.cursor = connection.cursor()
+from .Connection import Connection
+
+
+class Cursor(Connection):
+    def __init__(self):
+        super(Cursor, self).__init__()
+        self.cursor = self.database_connection.cursor()
         self.record = None
+
+    def database_info(self):
+        print("connected to MariaDB version: ", self.database_connection.get_server_info())
+        print("connected to Database: ", self.check_cursor())
 
     def check_cursor(self):
         self.cursor.execute("select database();")
@@ -12,11 +20,10 @@ class Cursor:
         self.cursor.close()
 
     def get_animals(self):
-        self.cursor.execute(
+        self.record = self.cursor.execute(
             'select name, price, speed, capacity ' +
             'from Animals;'
-        )
-        self.record = self.cursor.fetchall()
+        ).fetchall()
         return self.record
 
     def get_weapons(self):

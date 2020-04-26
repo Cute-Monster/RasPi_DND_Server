@@ -2,7 +2,6 @@ import os
 import json
 import mysql.connector as maria_db
 from datetime import datetime
-from src.Helps.DBCursors import Cursor as DBCursor
 
 
 class Connection:
@@ -10,7 +9,7 @@ class Connection:
         self.arch = os.system('arch')
         self.db_port = 3306
         self.error_log_file = open("{}/errors.log".format(os.path.abspath('logs')), "a")
-        # Getting computer inet address
+        # Getting computer WAN address
         self.computerAddress = self.get_ip_address()
         self.config = self.get_config()
         if self.arch is "armv71":
@@ -32,30 +31,11 @@ class Connection:
 
         self.database_connection = self.database_connect()
         if self.check_database_connection():
-            self.cursor = DBCursor(self.database_connection)
-        self.database_info()
+            self.cursor = self.database_connection.cursor()
+        # self.database_info()
 
     def get_ip_address(self):
-        # import socket
-        # import fcntl
-        # import struct
-        #
-        # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        # try:
-        #     return socket.inet_ntoa(fcntl.ioctl(
-        #         s.fileno(),
-        #         0x8915,  # SIOCGIFADDR
-        #         struct.pack('256s', bytes("wlan0"[:15], 'utf-8'))
-        #     )[20:24])
-        # except Exception as exception:
-        #     self.error_log_file.writelines("{}: {}".format(datetime.now(), exception))
-        #     return socket.inet_ntoa(fcntl.ioctl(
-        #         s.fileno(),
-        #         0x8915,  # SIOCGIFADDR
-        #         struct.pack('256s', bytes("eth0"[:15], 'utf-8'))
-        #     )[20:24])
         from requests import get
-        # ip = get('https://api.ipify.org').text
         return get('https://api.ipify.org').text
 
     def get_config(self):
@@ -69,7 +49,6 @@ class Connection:
         return config
 
     def database_connect(self):
-        connection = None
         try:
             connection = maria_db.connect(
                 host=self.db_host,
@@ -78,29 +57,14 @@ class Connection:
                 password=self.db_password,
                 port=self.db_port
             )
+            return connection
         except maria_db.Error as e:
             self.error_log_file.writelines("{}: Connection error: {}\n".format(datetime.now(), str(e)))
             self.disconnect()
             return None
-        finally:
-            return connection
 
     def check_database_connection(self):
-        if self.database_connection.is_connected():
-            return True
-        else:
-            return False
-
-    def database_info(self):
-        print("connected to MariaDB version: ", self.database_connection.get_server_info())
-        # self.cursor = self.database_connection.cursor()
-        # self.cursor.execute("select database();")
-        # record = self.cursor.fetchone()
-        print("connected to Database: ", self.cursor.check_cursor())
-
-    def test_cursor(self):
-        animals = self.cursor.get_animals()
-        print(animals)
+        return self.database_connection.is_connected()
 
     def ssh_connect(self):
         try:
@@ -120,9 +84,9 @@ class Connection:
             self.error_log_file.writelines("{}: {}\n".format(datetime.now(), str(e)))
             return None
 
-    def disconnect(self):
+    def disconnect(self) -> None:
         if self.database_connection.is_connected():
-            self.cursor.cursor_close()
+            self.cursor.close()
             self.database_connection.close()
             print("Cursor closed\n"
                   "Database Connection closed")
