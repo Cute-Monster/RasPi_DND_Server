@@ -1,0 +1,18 @@
+TODO:
+    [+] Check for player name before registration, if exists send response about that
+    [+] Getting player data from database and correct writing to <Player.py> class to manage him
+    [ ] Custom exceptions to handle them from main script
+    [ ] Fight system
+        [ ] Dice module
+        [ ] Spell system
+    [+] Dungeon skeleton system
+        [+] Generation of dungeon
+        [+] Storing and saving it (what format)
+        [+] Storing format in response
+    [+] Messaging between 2 players
+    [+] Chat messaging with all players
+    [+] Deleting authorized user from authorized_users dictionary when on connection lost
+    [ ] New methods in <src.Server.Server.py> for new actions
+        [+] Sending generated dungeon skeleton by request
+        [ ] ...
+    [ ] ...

@@ -1,0 +1,6 @@
+{
+  "action": "< action >",
+    "code": "< action_code >",
+    "code_desc": "< code description >",
+    "data": "<  dictionary containing data or None >"
+}
