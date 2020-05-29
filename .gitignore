@@ -1,3 +1,4 @@
 # Project exclude paths
 /RemoteDBvenv
-forTests.py
+ForTesting/
+Logs/
