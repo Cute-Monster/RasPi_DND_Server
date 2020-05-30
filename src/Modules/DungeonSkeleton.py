@@ -116,7 +116,8 @@ class DungeonSkeleton:
             # pprint.pprint(generated_mobs[mob['enemy_id']])
         return generated_mobs
 
-    def mob_data_parser(self, mob_id: int, data: dict, stats_flag=False) -> dict:
+    @staticmethod
+    def mob_data_parser(mob_id: int, data: dict, stats_flag=False) -> dict:
         """
         Parsing data about mobs
         :param mob_id: Id of the mob
