@@ -1,0 +1,6 @@
+{
+  "action": "playerRegistration",
+  "code": 405,
+  "code_desc": "player name already taken",
+  "data": None
+}

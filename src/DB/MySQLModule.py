@@ -12,13 +12,11 @@ __status__ = "Developing"
 
 
 import os
-import platform
+from platform import platform
 import json
 import mysql.connector as maria_db
 from src.Logging.Logger import Log
 from src.CustomExceptions import DBExceptions
-
-__all__ = ["MySQLModule"]
 
 
 class MySQLModule:
@@ -28,7 +26,7 @@ class MySQLModule:
     def __init__(self):
         self.log = Log(self.__class__)
 
-        self.device_platform = platform.platform()
+        # self.device_platform = platform()
 
         self.db_port = 3306
 
@@ -36,7 +34,7 @@ class MySQLModule:
         self.computerAddress = self.get_ip_address()
 
         self.config = self.get_config()
-        if "armv7" in self.device_platform:
+        if "armv7" in platform():
             self.raspberry = True
             self.ssh_connection = None
         else:

@@ -1,12 +1,10 @@
-from src.Models.Players import Players
+from src.Models.Player import Player
 from src.Modules import UtilityModule
-__all__ = ["UserModule"]
 
 
-class UserModule(Players):
+class UserModule(Player):
     def __init__(self, player_data):
         super().__init__()
-
         self.player_id = player_data.get('main')[0]['player_id']
         self.player_name = player_data.get('main')[0]['player_name']
         self.level = player_data.get('main')[0]['lvl']

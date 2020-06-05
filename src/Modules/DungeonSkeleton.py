@@ -7,21 +7,17 @@ __credits__ = ["Runtov Constantin", "Mandrila Daniel"]
 __license__ = "USM"
 __version__ = "0.1.5"
 __maintainer__ = "Gheorghe Latul"
-__email__ = "ghosatshow@yandex.ru "
+__email__ = "ghostshow@yandex.ru "
 __status__ = "Developing"
 
 import copy
-import pprint
 
 from networkx.generators.random_graphs import erdos_renyi_graph
 import random
 
-from src.Models.Players import Players
+from src.Modules.UserModule import UserModule
 from src.DB.DBCore import DBCore
 from src.Logging.Logger import Log
-from src.Modules import UtilityModule
-
-__all__ = ["DungeonSkeleton"]
 
 
 class DungeonSkeleton:
@@ -34,7 +30,7 @@ class DungeonSkeleton:
         self.cursor = cursor
         self.all_mobs = self.generate_mobs()
 
-    def final_dungeon_skeleton(self, player_data: Players) -> dict:
+    def final_dungeon_skeleton(self, player_data: UserModule) -> dict:
         """
         Create final dungeon structure for a player from:
             1 -> dungeon structure
@@ -43,11 +39,10 @@ class DungeonSkeleton:
         """
 
         graph_structure = self.generate_graph_structure()
-        player = player_data
 
-        for node in graph_structure['rooms']:
-            graph_structure['mobs'][node] = {}
-            for uid in range(0, random.choice([1, 2, 3])):
+        for room in graph_structure['rooms']:
+            graph_structure['mobs'][room] = {}
+            for mob_uid in range(0, random.choice([1, 2, 3])):
                 mob = copy.deepcopy(self.all_mobs[random.choice(
                     range(
                         1,
@@ -55,13 +50,13 @@ class DungeonSkeleton:
                     )
                 )])
 
-                mob['mob_level'] = 1 if player.level - 2 < 1 else random.choice(
-                    range(player.level - 2, player.level))
+                mob['mob_level'] = 1 if player_data.level - 2 < 1 else random.choice(
+                    range(player_data.level - 2, player_data.level)
+                )
 
                 # print(f"{uid} : {mob['stats']['hits']}")
-                mob['stats']['hits'] = mob['stats']['hits'] if player.level - 2 < 1 else mob['stats']['hits'] * 2
-
-                graph_structure['mobs'][node][uid] = mob
+                mob['stats']['hits'] = mob['stats']['hits'] if player_data.level - 2 < 1 else mob['stats']['hits'] * 2.5
+                graph_structure['mobs'][room][mob_uid] = mob
 
         return graph_structure
 
@@ -95,10 +90,8 @@ class DungeonSkeleton:
         all_stats = self.cursor.get_mobs_stats()
 
         generated_mobs = {}
-        # print("All_Vulner", *all_vulnerabilities, sep="\n")
-        # print("All_ATT", *all_attacks, sep="\n-> ")
-        # print("All_STATS",* all_stats, sep="\n-> ")
-        for uid, mob in enumerate(available_mobs):
+
+        for mob in available_mobs:
 
             mob_id = mob[list(mob)[0]]
             mob_attacks = self.mob_data_parser(mob_id, all_attacks)

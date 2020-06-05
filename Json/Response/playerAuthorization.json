@@ -1,0 +1,54 @@
+{
+  "action": "playerAuthorization",
+  "code": 407,
+  "code_desc": "successfully authorized",
+  "data": {
+    "animals": {},
+    "armor": {},
+    "armor_class": 2,
+    "attacks": {
+      "4": {
+        "attack_name": "Thor",
+        "cooldown": 5,
+        "count_of_random": 2,
+        "effect": "embodiment",
+        "lvl": 1,
+        "random_diapason": 8,
+        "type_attack": "Long Range"
+      },
+      "7": {
+        "attack_name": "A ray of cold",
+        "cooldown": 5,
+        "count_of_random": 1,
+        "effect": "embodiment",
+        "lvl": 0,
+        "random_diapason": 8,
+        "type_attack": "Long Range"
+      }
+    },
+    "chance": 0.0,
+    "class_id": 1,
+    "class_name": "Mage",
+    "constitution": 3.0,
+    "dexterity": 8.0,
+    "experience": 0,
+    "food": {
+      "1": {
+        "food_name": "begg food",
+        "food_price": 7.0,
+      }
+    },
+    "hits": 3,
+    "intelligence": 6.0,
+    "level": 1,
+    "player_id": 2,
+    "player_name": "test4",
+    "race": "Human",
+    "race_id": 1,
+    "speed": 4.0,
+    "strength": 5.0,
+    "vulnerabilities": {},
+    "weapons": {},
+    "wisdom": 9.0
+  }
+}

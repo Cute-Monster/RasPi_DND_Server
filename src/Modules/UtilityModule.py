@@ -11,7 +11,10 @@ codes = {
     403: "action error",
     405: "player name already taken",
     406: "player successfully registered",
-    407: "you are not logged"
+    407: "successfully authorized",
+    408: "you are not logged",
+    409: "player not logged now",
+    410: "wrong username or password"
 }
 
 response = {
@@ -22,7 +25,9 @@ response = {
 }
 
 
-def generate_response(action, code, data=None) -> bytes:
+def generate_response(action=None,
+                      code=None,
+                      data=None) -> bytes:
     """
     Method to generate response
     :param action: Invoked action
@@ -39,12 +44,13 @@ def generate_response(action, code, data=None) -> bytes:
     response['code_desc'] = codes.get(code)
     response['data'] = data
 
-    json.dumps(response)
+    # json.dumps(response)
 
-    return bytes(str(response), "utf8")
+    return bytes(str(json.dumps(response)), "utf8")
 
 
-def serialize_data(data, column: str) -> dict:
+def serialize_data(data,
+                   column: str) -> dict:
     end_data = {}
 
     for items in data.get(column):
@@ -56,14 +62,14 @@ def serialize_data(data, column: str) -> dict:
     return end_data
 
 
-def encrypt_password(password: str):
+def encrypt_password(player_password: str):
     """
     Method for encrypting user password using salt
-    :param password: User password to encrypt
+    :param player_password: User password to encrypt
     :return: Encrypted password
     """
 
     salt = 'c;]¥Îdå<}Òux¶zCnÖÉóL×ð«&hBè~§Á[ÃF¡v©"Õ,(/P,' \
            'M}Dbëç³çÚ^}°*çµ¹rbÔÁi)xÚè¨2iûÿVLE9)®8ó¥ðt@Ô.]×nïf"ÏC`vzínÑÁpFôwVWÆ6;á©>_À¼mjû¿úõM\'R:7 '
 
-    return hashlib.md5(bytes("{}".format(salt + password), "utf-8")).hexdigest()
+    return hashlib.md5(bytes("{}".format(salt + player_password), "utf-8")).hexdigest()

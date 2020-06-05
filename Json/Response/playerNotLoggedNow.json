@@ -1,0 +1,6 @@
+{
+  "action": "sendPrivateMessage",
+  "code": 409,
+  "code_desc": "player not logged now",
+  "data": None
+}

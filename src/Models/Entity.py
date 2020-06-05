@@ -7,11 +7,8 @@ __credits__ = ["Runtov Constantin", "Mandrila Daniel"]
 __license__ = "USM"
 __version__ = "0.1.5"
 __maintainer__ = "Gheorghe Latul"
-__email__ = "ghosatshow@yandex.ru "
+__email__ = "ghostshow@yandex.ru "
 __status__ = "Developing"
-
-
-__all__ = ["Entity"]
 
 
 class Entity:

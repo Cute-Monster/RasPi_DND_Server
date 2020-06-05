@@ -1,0 +1,10 @@
+{
+  "action": "sendPrivateMessage",
+  "code": 200,
+  "code_desc": "request success",
+  "data": {
+    "from": "test4",
+    "message": "Private shit",
+    "to": "test6"
+  }
+}

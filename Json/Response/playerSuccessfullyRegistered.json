@@ -1,0 +1,6 @@
+{
+  "action": "playerRegistration",
+  "code": 406,
+  "code_desc": "player successfully registered",
+  "data": None
+}

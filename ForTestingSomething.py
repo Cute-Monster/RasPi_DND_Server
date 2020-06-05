@@ -15,25 +15,34 @@ def graph() -> dict:
         "edges": list(g.edges)
     }
 
+
+class TestExcepion(Exception):
+    pass
+
 if __name__ == '__main__':
     # g = graph()
     # pprint.pprint(json.dumps(g))
     # for i in range(0,5):
     #     graph()
-    test = {
-        "1": {
-            "test": "Hi"
-        },
-        "2": "Not"
-    }
-    test.setdefault("default", "this is default")
-    # test.update({
-    #     "hello":1
-    # })
-    test["1"]["test"] = "fuck"
-    shit = test.get("1").copy()
-    test["1"]["test"] = "fuck"
-    pprint.pprint(shit)
-    pprint.pprint(test)
-
+    # test = {
+    #     "1": {
+    #         "test": "Hi"
+    #     },
+    #     "2": "Not"
+    # }
+    # test.setdefault("default", "this is default")
+    # # test.update({
+    # #     "hello":1
+    # # })
+    # test["1"]["test"] = "fuck"
+    # shit = test.get("1").copy()
+    # test["1"]["test"] = "fuck"
+    # pprint.pprint(shit)
+    # pprint.pprint(test)
+    try:
+        for word in ['test', "HELLO"]:
+            if word.isupper():
+                raise TestExcepion("Word is upper")
+    except TestExcepion as test:
+        print(test.withtraceback(test))
 

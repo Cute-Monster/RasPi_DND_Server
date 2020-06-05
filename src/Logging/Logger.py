@@ -7,14 +7,12 @@ __credits__ = ["Runtov Constantin", "Mandrila Daniel"]
 __license__ = "USM"
 __version__ = "0.1.5"
 __maintainer__ = "Gheorghe Latul"
-__email__ = "ghosatshow@yandex.ru "
+__email__ = "ghostshow@yandex.ru "
 __status__ = "Developing"
 
 # TODO reformat this class for using with builtin logger package
 from datetime import datetime
 import os
-
-__all__ = ["Log"]
 
 
 class Log:

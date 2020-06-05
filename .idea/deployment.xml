@@ -8,7 +8,7 @@
             <mapping deploy="/home/pi/Desktop/Testing" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath path="/home/pi/Desktop/Testing/venvtest" />
+            <excludedPath path="/home/pi/Desktop/Testing/venv" />
           </excludedPaths>
         </serverdata>
       </paths>

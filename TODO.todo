@@ -3,7 +3,7 @@ TODO:
     [+] Getting player data from database and correct writing to <Player.py> class to manage him
     [ ] Custom exceptions to handle them from main script
     [ ] Fight system
-        [ ] Dice module
+        [+] Dice module
         [ ] Spell system
     [+] Dungeon skeleton system
         [+] Generation of dungeon
@@ -15,4 +15,5 @@ TODO:
     [ ] New methods in <src.Server.Server.py> for new actions
         [+] Sending generated dungeon skeleton by request
         [ ] ...
+    [+] Folder with Requests and Responses json
     [ ] ...
