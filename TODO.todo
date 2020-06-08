@@ -4,9 +4,15 @@ TODO:
     [ ] Custom exceptions to handle them from main script
     [ ] Fight system
         [+] Dice module
-        [ ] Spell system
+        [-] Spell system
+    [ ] Generators
+        [+] dungeon skeleton
+        [+] loot after passing dungeon
+    [ ] User level system
+        [ ] level up
+        [ ] ...
+    [ ] Updating user information in the DataBase
     [+] Dungeon skeleton system
-        [+] Generation of dungeon
         [+] Storing and saving it (what format)
         [+] Storing format in response
     [+] Messaging between 2 players

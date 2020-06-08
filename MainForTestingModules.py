@@ -1,12 +1,14 @@
 import json
 import pprint
+import hashlib
+import random
 
 from src.DB.DBCore import DBCore
 from src.Modules.DungeonSkeleton import DungeonSkeleton
 from src.Modules.UserModule import UserModule
+from src.Modules.BattleModule import BattleModule
 # cursor = None
 # import Modules.UtilityModule as Utility
-
 # def __init__():
 #     global cursor
 #     cursor = dbore()
@@ -35,11 +37,26 @@ if __name__ == '__main__':
         # test.update({"test":5})
         # print(test.keys())
         # print(cursor.check_player_name("test5"))
-        player = UserModule(cursor.get_player("test3"))
+        from src.Modules.LootModule import LootModule
+        player = UserModule(cursor.get_player("test8"))
         # pprint.pprint(player.get_player())
         skeleton = DungeonSkeleton(cursor)
-        # skeleton.all_mobs
-        pprint.pprint(skeleton.final_dungeon_skeleton(player))
+        # loot = cursor.get_loot()
+        # loot = LootModule(skeleton.final_dungeon_skeleton(player), player, loot)
+        mob = skeleton.all_mobs.get(1)
+        print("\n Player \n")
+        pprint.pprint(player.get_player())
+        print("\n Mob \n")
+        pprint.pprint(mob)
+
+        battle = BattleModule(player, {
+                                "player_attack_id": 4,
+                                "mob": mob
+                              })
+        # pprint.pprint(player.get_player())
+        # pprint.pprint(loot.get_loot())
+        print("\n Result \n")
+        pprint.pprint(battle.battle_result())
     except KeyboardInterrupt as e:
         cursor.disconnect()
 

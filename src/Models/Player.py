@@ -40,5 +40,3 @@ class Player(Entity):
         """
 
         return self.__dict__
-
-    # TODO finish this class

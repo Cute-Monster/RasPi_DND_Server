@@ -9,5 +9,5 @@ class ServerFactory(Factory):
         self.authorized_users = {}
 
     def buildProtocol(self, addr) -> UserHandler:
-        print(f"Connected: {addr.host}:{addr.port}")
+        # print(f"Connected: {addr.host}:{addr.port}")
         return UserHandler(self.cursor, self.authorized_users, addr)

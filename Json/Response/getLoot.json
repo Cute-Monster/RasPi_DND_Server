@@ -1,0 +1,122 @@
+{
+  "action": "getLoot",
+  "code": 204,
+  "code_desc": "loot generated successfully",
+  "data": {
+    "armor": {
+      "0": {
+        "armor_price": 450.0,
+        "armor_weight": 12,
+        "lvl": 1,
+        "name": "Improved Leather"
+      },
+      "1": {
+        "armor_price": 4000.0,
+        "armor_weight": 20,
+        "lvl": 1,
+        "name": "Cuirass"
+      },
+      "2": {
+        "armor_price": 500.0,
+        "armor_weight": 45,
+        "lvl": 1,
+        "name": "Scale"
+      },
+      "3": {
+        "armor_price": 500.0,
+        "armor_weight": 20,
+        "lvl": 1,
+        "name": "ChainMail"
+      },
+      "4": {
+        "armor_price": 100.0,
+        "armor_weight": 12,
+        "lvl": 1,
+        "name": "Skin"
+      }
+    },
+    "food": {
+      "0": {
+        "lvl": 1,
+        "name": "poor food",
+        "price": 10.0
+      },
+      "1": {
+        "lvl": 1,
+        "name": "rich food",
+        "price": 200.0
+      },
+      "2": {
+        "lvl": 1,
+        "name": "comfort food",
+        "price": 80.0
+      },
+      "3": {
+        "lvl": 1,
+        "name": "comfort food",
+        "price": 80.0
+      },
+      "4": {
+        "lvl": 1,
+        "name": "aristocratic food",
+        "price": 400.0
+      },
+      "5": {
+        "lvl": 1,
+        "name": "rich food",
+        "price": 200.0
+      }
+    },
+    "total_exp": 1220,
+    "weapons": {
+      "0": {
+        "damage_max": 6,
+        "damage_min": 1,
+        "lvl": 1,
+        "name": "Hand Crossbow",
+        "price": 750.0,
+        "weight": 3.0
+      },
+      "1": {
+        "damage_max": 6,
+        "damage_min": 2,
+        "lvl": 1,
+        "name": "Hammer",
+        "price": 100.0,
+        "weight": 10.0
+      },
+      "2": {
+        "damage_max": 8,
+        "damage_min": 1,
+        "lvl": 1,
+        "name": "Warhammer",
+        "price": 150.0,
+        "weight": 2.0
+      },
+      "3": {
+        "damage_max": 8,
+        "damage_min": 1,
+        "lvl": 1,
+        "name": "MorningStar",
+        "price": 150.0,
+        "weight": 4.0
+      },
+      "4": {
+        "damage_max": 8,
+        "damage_min": 1,
+        "lvl": 1,
+        "name": "Baton",
+        "price": 20.0,
+        "weight": 10.0
+      },
+      "5": {
+        "damage_max": 10,
+        "damage_min": 1,
+        "lvl": 1,
+        "name": "Heavy Crossbow",
+        "price": 500.0,
+        "weight": 18.0
+      }
+    }
+  }
+}
