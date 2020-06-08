@@ -3,18 +3,24 @@ import json
 
 codes = {
     100: "successfully connected",
+
     200: "request success",
     201: "dungeon skeleton generated successfully",
+    202: "player successfully registered",
+    203: "successfully authorized",
+    204: "loot generated successfully",
+    205: "battle successful",
+
     400: "server error",
     401: "invalid json format",
     402: "failed to check user",
     403: "action error",
     405: "player name already taken",
-    406: "player successfully registered",
-    407: "successfully authorized",
-    408: "you are not logged",
-    409: "player not logged now",
-    410: "wrong username or password"
+    406: "you are not logged",
+    407: "player not logged now",
+    408: "wrong username or password",
+    409: "player already logged",
+    410: "no completed dungeon "
 }
 
 response = {

@@ -7,13 +7,11 @@ __credits__ = ["Runtov Constantin", "Mandrila Daniel"]
 __license__ = "USM"
 __version__ = "0.1.5"
 __maintainer__ = "Gheorghe Latul"
-__email__ = "ghosatshow@yandex.ru "
+__email__ = "ghostshow@yandex.ru "
 __status__ = "Developing"
 
 import random
 from src.Logging.Logger import Log
-
-__all__ = ["Dice"]
 
 
 class Dice:
@@ -72,4 +70,3 @@ class Dice:
         for _ in (0, times-1):
             dices.append(random.randint(self.twenty_side))
         return dices
-    # TODO other dice methods

@@ -50,7 +50,7 @@ class DBCore(MySQLModule):
         """
 
         weapons = self.select_query("""
-        SELECT name, price, damage_min, damage_max, weight FROM Weapons
+        SELECT * FROM Weapons
         """)
 
         return weapons
@@ -86,7 +86,7 @@ class DBCore(MySQLModule):
         """
 
         food = self.select_query("""
-        SELECT name, price FROM Food;
+        SELECT * FROM Food;
         """)
 
         return food
@@ -98,7 +98,7 @@ class DBCore(MySQLModule):
         """
 
         armor = self.select_query("""
-        SELECT name, armor_price, armor_weight FROM Armor
+        SELECT * FROM Armor
         """)
 
         return armor
@@ -223,7 +223,7 @@ class DBCore(MySQLModule):
 
         return self.select_query(f"""
             SELECT
-                `we`.`weapon_id`,
+                `we`.`weapons_id`,
                 `w`.`name` AS `weapon_name`,
                 `w`.`price` AS `weapon_price`,
                 `w`.`damage_min`,
@@ -231,10 +231,10 @@ class DBCore(MySQLModule):
                 `w`.`weight` AS `weapon_weight`
             FROM
                 `Weapon_Equipment` AS `we`
-                INNER JOIN `Weapons` AS `w` ON `w`.`id` = `we`.`weapon_id` 
+                INNER JOIN `Weapons` AS `w` ON `w`.weapons_id = `we`.`weapons_id` 
             WHERE
                 `we`.`equipment_id` = '{player_id}'
-        """)
+        """ )
 
     def get_player_animals(self, player_id):
         """
@@ -371,5 +371,12 @@ class DBCore(MySQLModule):
 
         return self.select_query(f"""
             SELECT s.* FROM `Enemies` AS `e`
-            INNER JOIN Stats AS s ON e.enemy_id = s.hero_id
+            INNER JOIN Enemy_Stats AS s ON e.enemy_id = s.hero_id
         """)
+
+    def get_loot(self):
+        return {
+            "weapons": self.get_weapons(),
+            "armor": self.get_armor(),
+            "food": self.get_food()
+        }

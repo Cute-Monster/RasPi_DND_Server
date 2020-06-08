@@ -1,6 +1,6 @@
 {
   "action": "playerAuthorization",
-  "code": 407,
+  "code": 203,
   "code_desc": "successfully authorized",
   "data": {
     "animals": {},

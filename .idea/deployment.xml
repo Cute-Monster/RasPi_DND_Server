@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Raspberry_Home" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Raspberry_Home" persistUploadOnCheckin="false" autoUploadExternalChanges="true">
     <serverData>
       <paths name="Raspberry_Home">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/Desktop/Testing" local="$PROJECT_DIR$" />
+            <mapping deploy="/home/pi/Desktop/DND_Server" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath path="/home/pi/Desktop/Testing/venv" />
+            <excludedPath path="/home/pi/Desktop/DND_Server/venv" />
           </excludedPaths>
         </serverdata>
       </paths>
