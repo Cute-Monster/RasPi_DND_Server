@@ -28,7 +28,9 @@ class DungeonSkeleton:
     def __init__(self,
                  cursor: DBCore
                  ):
-        self.log_file = Log(self.__class__)
+        self.log_file = Log(
+            class_name=self.__class__
+        )
         self.cursor = cursor
         self.all_mobs = self.generate_mobs()
 

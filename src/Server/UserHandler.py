@@ -60,28 +60,30 @@ class UserHandler(LineReceiver, ABC):
         # pprint(self.actions)
 
     @staticmethod
-    def log_to_debug(line: str) -> None:
+    def log_to_debug(line) -> None:
         """
-        Log info to the debug file
-        :param line: line to write
+        Log to the debug file
+        :param line: Line to log
         """
 
         with open("Logs/debug.log", "a") as f:
             f.writelines(f"{datetime.now()} | {line}\n")
-    
+
     @staticmethod
-    def log_user_registration(username: str,
-                              password: str
-                              ) -> None:
+    def log_account_info(username: str,
+                         password: str
+                         ) -> None:
         """
-        Method for logging Users username and password into the file
-        :param username: Users username
-        :param password: Users password
+        Log players Username and Password
+        :param username: Players username
+        :param password: Players password
         :return:
         """
 
-        with open("Logs/Users.log", "a") as user_log:
-            user_log.writelines(f"{datetime.now()} | Username -> {username} | Password -> {password}\n") 
+        with open("Logs/user_registry.log", "a") as file:
+            file.writelines(
+                f"Registered: {datetime.now()} | Username: {username} | Password: {password}\n"
+            )
 
     def connectionMade(self):
         """
@@ -119,7 +121,7 @@ class UserHandler(LineReceiver, ABC):
         """
         Receive line and parse it to json_data.
         Call method depending on action stored in json_data
-        :param line: Line received from socket
+        :param line:
         :return:
         """
 
@@ -150,6 +152,7 @@ class UserHandler(LineReceiver, ABC):
                         code=400
                     )
                 )
+                # self.cursor.disconnect()
 
         except json.decoder.JSONDecodeError as json_decode_error:
             self.log_file.log_all(
@@ -168,7 +171,7 @@ class UserHandler(LineReceiver, ABC):
                        ):
         """
         Deleting connection from connections list if lost
-        :param reason: Why connection is lost
+        :param reason:
         :return:
         """
 
@@ -196,16 +199,14 @@ class UserHandler(LineReceiver, ABC):
         :param json_data: Received data from the client
         :return:
         """
-
-        if self.connected_users[self.user_key].get('authorized'):
+        if self.connected_users[self.user_key]['authorized']:
             if self.connected_users[self.user_key]['main']['dungeon']:  # fixme check if dungeon complete
                 available_loot = self.cursor.get_loot()
                 self.connected_users[self.user_key]['main']['dungeon']['passed'] = True
                 result = LootModule.LootModule(
                     dungeon=self.connected_users[self.user_key]['main']['dungeon']['skeleton'],
                     player=self.player,
-                    loot=available_loot
-                )
+                    loot=available_loot)
                 self.send_one(
                     response=UtilityModule.generate_response(
                         action=action,
@@ -230,23 +231,10 @@ class UserHandler(LineReceiver, ABC):
                 )
             )
 
-    def level_up(self,
-                 action: str,
-                 json_data: Any
-                 ) -> None:
-        """
-        Method used for leveling up the player if needed experience is being toke
-        :param action:String used to generate response
-        :param json_data: Received data from the client
-        :return:
-        """
+    def level_up(self, action: str, json_data: Any) -> None:
+        pass # TODO
 
-        pass  # TODO
-
-    def start_battle(self,
-                     action: str,
-                     json_data: Any
-                     ) -> None:
+    def start_battle(self, action: str, json_data: Any) -> None:
         """
         Method for invoking battle between a player and given enemy
         :param action: String used to generate response
@@ -258,7 +246,7 @@ class UserHandler(LineReceiver, ABC):
             player=self.player,
             battle_data=json_data['data']
         ).battle_result()
-        # pprint(battle)
+        pprint(battle)
         self.send_one(
             response=UtilityModule.generate_response(
                 action=action,
@@ -266,12 +254,11 @@ class UserHandler(LineReceiver, ABC):
                 data=battle
             )
         )
-        del battle
+        pass  # TODO
 
     def send_private_message(self,
                              action: str,
-                             json_data: Any
-                             ) -> None:
+                             json_data: Any) -> None:
         """
         Sending message to the another specified user from a specified player
         :param action: String used to generate response
@@ -303,15 +290,13 @@ class UserHandler(LineReceiver, ABC):
 
     def send_chat_message(self,
                           action: str,
-                          json_data: Any
-                          ) -> None:
+                          json_data: Any) -> None:
         """
         Sending message to the cat from a specified player
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
-
         data = {
             'from': self.player.player_name,
             'message': json_data['data']['message']
@@ -326,15 +311,13 @@ class UserHandler(LineReceiver, ABC):
 
     def player_registration(self,
                             action: str,
-                            json_data: Any
-                            ) -> None:
+                            json_data: Any) -> None:
         """
         Registration of specified player
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
-
         try:
 
             if self.cursor.check_player_name(
@@ -362,13 +345,15 @@ class UserHandler(LineReceiver, ABC):
                         code=202
                     )
                 )
+
+                self.log_account_info(
+                    username=json_data['data']['player_name'],
+                    password=json_data['data']['player_password']
+                )
+
                 self.log_file.log_all(
                     priority=3,
                     string=f"Player < {json_data['data']['player_name']} > successfully registered"
-                )
-                self.log_user_registration(
-                        username=json_data['data']['player_name'],
-                        password=json_data['data']['player_password']
                 )
 
         except DBExceptions.QueryExecuteError as query_exec_error:
@@ -385,8 +370,7 @@ class UserHandler(LineReceiver, ABC):
 
     def player_authorization(self,
                              action: str,
-                             json_data: Any
-                             ) -> None:
+                             json_data: Any) -> None:
         """
         Authorization of specified player
         :param action: String used to generate response
@@ -394,17 +378,16 @@ class UserHandler(LineReceiver, ABC):
         :return:
         """
 
-        def check_for_user_in_system(player_username) -> bool:
+        def check_for_user_in_system(player_name: str) -> bool:
             """
-            method to check if user is being already authorized
-            :param player_username: Player username to check in connected users
+            Checking if user with given username already logged
+            :param player_name:
             :return:
             """
 
             for uid, user in self.connected_users.items():
-                if user['authorized']:
-                    if user['main']['player_name'] == player_username:
-                        return False
+                if user['authorized'] and user['main']['player_name'] == player_name:
+                    return False
             return True
 
         try:
@@ -483,7 +466,6 @@ class UserHandler(LineReceiver, ABC):
         :param json_data: Received data from the client
         :return:
         """
-
         try:
             if self.connected_users[self.user_key].get('authorized'):
                 skeleton = self.dungeon_generator.final_dungeon_skeleton(
@@ -530,7 +512,6 @@ class UserHandler(LineReceiver, ABC):
         :param message: Json object to send for all authorized users
         :return:
         """
-
         self.log_to_debug(
                 line=f"Send_All: {message}"
                 )
@@ -546,12 +527,11 @@ class UserHandler(LineReceiver, ABC):
                  response: bytes
                  ) -> None:
         """
-        Send response from the server to the current user
-        :param response: Response to send
+        Send response from server
+        :param response:
         :return:
         """
-        
-        # pprint(json.loads(response), width=120)
+        pprint(json.loads(response), width=120)
         self.log_to_debug(
             line=f"Send_One: {response} "
             )
@@ -561,15 +541,13 @@ class UserHandler(LineReceiver, ABC):
 
     def send_to_spec_user(self,
                           to_player: str,
-                          message: bytes
-                          ) -> None:
+                          message: bytes) -> None:
         """
         Send a message to specified user from user
         :param to_player: User whom to send
         :param message: Message to send
         :return:
         """
-
         self.log_to_debug(
                 line=f"Send_To_Spec: {message}"
                 )
@@ -580,12 +558,11 @@ class UserHandler(LineReceiver, ABC):
         ) == 1:
             for user_key in self.connected_users:
 
-                if self.connected_users[user_key]['authorized']:
-
-                    if self.connected_users[user_key]['main']['player_name'] == to_player:
-                        user_to_logged = True
-                        user_to_key = user_key
-                        break
+                if self.connected_users[user_key]['authorized'] \
+                        and self.connected_users[user_key]['main']['player_name'] == to_player:
+                    user_to_logged = True
+                    user_to_key = user_key
+                    break
         else:
             raise ChatExceptions.ChatException("player not registered")
         if user_to_logged:

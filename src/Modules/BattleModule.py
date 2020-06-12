@@ -19,10 +19,7 @@ class BattleModule:
     Class defining battle module
     """
 
-    def __init__(self,
-                 player: UserModule,
-                 battle_data: dict
-                 ):
+    def __init__(self, player: UserModule, battle_data: dict):
         self.player = player
         self.attack_id = battle_data['player_attack_id']
         self.mob = battle_data['mob']
@@ -53,7 +50,9 @@ class BattleModule:
         }
 
     @staticmethod
-    def dice(side_counter, throw_counter) -> int:
+    def dice(side_counter: int,
+             throw_counter: int
+             ) -> int:
         """
         Method for rolling dice
         :param side_counter: Number of sides
@@ -74,15 +73,13 @@ class BattleModule:
         :return:
         """
 
-        # hit_chance = int
+        hit_chance = int
         modifier = int
-        # attack = dict
-        # attack_successful = False
+        attack = dict
+        attack_successful = False
         damage_given = 0
-        dice_result = self.dice(
-                side_counter=20,
-                throw_counter=1
-                )
+        dice_result = self.dice(20, 1)
+
         if whose_turn == "player":
             attack = self.player.attacks[self.attack_id]
             if attack['type_attack'] == 'Melee':
@@ -92,7 +89,7 @@ class BattleModule:
             elif attack['type_attack'] == 'Magic':
                 modifier = round((self.player.intelligence + self.player.wisdom) / 3) - 5
 
-            if (modifier + dice_result < self.mob['stats']['armor_class'])\
+            if modifier + dice_result < self.mob['stats']['armor_class']\
                     or dice_result == 1:
                 attack_successful = False
             else:
@@ -101,10 +98,10 @@ class BattleModule:
                 damage_given += attack_dice
 
                 for uid, item in self.player.weapons.items():
+                    # print(item)
                     damage_given += choice(range(item['damage_min'], item['damage_max']))
 
         else:
-
             attack = self.mob['attacks'][choice(list(self.mob['attacks'].keys()))]
             if attack['type_attack'] == 'Melee':
                 modifier = round((self.mob['stats']['strength'] + self.mob['stats']['dexterity']) / 3) - 5
@@ -113,7 +110,7 @@ class BattleModule:
             elif attack['type_attack'] == 'Magic':
                 modifier = round((self.mob['stats']['intelligence'] + self.mob['stats']['wisdom']) / 3) - 5
 
-            if (modifier + dice_result < self.player.armor_class)\
+            if modifier + dice_result < self.player.armor_class\
                     or dice_result == 1:
                 attack_successful = False
             else:
