@@ -45,7 +45,7 @@ class UserHandler(LineReceiver, ABC):
         self.user_key = f"{self.addr.host}:{self.addr.port}"
         self.player = UserModule
         self.log_file = Log(
-            module=self.__class__
+            class_name=self.__class__
         )
         self.actions = {
             "default": UtilityModule.generate_response,
@@ -62,11 +62,28 @@ class UserHandler(LineReceiver, ABC):
     @staticmethod
     def log_to_debug(line) -> None:
         """
-        Log to debug file
-        :param line:
+        Log to the debug file
+        :param line: Line to log
         """
+
         with open("Logs/debug.log", "a") as f:
             f.writelines(f"{datetime.now()} | {line}\n")
+
+    @staticmethod
+    def log_account_info(username: str,
+                         password: str
+                         ) -> None:
+        """
+        Log players Username and Password
+        :param username: Players username
+        :param password: Players password
+        :return:
+        """
+
+        with open("Logs/user_registry.log", "a") as file:
+            file.writelines(
+                f"Registered: {datetime.now()} | Username: {username} | Password: {password}\n"
+            )
 
     def connectionMade(self):
         """
@@ -99,7 +116,8 @@ class UserHandler(LineReceiver, ABC):
         )
 
     def lineReceived(self,
-                     line):
+                     line
+                     ):
         """
         Receive line and parse it to json_data.
         Call method depending on action stored in json_data
@@ -123,10 +141,10 @@ class UserHandler(LineReceiver, ABC):
                     )
 
             except Exception as exception:
-                print(f"Exception in lineReceived: {exception}")
+                # print(f"Exception in lineReceived: {exception}")
                 self.log_file.log_all(
                     priority=2,
-                    string=exception
+                    string=str(exception)
                 )
                 self.send_one(
                     response=UtilityModule.generate_response(
@@ -139,7 +157,7 @@ class UserHandler(LineReceiver, ABC):
         except json.decoder.JSONDecodeError as json_decode_error:
             self.log_file.log_all(
                 priority=2,
-                string=json_decode_error
+                string=str(json_decode_error)
             )
             self.send_one(
                 response=UtilityModule.generate_response(
@@ -149,7 +167,8 @@ class UserHandler(LineReceiver, ABC):
             )
 
     def connectionLost(self,
-                       reason=twisted_error):
+                       reason=twisted_error
+                       ):
         """
         Deleting connection from connections list if lost
         :param reason:
@@ -170,35 +189,45 @@ class UserHandler(LineReceiver, ABC):
                            f"-> Reason: {reason.getErrorMessage()}"
                 )
 
-    def generate_loot(self, action: str, json_data: Any) -> None:
+    def generate_loot(self,
+                      action: str,
+                      json_data: Any
+                      ) -> None:
         """
         Method to generate loot after passing the dungeon
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
-
-        if self.connected_users[self.user_key]['main']['dungeon']:  # fixme check if dungeon complete
-            available_loot = self.cursor.get_loot()
-            self.connected_users[self.user_key]['main']['dungeon']['passed'] = True
-            result = LootModule.LootModule(
-                dungeon=self.connected_users[self.user_key]['main']['dungeon']['skeleton'],
-                player=self.player,
-                loot=available_loot)
-            self.send_one(
-                response=UtilityModule.generate_response(
-                    action=action,
-                    code=204,
-                    data=result.get_loot()
+        if self.connected_users[self.user_key]['authorized']:
+            if self.connected_users[self.user_key]['main']['dungeon']:  # fixme check if dungeon complete
+                available_loot = self.cursor.get_loot()
+                self.connected_users[self.user_key]['main']['dungeon']['passed'] = True
+                result = LootModule.LootModule(
+                    dungeon=self.connected_users[self.user_key]['main']['dungeon']['skeleton'],
+                    player=self.player,
+                    loot=available_loot)
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=204,
+                        data=result.get_loot()
+                    )
                 )
-            )
-            del result
-            del available_loot
+                del result
+                del available_loot
+            else:
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=410
+                    )
+                )
         else:
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,
-                    code=410
+                    code=406
                 )
             )
 
@@ -251,7 +280,7 @@ class UserHandler(LineReceiver, ABC):
                     data=data
                 )
             )
-        except ChatExceptions.ChatException as chat_exception:
+        except ChatExceptions.ChatException:
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,
@@ -316,6 +345,12 @@ class UserHandler(LineReceiver, ABC):
                         code=202
                     )
                 )
+
+                self.log_account_info(
+                    username=json_data['data']['player_name'],
+                    password=json_data['data']['player_password']
+                )
+
                 self.log_file.log_all(
                     priority=3,
                     string=f"Player < {json_data['data']['player_name']} > successfully registered"
@@ -330,7 +365,7 @@ class UserHandler(LineReceiver, ABC):
             )
             self.log_file.log_all(
                 priority=2,
-                string=query_exec_error
+                string=str(query_exec_error)
             )
 
     def player_authorization(self,
@@ -343,13 +378,16 @@ class UserHandler(LineReceiver, ABC):
         :return:
         """
 
-        def check_for_user_in_system(player_name) -> bool:
+        def check_for_user_in_system(player_name: str) -> bool:
+            """
+            Checking if user with given username already logged
+            :param player_name:
+            :return:
+            """
+
             for uid, user in self.connected_users.items():
-                # print("Suka", uid)
-                if user['authorized']:
-                    if user['main']['player_name'] == player_name:
-                        # print("blyat")
-                        return False
+                if user['authorized'] and user['main']['player_name'] == player_name:
+                    return False
             return True
 
         try:
@@ -415,12 +453,13 @@ class UserHandler(LineReceiver, ABC):
             )
             self.log_file.log_all(
                 priority=2,
-                string=query_exec_error
+                string=str(query_exec_error)
             )
 
     def get_dungeon_skeleton(self,
                              action: str,
-                             json_data: Any) -> None:
+                             json_data: Any
+                             ) -> None:
         """
         Generate and send dungeon skeleton for the player
         :param action: String used to generate response
@@ -456,7 +495,7 @@ class UserHandler(LineReceiver, ABC):
         except Exception as exception:
             self.log_file.log_all(
                 priority=2,
-                string=exception
+                string=str(exception)
             )
             self.send_one(
                 response=UtilityModule.generate_response(
@@ -466,7 +505,8 @@ class UserHandler(LineReceiver, ABC):
             )
 
     def send_all(self,
-                 message: bytes) -> None:
+                 message: bytes
+                 ) -> None:
         """
         Sending message to al authorized users
         :param message: Json object to send for all authorized users
@@ -484,7 +524,8 @@ class UserHandler(LineReceiver, ABC):
                 )
 
     def send_one(self,
-                 response: bytes) -> None:
+                 response: bytes
+                 ) -> None:
         """
         Send response from server
         :param response:
@@ -517,12 +558,11 @@ class UserHandler(LineReceiver, ABC):
         ) == 1:
             for user_key in self.connected_users:
 
-                if self.connected_users[user_key]['authorized']:
-
-                    if self.connected_users[user_key]['main']['player_name'] == to_player:
-                        user_to_logged = True
-                        user_to_key = user_key
-                        break
+                if self.connected_users[user_key]['authorized'] \
+                        and self.connected_users[user_key]['main']['player_name'] == to_player:
+                    user_to_logged = True
+                    user_to_key = user_key
+                    break
         else:
             raise ChatExceptions.ChatException("player not registered")
         if user_to_logged:

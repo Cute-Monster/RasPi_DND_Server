@@ -50,7 +50,9 @@ class BattleModule:
         }
 
     @staticmethod
-    def dice(side_counter, throw_counter) -> int:
+    def dice(side_counter: int,
+             throw_counter: int
+             ) -> int:
         """
         Method for rolling dice
         :param side_counter: Number of sides
@@ -76,6 +78,7 @@ class BattleModule:
         attack = dict
         attack_successful = False
         damage_given = 0
+        dice_result = self.dice(20, 1)
 
         if whose_turn == "player":
             attack = self.player.attacks[self.attack_id]
@@ -86,14 +89,15 @@ class BattleModule:
             elif attack['type_attack'] == 'Magic':
                 modifier = round((self.player.intelligence + self.player.wisdom) / 3) - 5
 
-            if modifier + self.dice(20, 1) < self.mob['stats']['armor_class']:
+            if modifier + dice_result < self.mob['stats']['armor_class']\
+                    or dice_result == 1:
                 attack_successful = False
             else:
                 attack_dice = self.dice(attack['random_diapason'], attack['count_of_random'])
                 attack_successful = True
                 damage_given += attack_dice
 
-                for id, item in self.player.weapons.items():
+                for uid, item in self.player.weapons.items():
                     # print(item)
                     damage_given += choice(range(item['damage_min'], item['damage_max']))
 
@@ -106,7 +110,8 @@ class BattleModule:
             elif attack['type_attack'] == 'Magic':
                 modifier = round((self.mob['stats']['intelligence'] + self.mob['stats']['wisdom']) / 3) - 5
 
-            if modifier + self.dice(20, 1) < self.player.armor_class:
+            if modifier + dice_result < self.player.armor_class\
+                    or dice_result == 1:
                 attack_successful = False
             else:
                 attack_dice = self.dice(attack['random_diapason'], attack['count_of_random'])
