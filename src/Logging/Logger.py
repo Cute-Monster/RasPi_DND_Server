@@ -1,5 +1,5 @@
 """
-Logger.py: Module for logging server behaviour
+Logger.py: Module for logging server behaviour into specific log files
 """
 __author__ = "Runtov Constantin, Mandrila Daniel"
 __copyright__ = "Copyright 2020, The Earth"
@@ -19,12 +19,14 @@ class Log:
     """
     Class for logging executing of the code
     """
-    def __init__(self, module):
-        self.log_path = os.path.abspath("Logs")
-        self.error_log_file = open("{}/errors.log".format(self.log_path), "a")
-        self.access_log_file = open("{}/access.log".format(self.log_path), "a")
 
-        self.module = module
+    def __init__(self,
+                 class_name: __name__):
+        self.log_path = os.path.abspath("Logs")
+        # self.error_log_file = open("{}/errors.log".format(self.log_path), "a")
+        # self.access_log_file = open("{}/access.log".format(self.log_path), "a")
+
+        self.class_name = class_name
 
         self.priority = {
             1: "CRITICAL",
@@ -33,30 +35,27 @@ class Log:
             4: "DEBUG"
         }
 
-    def log_all(self, priority: int, string):
+    def log_all(self,
+                priority: int,
+                string: str
+                ):
         """
         Writing log info to files specified by priority
         :param priority: Priority of info to be logged
         :param string: Info to be writen to log file
         :return:
         """
-        if self.error_log_file.closed or self.access_log_file.closed:
-            self.error_log_file = open("{}/errors.log".format(self.log_path), "a")
-            self.access_log_file = open("{}/access.log".format(self.log_path), "a")
 
-        (self.access_log_file if priority == 3 or priority == 4 else self.error_log_file).writelines(
-            "{} | {} | {} | {}\n".format(
-                datetime.now(),
-                self.module,
-                self.priority.get(priority),
-                string
-            ))
-        self.log_close()
-
-    def log_close(self):
-        """
-        Closing log files
-        :return:
-        """
-        self.error_log_file.close()
-        self.access_log_file.close()
+        with open("{}/{}.log".format(
+                self.log_path,
+                "access" if priority == 3 or 4 else "errors"
+        ),
+                "a") as f:
+            f.writelines(
+                "{} | {} | {} | {}\n".format(
+                    datetime.now(),
+                    self.class_name,
+                    self.priority.get(priority),
+                    string
+                )
+            )

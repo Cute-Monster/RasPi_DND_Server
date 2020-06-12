@@ -1,0 +1,459 @@
+2020-03-28 22:13:05.018316: [Errno 19] No such device2020-03-28 22:14:32.904094: [Errno 19] No such device2020-03-28 22:14:45.728075: [Errno 19] No such device2020-03-28 22:18:16.515613: [Errno 19] No such device2020-03-28 22:20:26.562324: [Errno 19] No such device2020-03-28 22:20:46.072595: [Errno 19] No such device2020-03-28 22:21:08.698176: [Errno 19] No such device2020-03-28 22:21:30.144986: [Errno 19] No such device2020-04-24 14:28:39.334578: [Errno 19] No such device2020-04-26 15:58:45.752644: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 15:58:45.763989: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:01:50.696190: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:01:50.707392: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:04:05.685869: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:27:30.639360: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:27:30.651051: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:42:44.712414: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:42:44.724585: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:54:03.978881: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:54:03.991446: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:56:11.283546: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:56:11.295211: 'NoneType' object has no attribute 'is_active'
+2020-04-26 16:56:34.678097: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 16:56:34.689280: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:03:27.565265: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:04:32.233500: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:04:32.245690: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:05:57.614541: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:05:57.634140: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:06:12.534628: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:07:28.948652: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:08:28.202607: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:10:09.575422: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:11:59.686354: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:12:39.440171: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:12:39.452109: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:17:50.226128: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:17:50.238075: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:20:36.309283: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:20:36.321128: ConnectionModule: Database Connection closed2020-04-26 17:20:36.321339: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:22:52.718299: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:22:52.730031: ConnectionModule:  Database Connection closed2020-04-26 17:22:52.730244: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:24:31.915708: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+
+2020-04-26 17:24:31.928593: ConnectionModule:  Database Connection closed
+2020-04-26 17:24:31.928806: 'NoneType' object has no attribute 'is_active'
+2020-04-26 17:24:47.172720: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 17:24:47.185607: ConnectionModule:  Database Connection closed
+2020-04-26 17:24:47.185798: 'NoneType' object has no attribute 'is_active'
+2020-04-26 20:24:25.311227: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 20:24:25.323220: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-04-26 20:40:25.652756: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-26 20:40:25.664184: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-04-30 19:14:32.312316: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:14:32.321449: <class 'Classes.DBCore.DBCore'>: CRITICAL: 1054 (42S22): Unknown column 'test' in 'where clause'
+2020-04-30 19:14:47.615104: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:14:47.623629: <class 'Classes.DBCore.DBCore'>: CRITICAL: 1054 (42S22): Unknown column 'test' in 'where clause'
+2020-04-30 19:15:02.058967: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:15:02.067757: <class 'Classes.DBCore.DBCore'>: CRITICAL: 1054 (42S22): Unknown column 'test' in 'where clause'
+2020-04-30 19:17:39.985995: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:17:39.994572: <class 'Classes.DBCore.DBCore'>: CRITICAL: 1054 (42S22): Unknown column 'test' in 'where clause'
+2020-04-30 19:18:24.281740: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:20:37.596997: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:20:53.864891: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:21:13.552706: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:21:21.305301: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:21:53.364876: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 19:25:42.912872: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:01:52.155419: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:08:37.814553: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:08:57.866377: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:09:24.575550: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:09:24.586533: <class 'Classes.DBCore.DBCore'>: CRITICAL: No result set to fetch from.
+2020-04-30 20:09:52.471930: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:09:52.483229: <class 'Classes.DBCore.DBCore'>: CRITICAL: No result set to fetch from.
+2020-04-30 20:10:27.310403: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:10:27.321724: <class 'Classes.DBCore.DBCore'>: CRITICAL: No result set to fetch from.
+2020-04-30 20:14:31.603375: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:14:31.614318: <class 'Classes.DBCore.DBCore'>: CRITICAL: No result set to fetch from.
+2020-04-30 20:15:10.157315: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:17:31.690919: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:17:42.506209: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:19:19.257280: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:21:15.984847: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:21:15.995249: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-04-30 20:40:32.733472: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-04-30 20:40:33.210024: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 16:43:51.796494: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 16:43:54.714360: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 18:29:21.185839: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:30:30.678004: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:33:40.904265: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:33:51.694793: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:35:44.438352: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:38:20.030392: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:38:21.127631: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 18:39:04.651058: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:39:05.918560: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 18:39:16.996206: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 18:39:19.242389: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 18:41:31.507263: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 19:03:28.105331: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 19:03:57.395116: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 19:07:48.826013: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 19:08:05.258235: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-01 19:18:19.536091: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-01 19:18:42.367295: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:08:05.304996: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:08:39.400516: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:10:19.110655: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:12:19.504905: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:13:30.088472: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:14:50.583645: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:40:28.486194: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:41:20.406571: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:41:20.414281: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:41:43.172094: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:41:50.808591: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:41:56.935779: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:41:56.943619: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:42:32.573615: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:42:37.482359: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:42:37.490318: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:44:14.003536: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:44:16.663768: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:44:16.671724: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:47:04.115767: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:47:58.142690: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:48:21.341713: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:48:21.349761: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:48:32.444005: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:48:32.447340: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:50:38.453498: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:50:40.996374: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:50:41.004486: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:54:46.472162: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:54:59.206943: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:54:59.214604: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:55:24.367948: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:55:31.841228: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:55:31.849158: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:55:59.214198: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:56:03.684633: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:56:03.692575: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:58:17.273068: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:58:25.619535: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 16:59:42.764248: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 16:59:45.033604: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:44:19.719269: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:44:36.029323: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:44:36.037017: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:45:05.761443: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:45:29.653761: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:45:29.661520: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:46:43.542417: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:47:18.342944: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:47:18.351713: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:48:31.360050: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:48:45.393078: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:48:45.401273: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:49:24.028731: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:49:35.008234: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:49:35.016478: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:51:35.174916: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:52:28.476326: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:52:28.488139: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:52:56.614313: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:54:01.415558: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:54:01.450033: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:54:24.422208: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:54:24.434619: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:54:48.279831: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:54:48.290756: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:54:55.625979: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:55:01.954076: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:55:01.962428: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:55:59.050902: <class 'Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:55:59.061903: <class 'Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:56:34.682094: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:56:45.091861: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:56:45.110602: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:57:07.660174: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:57:18.392465: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:57:30.688975: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:57:30.696984: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:58:02.501972: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 17:58:12.790522: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 17:58:12.798817: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:00:26.346656: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:00:36.949024: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:00:36.967302: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:01:48.237552: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:02:25.816109: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:02:25.824044: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:03:04.957611: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:03:12.472859: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:03:12.480651: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:03:49.110233: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:03:49.124491: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:04:51.611370: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:05:00.569989: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:05:00.578660: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:05:52.886159: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:15:35.101650: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:15:35.109502: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:22:03.788929: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:22:06.832653: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:22:06.851194: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:26:09.468474: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:26:17.593372: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:26:17.601509: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:28:17.355513: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:28:25.458869: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:28:25.466868: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:29:41.528563: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:29:43.824920: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:29:43.832702: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:33:00.209246: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:33:12.031499: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:33:12.039751: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:34:20.982335: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:34:27.434722: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:34:27.443004: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:35:20.466833: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:35:25.524245: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:35:25.532176: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:39:23.032886: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:39:29.566141: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:39:29.574450: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:39:46.588078: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:39:52.109073: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:39:52.117178: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:41:08.918454: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:42:33.533376: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:52:25.855791: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:52:42.454943: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 18:53:24.465670: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 18:53:24.493141: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 19:07:55.583480: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 19:08:47.826367: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-03 19:08:56.754233: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-03 19:08:56.762324: <class 'src.Classes.DBCore.DBCore'>: CRITICAL: 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:18:46.473727 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 21:19:24.882886 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:27:51.531931 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 21:27:56.214339 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:28:00.230352 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:28:00.233240 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:29:08.512742 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:29:08.515575 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:31:34.470152 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 21:31:52.614600 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:32:02.699096 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:32:02.702076 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:34:04.492047 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 21:34:07.403261 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:34:18.917116 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:34:18.920685 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 21:59:45.468804 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 22:03:51.867725 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 22:03:58.836088 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-17 22:03:58.843356 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | 'NoneType' object has no attribute 'is_active'
+2020-05-17 22:05:10.244994 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.25' not found (required by /home/pi/Desktop/Testing/venvtest/lib/python3.7/site-packages/nacl/_sodium.abi3.so)
+2020-05-17 22:18:53.366148 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-17 22:25:01.420159 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-17 22:29:37.078276 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-22 17:17:23.971464 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-22 17:17:29.931599 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-22 17:17:50.391569 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | Cursor is not connected
+2020-05-22 17:17:50.392760 | __main__ | WARNING | The error argument should be either an integer or dictionary
+2020-05-22 17:21:34.271907 | <class 'src.Classes.DB.DBCore.DBCore'> | CRITICAL | Cursor is not connected
+2020-05-22 17:21:34.273083 | __main__ | WARNING | The error argument should be either an integer or dictionary
+2020-05-24 21:51:41.278711 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-25 18:06:37.613940 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-25 18:06:41.087251 | __main__ | WARNING | 'DBCore' object has no attribute 'check_player_name'
+2020-05-25 18:08:23.648247 | __main__ | WARNING | 'DBCore' object has no attribute 'check_player_name'
+2020-05-25 18:09:34.724491 | __main__ | WARNING | Expecting value: line 1 column 5 (char 4)
+2020-05-25 18:09:34.728341 | __main__ | WARNING | Expecting value: line 1 column 9 (char 8)
+2020-05-25 18:09:34.736971 | __main__ | WARNING | Expecting value: line 1 column 13 (char 12)
+2020-05-25 18:09:34.740923 | __main__ | WARNING | Expecting value: line 1 column 17 (char 16)
+2020-05-25 18:09:34.744758 | __main__ | WARNING | Expecting value: line 1 column 13 (char 12)
+2020-05-25 18:09:34.748567 | __main__ | WARNING | Extra data: line 1 column 11 (char 10)
+2020-05-25 18:09:34.752496 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-25 18:09:52.282466 | __main__ | WARNING | Expecting value: line 1 column 9 (char 8)
+2020-05-25 18:10:04.530976 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-25 18:10:07.035363 | __main__ | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-25 20:33:56.770846 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-25 20:33:56.771982 | __main__ | WARNING | Error to execute query::
+Cursor is not connected
+2020-05-25 20:34:23.689280 | __main__ | WARNING | Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2020-05-25 20:35:49.417106 | __main__ | WARNING | 'NoneType' object is not callable
+2020-05-25 21:03:59.919006 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-25 21:05:18.589168 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-25 21:32:01.476925 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-25 22:06:19.115943 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-25 22:09:57.201690 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-25 22:13:48.708018 | __main__ | WARNING | 'player_name'
+2020-05-25 22:16:46.100450 | __main__ | WARNING | 'player_name'
+2020-05-25 22:19:46.230336 | __main__ | WARNING | 'player_name'
+2020-05-25 22:21:33.022266 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-25 22:21:33.024030 | __main__ | WARNING | Error to execute query::
+Cursor is not connected
+2020-05-25 22:27:00.144738 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-25 22:27:00.146751 | __main__ | WARNING | Error to execute query::
+Cursor is not connected
+2020-05-25 22:47:55.880571 | __main__ | WARNING | dump() missing 1 required positional argument: 'fp'
+2020-05-26 17:37:28.769702 | __main__ | WARNING | 'name'
+2020-05-26 17:39:57.271108 | __main__ | WARNING | 'name'
+2020-05-26 17:41:19.914108 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 17:41:19.915182 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 17:49:37.461021 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 17:49:37.462170 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 17:52:46.126960 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 17:52:46.128124 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 17:56:04.915375 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 17:56:04.916511 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:05:31.848952 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:05:31.850070 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:42:54.711433 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:42:54.712634 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:43:36.578769 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:43:36.579914 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:44:01.643526 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:44:01.645075 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:47:10.311430 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:47:10.312580 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:49:12.164482 | src.DB.DBCore | CRITICAL | Cursor is not connected
+2020-05-26 18:49:12.165803 | __main__ | WARNING | Error to execute query: Cursor is not connected
+2020-05-26 18:56:40.001646 | __main__ | WARNING | 7
+2020-05-26 18:58:39.445685 | __main__ | WARNING | 7
+2020-05-26 19:41:18.000424 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-26 20:10:28.115568 | src.Server.Server | WARNING | 'Server' object has no attribute 'items'
+2020-05-26 20:12:37.323113 | src.Server.Server | WARNING | 'Server' object has no attribute 'items'
+2020-05-26 20:16:46.049980 | src.Server.Server | WARNING | 'Server' object is not subscriptable
+2020-05-26 20:17:58.260659 | src.Server.Server | WARNING | 'Server' object has no attribute 'get'
+2020-05-26 20:19:13.776024 | src.Server.Server | WARNING | 'Server' object is not subscriptable
+2020-05-26 20:25:38.853882 | src.Server.Server | WARNING | 'Server' object is not iterable
+2020-05-26 20:34:36.562164 | src.Server.Server | WARNING | send_one() takes 2 positional arguments but 4 were given
+2020-05-26 20:36:06.448557 | src.Server.Server | WARNING | 'Server' object has no attribute 'self'
+2020-05-26 20:58:07.998594 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 19:24:43.534316 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 19:26:40.075341 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 19:27:39.669881 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 19:27:42.957894 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 19:30:43.716330 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-27 23:48:58.298269 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-28 00:46:02.077312 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-28 00:50:15.446896 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-28 01:46:44.405385 | <class 'DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-28 02:11:02.465584 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-28 02:11:35.312656 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-29 19:41:26.971578 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-29 19:42:40.800749 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-29 19:42:43.289864 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-29 19:42:46.737533 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-29 20:11:22.881491 | src.Server.Server | WARNING | Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2020-05-29 20:11:50.075372 | src.Server.Server | WARNING | get() takes no keyword arguments
+2020-05-29 20:13:47.183706 | src.Server.Server | WARNING | Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2020-05-29 20:13:49.055657 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-29 20:14:03.121135 | src.Server.Server | WARNING | get() takes no keyword arguments
+2020-05-29 20:14:58.612061 | src.Server.Server | WARNING | get() takes no keyword arguments
+2020-05-29 20:15:40.502002 | src.Server.Server | WARNING | get() takes no keyword arguments
+2020-05-29 23:56:04.943011 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-30 00:18:11.811375 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-30 00:18:28.042534 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-30 00:18:40.284649 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-30 00:39:03.111090 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/src/src/Config/home_connection_config.json'
+2020-05-30 02:30:03.996800 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | [Errno 2] No such file or directory: '/home/pi/Desktop/Testing/Config/home_connection_config.json'
+2020-05-30 02:30:32.912773 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-05-30 02:30:35.160777 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-01 21:30:23.872609 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 18:03:11.550030 | src.Server.Server | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 18:09:53.670245 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 18:26:48.866475 | src.Server.UserHandler | WARNING | 'module' object is not callable
+2020-06-03 18:27:36.288064 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Cursor is not connected
+2020-06-03 18:27:36.290235 | src.Server.UserHandler | WARNING | ('Error to execute query:', ProgrammingError(-1, 'Cursor is not connected', None))
+2020-06-03 18:28:02.209847 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Cursor is not connected
+2020-06-03 18:28:02.211919 | src.Server.UserHandler | WARNING | ('Error to execute query:', ProgrammingError(-1, 'Cursor is not connected', None))
+2020-06-03 18:28:11.950551 | src.Server.UserHandler | WARNING | 'module' object is not callable
+2020-06-03 19:14:40.550980 | src.Server.UserHandler | WARNING | 'module' object is not callable
+2020-06-03 21:49:21.629162 | src.Server.UserHandler | WARNING | 'module' object is not callable
+2020-06-03 22:13:18.596126 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 22:15:58.642149 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 22:16:01.538096 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 22:42:07.571027 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 23:01:52.518358 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 23:13:50.678877 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-03 23:18:03.217083 | src.Server.UserHandler | WARNING | 'NoneType' object is not callable
+2020-06-05 23:51:36.122382 | src.Server.UserHandler | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 15:16:44.259431 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '10' for key 'PRIMARY'
+2020-06-06 15:16:44.262285 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '10' for key 'PRIMARY'", '23000'))
+2020-06-06 18:32:29.018189 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:33:39.277064 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:35:01.160737 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:39:29.106293 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:41:37.991303 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:47:33.772788 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 18:50:18.699176 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:33:38.522254 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:34:14.854284 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:34:41.072048 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:36:05.798127 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:39:43.559203 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:47:21.437653 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:47:39.616023 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:48:58.490959 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:55:32.517305 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:55:52.451210 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:58:08.376091 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 21:58:10.560247 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:01:19.825765 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:01:49.761043 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:01:53.480970 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:03:15.296269 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:03:31.781564 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:03:36.605368 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:03:38.976657 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:04:01.382211 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 55 (char 54)
+2020-06-06 22:04:07.415879 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 55 (char 54)
+2020-06-06 22:04:11.415664 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 55 (char 54)
+2020-06-06 22:04:28.932989 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 55 (char 54)
+2020-06-06 22:05:08.669972 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 22:07:06.535413 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 23:23:38.392139 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:23:46.526488 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-06 23:23:49.296842 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:26:53.544618 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:28:08.540019 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:29:04.254103 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:30:50.730292 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:31:25.403589 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:32:03.917326 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:32:23.358730 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-06 23:48:43.290194 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'UserHandler' object has no attribute 'check_for_user_in_system'
+2020-06-07 01:42:08.194063 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:03:51.329706 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:09:45.678774 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:10:33.040538 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:13:23.750731 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:19:27.876340 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 02:23:16.092984 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 11:47:37.767446 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 11:48:20.841405 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-07 23:10:39.238495 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'w.weapon_id' in 'on clause'
+2020-06-08 00:05:57.235858 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | my_wrapper() takes 2 positional arguments but 3 were given
+2020-06-08 00:06:22.364379 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | my_wrapper() takes 2 positional arguments but 3 were given
+2020-06-08 00:25:17.435481 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 00:25:23.588417 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | my_wrapper() takes 2 positional arguments but 3 were given
+2020-06-08 00:29:44.286330 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'function' object has no attribute 'connected_users'
+2020-06-08 01:23:04.082591 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:25:05.063298 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:27:48.109446 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:28:15.525748 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 01:29:30.360602 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 01:29:42.289647 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:33:10.163279 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:35:34.872479 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'dungeon'
+2020-06-08 01:40:01.804874 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'str' object does not support item assignment
+2020-06-08 01:41:23.390742 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'str' object does not support item assignment
+2020-06-08 01:42:26.806118 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 01:42:29.178821 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'str' object does not support item assignment
+2020-06-08 01:45:36.900421 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'NoneType' object does not support item assignment
+2020-06-08 03:31:19.573131 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'player_attack_id'
+2020-06-08 03:34:51.449925 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 03:34:56.538060 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-08 04:09:19.856608 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-09 02:53:22.793951 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-09 02:55:31.042024 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)

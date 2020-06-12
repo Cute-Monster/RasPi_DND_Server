@@ -25,7 +25,9 @@ class DungeonSkeleton:
     Module which generates random dungeon skeleton with mobs for player
     """
 
-    def __init__(self, cursor: DBCore):
+    def __init__(self,
+                 cursor: DBCore
+                 ):
         self.log_file = Log(self.__class__)
         self.cursor = cursor
         self.all_mobs = self.generate_mobs()

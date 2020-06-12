@@ -1,4 +1,7 @@
 # Project exclude paths
 /RemoteDBvenv
 ForTesting/
-Logs/
+
+/.scannerwork/
+/Json.zip
+src/Modules/UserLevelModule.py
