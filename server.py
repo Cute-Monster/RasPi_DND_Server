@@ -22,4 +22,4 @@ if __name__ == '__main__':
         reactor.run()
     except KeyboardInterrupt as e:
         reactor.close()
-        log_file.log_all(3, "Stoped")
+        log_file.log_all(3, "Stopped")

@@ -26,8 +26,6 @@ class MySQLModule:
     def __init__(self):
         self.log = Log(self.__class__)
 
-        # self.device_platform = platform()
-
         self.db_port = 3306
 
         # Getting computer WAN address
@@ -47,7 +45,7 @@ class MySQLModule:
 
             if self.ssh_connection is not None:
                 self.db_port = self.ssh_connection.local_bind_port
-                self.log.log_all(3, "Local bind port: " + self.ssh_connection.local_bind_port)
+                self.log.log_all(3, "Local bind port: " + str(self.ssh_connection.local_bind_port))
 
         self.db_host = self.config['Connection']['DataBase']['host']
         self.db_username = self.config['Connection']['DataBase']['username']

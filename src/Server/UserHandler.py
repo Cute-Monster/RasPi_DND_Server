@@ -45,7 +45,7 @@ class UserHandler(LineReceiver, ABC):
         self.user_key = f"{self.addr.host}:{self.addr.port}"
         self.player = UserModule
         self.log_file = Log(
-            module=self.__class__
+            class_name=self.__class__
         )
         self.actions = {
             "default": UtilityModule.generate_response,
@@ -60,13 +60,28 @@ class UserHandler(LineReceiver, ABC):
         # pprint(self.actions)
 
     @staticmethod
-    def log_to_debug(line) -> None:
+    def log_to_debug(line: str) -> None:
         """
-        Log to debug file
-        :param line:
+        Log info to the debug file
+        :param line: line to write
         """
+
         with open("Logs/debug.log", "a") as f:
             f.writelines(f"{datetime.now()} | {line}\n")
+    
+    @staticmethod
+    def log_user_registration(username: str,
+                              password: str
+                              ) -> None:
+        """
+        Method for logging Users username and password into the file
+        :param username: Users username
+        :param password: Users password
+        :return:
+        """
+
+        with open("Logs/Users.log", "a") as user_log:
+            user_log.writelines(f"{datetime.now()} | Username -> {username} | Password -> {password}\n") 
 
     def connectionMade(self):
         """
@@ -99,11 +114,12 @@ class UserHandler(LineReceiver, ABC):
         )
 
     def lineReceived(self,
-                     line):
+                     line
+                     ):
         """
         Receive line and parse it to json_data.
         Call method depending on action stored in json_data
-        :param line:
+        :param line: Line received from socket
         :return:
         """
 
@@ -123,10 +139,10 @@ class UserHandler(LineReceiver, ABC):
                     )
 
             except Exception as exception:
-                print(f"Exception in lineReceived: {exception}")
+                # print(f"Exception in lineReceived: {exception}")
                 self.log_file.log_all(
                     priority=2,
-                    string=exception
+                    string=str(exception)
                 )
                 self.send_one(
                     response=UtilityModule.generate_response(
@@ -134,12 +150,11 @@ class UserHandler(LineReceiver, ABC):
                         code=400
                     )
                 )
-                # self.cursor.disconnect()
 
         except json.decoder.JSONDecodeError as json_decode_error:
             self.log_file.log_all(
                 priority=2,
-                string=json_decode_error
+                string=str(json_decode_error)
             )
             self.send_one(
                 response=UtilityModule.generate_response(
@@ -149,10 +164,11 @@ class UserHandler(LineReceiver, ABC):
             )
 
     def connectionLost(self,
-                       reason=twisted_error):
+                       reason=twisted_error
+                       ):
         """
         Deleting connection from connections list if lost
-        :param reason:
+        :param reason: Why connection is lost
         :return:
         """
 
@@ -170,7 +186,10 @@ class UserHandler(LineReceiver, ABC):
                            f"-> Reason: {reason.getErrorMessage()}"
                 )
 
-    def generate_loot(self, action: str, json_data: Any) -> None:
+    def generate_loot(self,
+                      action: str,
+                      json_data: Any
+                      ) -> None:
         """
         Method to generate loot after passing the dungeon
         :param action: String used to generate response
@@ -178,34 +197,56 @@ class UserHandler(LineReceiver, ABC):
         :return:
         """
 
-        if self.connected_users[self.user_key]['main']['dungeon']:  # fixme check if dungeon complete
-            available_loot = self.cursor.get_loot()
-            self.connected_users[self.user_key]['main']['dungeon']['passed'] = True
-            result = LootModule.LootModule(
-                dungeon=self.connected_users[self.user_key]['main']['dungeon']['skeleton'],
-                player=self.player,
-                loot=available_loot)
-            self.send_one(
-                response=UtilityModule.generate_response(
-                    action=action,
-                    code=204,
-                    data=result.get_loot()
+        if self.connected_users[self.user_key].get('authorized'):
+            if self.connected_users[self.user_key]['main']['dungeon']:  # fixme check if dungeon complete
+                available_loot = self.cursor.get_loot()
+                self.connected_users[self.user_key]['main']['dungeon']['passed'] = True
+                result = LootModule.LootModule(
+                    dungeon=self.connected_users[self.user_key]['main']['dungeon']['skeleton'],
+                    player=self.player,
+                    loot=available_loot
                 )
-            )
-            del result
-            del available_loot
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=204,
+                        data=result.get_loot()
+                    )
+                )
+                del result
+                del available_loot
+            else:
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=410
+                    )
+                )
         else:
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,
-                    code=410
+                    code=406
                 )
             )
 
-    def level_up(self, action: str, json_data: Any) -> None:
-        pass # TODO
+    def level_up(self,
+                 action: str,
+                 json_data: Any
+                 ) -> None:
+        """
+        Method used for leveling up the player if needed experience is being toke
+        :param action:String used to generate response
+        :param json_data: Received data from the client
+        :return:
+        """
 
-    def start_battle(self, action: str, json_data: Any) -> None:
+        pass  # TODO
+
+    def start_battle(self,
+                     action: str,
+                     json_data: Any
+                     ) -> None:
         """
         Method for invoking battle between a player and given enemy
         :param action: String used to generate response
@@ -217,7 +258,7 @@ class UserHandler(LineReceiver, ABC):
             player=self.player,
             battle_data=json_data['data']
         ).battle_result()
-        pprint(battle)
+        # pprint(battle)
         self.send_one(
             response=UtilityModule.generate_response(
                 action=action,
@@ -225,11 +266,12 @@ class UserHandler(LineReceiver, ABC):
                 data=battle
             )
         )
-        pass  # TODO
+        del battle
 
     def send_private_message(self,
                              action: str,
-                             json_data: Any) -> None:
+                             json_data: Any
+                             ) -> None:
         """
         Sending message to the another specified user from a specified player
         :param action: String used to generate response
@@ -251,7 +293,7 @@ class UserHandler(LineReceiver, ABC):
                     data=data
                 )
             )
-        except ChatExceptions.ChatException as chat_exception:
+        except ChatExceptions.ChatException:
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,
@@ -261,13 +303,15 @@ class UserHandler(LineReceiver, ABC):
 
     def send_chat_message(self,
                           action: str,
-                          json_data: Any) -> None:
+                          json_data: Any
+                          ) -> None:
         """
         Sending message to the cat from a specified player
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
+
         data = {
             'from': self.player.player_name,
             'message': json_data['data']['message']
@@ -282,13 +326,15 @@ class UserHandler(LineReceiver, ABC):
 
     def player_registration(self,
                             action: str,
-                            json_data: Any) -> None:
+                            json_data: Any
+                            ) -> None:
         """
         Registration of specified player
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
+
         try:
 
             if self.cursor.check_player_name(
@@ -320,6 +366,10 @@ class UserHandler(LineReceiver, ABC):
                     priority=3,
                     string=f"Player < {json_data['data']['player_name']} > successfully registered"
                 )
+                self.log_user_registration(
+                        username=json_data['data']['player_name'],
+                        password=json_data['data']['player_password']
+                )
 
         except DBExceptions.QueryExecuteError as query_exec_error:
             self.send_one(
@@ -330,12 +380,13 @@ class UserHandler(LineReceiver, ABC):
             )
             self.log_file.log_all(
                 priority=2,
-                string=query_exec_error
+                string=str(query_exec_error)
             )
 
     def player_authorization(self,
                              action: str,
-                             json_data: Any) -> None:
+                             json_data: Any
+                             ) -> None:
         """
         Authorization of specified player
         :param action: String used to generate response
@@ -343,12 +394,16 @@ class UserHandler(LineReceiver, ABC):
         :return:
         """
 
-        def check_for_user_in_system(player_name) -> bool:
+        def check_for_user_in_system(player_username) -> bool:
+            """
+            method to check if user is being already authorized
+            :param player_username: Player username to check in connected users
+            :return:
+            """
+
             for uid, user in self.connected_users.items():
-                # print("Suka", uid)
                 if user['authorized']:
-                    if user['main']['player_name'] == player_name:
-                        # print("blyat")
+                    if user['main']['player_name'] == player_username:
                         return False
             return True
 
@@ -415,18 +470,20 @@ class UserHandler(LineReceiver, ABC):
             )
             self.log_file.log_all(
                 priority=2,
-                string=query_exec_error
+                string=str(query_exec_error)
             )
 
     def get_dungeon_skeleton(self,
                              action: str,
-                             json_data: Any) -> None:
+                             json_data: Any
+                             ) -> None:
         """
         Generate and send dungeon skeleton for the player
         :param action: String used to generate response
         :param json_data: Received data from the client
         :return:
         """
+
         try:
             if self.connected_users[self.user_key].get('authorized'):
                 skeleton = self.dungeon_generator.final_dungeon_skeleton(
@@ -456,7 +513,7 @@ class UserHandler(LineReceiver, ABC):
         except Exception as exception:
             self.log_file.log_all(
                 priority=2,
-                string=exception
+                string=str(exception)
             )
             self.send_one(
                 response=UtilityModule.generate_response(
@@ -466,12 +523,14 @@ class UserHandler(LineReceiver, ABC):
             )
 
     def send_all(self,
-                 message: bytes) -> None:
+                 message: bytes
+                 ) -> None:
         """
         Sending message to al authorized users
         :param message: Json object to send for all authorized users
         :return:
         """
+
         self.log_to_debug(
                 line=f"Send_All: {message}"
                 )
@@ -484,13 +543,15 @@ class UserHandler(LineReceiver, ABC):
                 )
 
     def send_one(self,
-                 response: bytes) -> None:
+                 response: bytes
+                 ) -> None:
         """
-        Send response from server
-        :param response:
+        Send response from the server to the current user
+        :param response: Response to send
         :return:
         """
-        pprint(json.loads(response), width=120)
+        
+        # pprint(json.loads(response), width=120)
         self.log_to_debug(
             line=f"Send_One: {response} "
             )
@@ -500,13 +561,15 @@ class UserHandler(LineReceiver, ABC):
 
     def send_to_spec_user(self,
                           to_player: str,
-                          message: bytes) -> None:
+                          message: bytes
+                          ) -> None:
         """
         Send a message to specified user from user
         :param to_player: User whom to send
         :param message: Message to send
         :return:
         """
+
         self.log_to_debug(
                 line=f"Send_To_Spec: {message}"
                 )

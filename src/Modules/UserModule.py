@@ -3,7 +3,13 @@ from src.Modules import UtilityModule
 
 
 class UserModule(Player):
-    def __init__(self, player_data):
+    """
+    Class which represents UserModule
+    """
+
+    def __init__(self,
+                 player_data: dict
+                 ):
         super().__init__()
         self.player_id = player_data.get('main')[0]['player_id']
         self.player_name = player_data.get('main')[0]['player_name']

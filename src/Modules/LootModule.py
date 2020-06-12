@@ -20,12 +20,18 @@ class LootModule:
     Class representing loot module generator
     """
 
-    def __init__(self, dungeon: dict, player: UserModule, loot: dict):
+    def __init__(self,
+                 dungeon: dict,
+                 player: UserModule,
+                 loot: dict
+                 ):
         self.dungeon = dungeon
         self.loot = loot
         self.player = player
 
-    def get_random_exp(self, mob: dict) -> int:
+    def get_random_exp(self,
+                       mob: dict
+                       ) -> int:
         """
         Generate random experience value depending on mob level
         :param mob: Mob info
@@ -87,7 +93,8 @@ class LootModule:
 
             if count_food > len(final_food):
                 final_food[item_id] = self.generate_item(
-                    item_type="food")
+                    item_type="food"
+                )
 
             if count_armor-1 > len(final_armor):
                 final_armor[item_id] = self.generate_item(
@@ -113,7 +120,9 @@ class LootModule:
             "food": final_food
         }
 
-    def generate_item(self, item_type: str) -> dict:
+    def generate_item(self,
+                      item_type: str
+                      ) -> dict:
         """
         Generate item for loot
         :param item_type: Type of generated item

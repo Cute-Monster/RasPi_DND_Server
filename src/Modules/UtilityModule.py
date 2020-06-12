@@ -52,11 +52,22 @@ def generate_response(action=None,
 
     # json.dumps(response)
 
-    return bytes(str(json.dumps(response)), "utf8")
+    return bytes(
+        str(json.dumps(response)),
+        "utf8"
+    )
 
 
 def serialize_data(data,
-                   column: str) -> dict:
+                   column: str
+                   ) -> dict:
+    """
+    Method for serializing user data taken from DataBase
+    :param data: Data to serialize
+    :param column: Column name
+    :return:
+    """
+
     end_data = {}
 
     for items in data.get(column):
@@ -78,4 +89,9 @@ def encrypt_password(player_password: str):
     salt = 'c;]¥Îdå<}Òux¶zCnÖÉóL×ð«&hBè~§Á[ÃF¡v©"Õ,(/P,' \
            'M}Dbëç³çÚ^}°*çµ¹rbÔÁi)xÚè¨2iûÿVLE9)®8ó¥ðt@Ô.]×nïf"ÏC`vzínÑÁpFôwVWÆ6;á©>_À¼mjû¿úõM\'R:7 '
 
-    return hashlib.md5(bytes("{}".format(salt + player_password), "utf-8")).hexdigest()
+    return hashlib.md5(
+        bytes(
+            "{}".format(salt + player_password),
+            "utf-8"
+        )
+    ).hexdigest()
