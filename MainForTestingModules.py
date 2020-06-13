@@ -48,7 +48,6 @@ if __name__ == '__main__':
         pprint.pprint(player.get_player())
         print("\n Mob \n")
         pprint.pprint(mob)
-
         battle = BattleModule(player, {
                                 "player_attack_id": 4,
                                 "mob": mob

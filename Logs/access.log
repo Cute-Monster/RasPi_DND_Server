@@ -1905,3 +1905,21 @@
 2020-06-12 02:47:56.669195 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 40271
 2020-06-12 02:47:56.787618 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
 2020-06-12 02:47:56.791359 | __main__ | INFO | Started
+2020-06-13 16:28:30.996618 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-13 16:28:30.996922 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 44423
+2020-06-13 16:28:31.113398 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 16:28:31.118377 | __main__ | INFO | Started
+2020-06-13 16:39:09.404543 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-13 16:39:09.404817 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38419
+2020-06-13 16:39:09.521113 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 16:39:09.525783 | __main__ | INFO | Started
+2020-06-13 16:44:26.864661 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-13 16:44:26.864945 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 46235
+2020-06-13 16:44:26.981222 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 16:44:26.986281 | __main__ | INFO | Started
+2020-06-13 16:48:34.233069 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-13 16:48:34.233811 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 43463
+2020-06-13 16:48:34.350917 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 16:48:34.354381 | __main__ | INFO | Started
+2020-06-13 16:48:39.826003 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 172.17.0.1:49602 Connected to server
+2020-06-13 16:50:07.188949 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 172.17.0.1:49602 -> Reason: Connection was closed cleanly.
