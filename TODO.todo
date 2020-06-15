@@ -9,7 +9,7 @@ TODO:
         [+] dungeon skeleton
         [+] loot after passing dungeon
     [ ] User level system
-        [+] level up
+        [ ] level up
         [ ] ...
     [ ] Updating user information in the DataBase
     [+] Dungeon skeleton system
