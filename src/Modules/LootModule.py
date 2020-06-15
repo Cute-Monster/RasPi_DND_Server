@@ -12,7 +12,6 @@ __status__ = "Developing"
 
 import random
 from .UserModule import UserModule
-from pprint import pprint
 
 
 class LootModule:
@@ -20,12 +19,18 @@ class LootModule:
     Class representing loot module generator
     """
 
-    def __init__(self, dungeon: dict, player: UserModule, loot: dict):
+    def __init__(self,
+                 dungeon: dict,
+                 player: UserModule,
+                 loot: dict
+                 ):
         self.dungeon = dungeon
         self.loot = loot
         self.player = player
 
-    def get_random_exp(self, mob: dict) -> int:
+    def _get_random_exp(self,
+                        mob: dict
+                        ) -> int:
         """
         Generate random experience value depending on mob level
         :param mob: Mob info
@@ -42,9 +47,9 @@ class LootModule:
                 )
             )
         except ValueError:
-            return self.get_random_exp(mob)
+            return self._get_random_exp(mob)
 
-    def set_item_level(self) -> int:
+    def _set_item_level(self) -> int:
         """
         Generate random level depending on players level
         :return:
@@ -60,10 +65,9 @@ class LootModule:
     def get_loot(self) -> dict:
         """
         Method to generate loot
-        :return:
+        :return: Dictionary containing generated loot by category
         """
 
-        # pprint(self.loot)
         final_weapons = {}
         final_armor = {}
         final_food = {}
@@ -78,42 +82,32 @@ class LootModule:
         for uid, room in self.dungeon['mobs'].items():
             mob_counter = len(room)
             for mob_id, mob in room.items():
-                exp += round(self.get_random_exp(mob) / mob_counter)
+                exp += round(self._get_random_exp(mob) / mob_counter)
 
             if count_weapons-1 > len(final_weapons):
-                final_weapons[item_id] = self.generate_item(
+                final_weapons[item_id] = self._generate_item(
                     item_type="weapons"
                 )
 
             if count_food > len(final_food):
-                final_food[item_id] = self.generate_item(
+                final_food[item_id] = self._generate_item(
                     item_type="food")
 
             if count_armor-1 > len(final_armor):
-                final_armor[item_id] = self.generate_item(
+                final_armor[item_id] = self._generate_item(
                     item_type="armor"
                 )
 
             item_id += 1
 
-        # print(f"Weapons_Count: {count_weapons}\n"
-        #       f"Rooms_Count: {count_rooms}\n"
-        #       f"count_food: {count_food}\n"
-        #       f"count_armor: {count_armor}")
-
-        # print(f"\nFinal Loot:\n"
-        #       f"final_armor: {len(final_armor)}\n"
-        #       f"final_weapons: {len(final_weapons)}\n"
-        #       f"final_food: {len(final_food)}\n")
-
         return {
-            "total_exp": exp,
+            "level": exp,
             "armor": final_armor,
             "weapons": final_weapons,
             "food": final_food
         }
 
-    def generate_item(self, item_type: str) -> dict:
+    def _generate_item(self, item_type: str) -> dict:
         """
         Generate item for loot
         :param item_type: Type of generated item
@@ -121,5 +115,5 @@ class LootModule:
         """
         item = random.choice(self.loot[item_type]).copy()
         del item[f'{item_type}_id']
-        item['lvl'] = self.set_item_level()
+        item['lvl'] = self._set_item_level()
         return item

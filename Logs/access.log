@@ -1923,3 +1923,807 @@
 2020-06-13 16:48:34.354381 | __main__ | INFO | Started
 2020-06-13 16:48:39.826003 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 172.17.0.1:49602 Connected to server
 2020-06-13 16:50:07.188949 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 172.17.0.1:49602 -> Reason: Connection was closed cleanly.
+2020-06-13 21:38:58.384842 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54466 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-13 21:40:19.061996 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 21:40:19.067889 | __main__ | INFO | Started
+2020-06-13 20:08:57.270067 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Connection error: 2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)
+2020-06-13 23:20:25.908359 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-13 23:20:25.913185 | __main__ | INFO | Started
+2020-06-13 23:27:29.982024 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Connection error: 2003: Can't connect to MySQL server on 'localhost:3306' (111 Connection refused)
+2020-06-14 00:45:56.279566 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 00:45:56.292630 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 45875
+2020-06-14 00:45:56.712380 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 00:45:56.728518 | __main__ | INFO | Started
+2020-06-14 00:46:01.759642 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:34136 Connected to server
+2020-06-14 00:47:10.602296 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:34136 -> Reason: Connection was closed cleanly.
+2020-06-14 04:10:32.896108 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:41120 Connected to server
+2020-06-14 04:10:38.346579 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-14 04:10:44.792157 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:41120 -> Reason: Connection was closed cleanly.
+2020-06-14 12:08:41.709732 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54424 Connected to server
+2020-06-14 12:08:54.596456 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test6 > successfully authorized
+2020-06-14 12:09:15.326992 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54424 -> Reason: Connection was closed cleanly.
+2020-06-14 12:20:08.456369 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55137 Connected to server
+2020-06-14 12:20:48.255459 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test4 > successfully authorized
+2020-06-14 18:01:15.024370 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55137 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-14 18:01:45.718110 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 18:01:45.852537 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 37863
+2020-06-14 18:01:46.214346 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 18:01:46.229795 | __main__ | INFO | Started
+2020-06-14 19:36:00.387269 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 19:36:00.387886 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 43553
+2020-06-14 19:36:00.589924 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 19:36:23.417186 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 19:36:23.417755 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38289
+2020-06-14 19:36:23.617500 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 19:36:23.627013 | __main__ | INFO | Started
+2020-06-14 19:36:40.277959 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:46028 Connected to server
+2020-06-14 19:36:59.881192 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:46028 -> Reason: Connection was closed cleanly.
+2020-06-14 19:46:05.767157 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 19:46:05.767859 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 32865
+2020-06-14 19:46:05.965299 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 19:46:05.974241 | __main__ | INFO | Started
+2020-06-14 19:46:12.408138 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:51642 Connected to server
+2020-06-14 19:46:24.249800 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-14 19:48:58.925713 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:51642 -> Reason: Connection was closed cleanly.
+2020-06-14 19:53:57.787006 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 19:53:57.787719 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 37475
+2020-06-14 19:53:57.988850 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 19:53:57.998319 | __main__ | INFO | Started
+2020-06-14 19:59:21.837341 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 19:59:21.838091 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38237
+2020-06-14 19:59:22.036870 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 19:59:22.046215 | __main__ | INFO | Started
+2020-06-14 19:59:27.859484 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:51948 Connected to server
+2020-06-14 19:59:33.601448 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:51948 -> Reason: Connection was closed cleanly.
+2020-06-14 20:07:23.727197 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 20:07:23.727930 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33433
+2020-06-14 20:07:23.927584 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 20:07:23.936466 | __main__ | INFO | Started
+2020-06-14 20:07:37.518172 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:52224 Connected to server
+2020-06-14 20:08:05.346905 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:52224 -> Reason: Connection was closed cleanly.
+2020-06-14 20:08:10.392616 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:52266 Connected to server
+2020-06-14 20:08:11.902060 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-14 20:08:16.767203 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:52266 -> Reason: Connection was closed cleanly.
+2020-06-14 20:18:00.537663 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 20:18:00.538390 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38035
+2020-06-14 20:18:00.739705 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 20:18:00.959692 | <class 'src.DB.DBCore.DBCore'> | INFO | Database Connection closed
+2020-06-14 20:18:01.026620 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH tunnel closed
+2020-06-14 20:35:13.367938 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-14 20:35:13.368749 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33827
+2020-06-14 20:35:13.569689 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-14 20:35:13.590122 | <class 'src.DB.DBCore.DBCore'> | INFO | Database Connection closed
+2020-06-14 20:35:13.656120 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH tunnel closed
+2020-06-14 21:30:56.933204 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:63178 Connected to server
+2020-06-14 21:31:02.497578 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test6 > successfully authorized
+2020-06-14 21:31:05.225531 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:63178 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 21:32:12.402323 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:55134 Connected to server
+2020-06-14 21:33:40.352508 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:63267 Connected to server
+2020-06-14 21:33:52.059196 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 21:33:55.748278 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:55134 -> Reason: Connection was closed cleanly.
+2020-06-14 21:34:03.057088 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:63267 -> Reason: Connection was closed cleanly.
+2020-06-14 21:36:37.192530 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:63417 Connected to server
+2020-06-14 21:36:47.749222 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:63417 -> Reason: Connection was closed cleanly.
+2020-06-14 21:37:25.792392 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:63434 Connected to server
+2020-06-14 21:37:31.669004 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 21:39:01.507208 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:63434 -> Reason: Connection was closed cleanly.
+2020-06-14 21:39:11.743637 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:63510 Connected to server
+2020-06-14 21:39:18.540244 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 21:39:30.667697 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:63510 -> Reason: Connection was closed cleanly.
+2020-06-14 22:13:58.162756 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:64939 Connected to server
+2020-06-14 22:14:04.438499 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:17:05.553868 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:64939 -> Reason: Connection was closed cleanly.
+2020-06-14 22:17:10.133102 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:65094 Connected to server
+2020-06-14 22:17:15.252355 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:17:34.502475 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:65094 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 22:18:05.723034 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:65137 Connected to server
+2020-06-14 22:18:12.611952 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:21:37.542970 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:65137 -> Reason: Connection was closed cleanly.
+2020-06-14 22:21:42.782331 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:65309 Connected to server
+2020-06-14 22:21:48.531676 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:22:19.972430 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:65309 -> Reason: Connection was closed cleanly.
+2020-06-14 22:22:28.772378 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:65374 Connected to server
+2020-06-14 22:22:33.833197 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:23:44.732564 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:65374 -> Reason: Connection was closed cleanly.
+2020-06-14 22:23:48.353081 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:65398 Connected to server
+2020-06-14 22:23:54.201445 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:26:51.780828 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:65398 -> Reason: Connection was closed cleanly.
+2020-06-14 22:27:00.042662 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:49235 Connected to server
+2020-06-14 22:27:04.461604 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:27:11.554732 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:49235 -> Reason: Connection was closed cleanly.
+2020-06-14 22:28:07.432744 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:49280 Connected to server
+2020-06-14 22:28:11.481846 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:28:42.581944 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:49280 -> Reason: Connection was closed cleanly.
+2020-06-14 22:54:42.312507 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50334 Connected to server
+2020-06-14 22:54:46.611311 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:55:36.116878 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50334 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 22:55:38.682678 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50357 Connected to server
+2020-06-14 22:55:43.187243 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:56:18.287833 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50357 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 22:56:20.882881 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50435 Connected to server
+2020-06-14 22:56:25.886929 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 22:56:40.775893 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50435 -> Reason: Connection was closed cleanly.
+2020-06-14 22:58:26.012575 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50520 Connected to server
+2020-06-14 22:58:31.461892 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:00:15.089951 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50520 -> Reason: Connection was closed cleanly.
+2020-06-14 23:00:18.422838 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50619 Connected to server
+2020-06-14 23:00:23.721978 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:00:42.522577 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50619 -> Reason: Connection was closed cleanly.
+2020-06-14 23:02:12.042690 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:50727 Connected to server
+2020-06-14 23:02:13.955128 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:50727 -> Reason: Connection was closed cleanly.
+2020-06-14 23:08:53.472555 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51033 Connected to server
+2020-06-14 23:08:57.652199 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:09:27.621645 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51033 -> Reason: Connection was closed cleanly.
+2020-06-14 23:09:34.153922 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51051 Connected to server
+2020-06-14 23:09:39.278210 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:10:24.028493 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51051 -> Reason: Connection was closed cleanly.
+2020-06-14 23:10:27.862682 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51123 Connected to server
+2020-06-14 23:10:29.620256 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51123 -> Reason: Connection was closed cleanly.
+2020-06-14 23:11:19.022831 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51147 Connected to server
+2020-06-14 23:11:23.868485 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:11:45.453521 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51147 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 23:11:50.762648 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51168 Connected to server
+2020-06-14 23:11:56.408099 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:12:59.044920 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51168 -> Reason: Connection was closed cleanly.
+2020-06-14 23:13:03.043010 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51232 Connected to server
+2020-06-14 23:13:08.179590 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:13:27.100038 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51232 -> Reason: Connection was closed cleanly.
+2020-06-14 23:14:15.742551 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51304 Connected to server
+2020-06-14 23:14:20.389502 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:15:38.995889 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51304 -> Reason: Connection was closed cleanly.
+2020-06-14 23:15:42.302621 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51332 Connected to server
+2020-06-14 23:15:46.348281 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:16:29.622952 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51332 -> Reason: Connection was closed cleanly.
+2020-06-14 23:16:33.142926 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51407 Connected to server
+2020-06-14 23:16:39.718542 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:16:54.260759 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51407 -> Reason: Connection was closed cleanly.
+2020-06-14 23:16:57.692702 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51422 Connected to server
+2020-06-14 23:17:02.568549 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:17:25.844941 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51422 -> Reason: Connection was closed cleanly.
+2020-06-14 23:17:30.592751 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51439 Connected to server
+2020-06-14 23:17:35.500074 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:17:48.668530 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51439 -> Reason: Connection was closed cleanly.
+2020-06-14 23:17:52.742838 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51462 Connected to server
+2020-06-14 23:17:58.930442 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:20:22.846917 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51462 -> Reason: Connection was closed cleanly.
+2020-06-14 23:20:27.293932 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51600 Connected to server
+2020-06-14 23:20:31.870840 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:21:01.638279 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51600 -> Reason: Connection was closed cleanly.
+2020-06-14 23:21:04.962797 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51623 Connected to server
+2020-06-14 23:21:10.190197 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:23:14.711310 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51623 -> Reason: Connection was closed cleanly.
+2020-06-14 23:23:18.043016 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51705 Connected to server
+2020-06-14 23:23:22.049329 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:23:34.453081 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51705 -> Reason: Connection was closed cleanly.
+2020-06-14 23:25:13.862953 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:51785 Connected to server
+2020-06-14 23:25:19.850701 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:25:26.765330 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:51785 -> Reason: Connection was closed cleanly.
+2020-06-14 23:56:06.922680 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53288 Connected to server
+2020-06-14 23:56:11.092414 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:56:53.913083 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53288 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 23:56:57.032676 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53308 Connected to server
+2020-06-14 23:57:01.031507 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:57:11.512774 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53308 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 23:57:13.952564 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53319 Connected to server
+2020-06-14 23:57:17.925038 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:57:23.915956 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53319 -> Reason: Connection was closed cleanly.
+2020-06-14 23:57:43.082457 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53511 Connected to server
+2020-06-14 23:57:47.660695 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:57:58.019394 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53511 -> Reason: Connection was closed cleanly.
+2020-06-14 23:58:45.592605 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53592 Connected to server
+2020-06-14 23:58:54.202062 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-14 23:59:39.888136 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53592 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-14 23:59:42.292380 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53611 Connected to server
+2020-06-14 23:59:47.580477 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:00:01.708663 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53611 -> Reason: Connection was closed cleanly.
+2020-06-15 00:00:36.512505 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53669 Connected to server
+2020-06-15 00:00:40.970596 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:00:45.036330 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53669 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-15 00:00:58.143034 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53683 Connected to server
+2020-06-15 00:01:03.381686 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:02:12.606708 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53683 -> Reason: Connection was closed cleanly.
+2020-06-15 00:02:16.082980 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53747 Connected to server
+2020-06-15 00:02:20.951923 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:02:35.574724 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53747 -> Reason: Connection was closed cleanly.
+2020-06-15 00:03:10.483187 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53768 Connected to server
+2020-06-15 00:03:15.181556 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:03:43.884482 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53768 -> Reason: Connection was closed cleanly.
+2020-06-15 00:04:51.272316 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53810 Connected to server
+2020-06-15 00:04:55.280917 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:05:08.732366 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53810 -> Reason: Connection was closed cleanly.
+2020-06-15 00:09:02.842693 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53901 Connected to server
+2020-06-15 00:09:07.069396 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:12:02.323599 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:58926 Connected to server
+2020-06-15 00:12:06.006177 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:58926 -> Reason: 'utf-8' codec can't decode byte 0xd1 in position 2: invalid continuation byte
+2020-06-15 00:12:16.472349 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:58934 Connected to server
+2020-06-15 00:12:18.473259 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:12:47.899957 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:58934 -> Reason: Connection was closed cleanly.
+2020-06-15 00:13:09.489491 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53901 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-15 00:13:12.982732 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54022 Connected to server
+2020-06-15 00:13:15.623596 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:58956 Connected to server
+2020-06-15 00:13:18.941098 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:13:20.048790 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test4 > successfully authorized
+2020-06-15 00:13:44.607581 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54022 -> Reason: Connection was closed cleanly.
+2020-06-15 00:15:58.768209 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 00:15:58.768931 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33421
+2020-06-15 00:15:58.966676 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 00:15:58.976040 | __main__ | INFO | Started
+2020-06-15 00:16:18.260416 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:58956 -> Reason: Connection was closed cleanly.
+2020-06-15 00:16:22.009010 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:53790 Connected to server
+2020-06-15 00:16:26.603216 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:16:47.113505 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:53790 -> Reason: Connection was closed cleanly.
+2020-06-15 00:17:00.483351 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54555 Connected to server
+2020-06-15 00:17:07.489118 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:17:17.803079 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54555 -> Reason: Connection was closed cleanly.
+2020-06-15 00:29:02.593133 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54823 Connected to server
+2020-06-15 00:29:08.790722 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:29:47.482032 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54823 -> Reason: Connection was closed cleanly.
+2020-06-15 00:29:54.783135 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54859 Connected to server
+2020-06-15 00:29:59.189142 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:30:16.844682 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54859 -> Reason: Connection was closed cleanly.
+2020-06-15 00:30:21.083320 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54878 Connected to server
+2020-06-15 00:30:25.460679 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:30:46.534274 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54878 -> Reason: Connection was closed cleanly.
+2020-06-15 00:30:51.232968 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54924 Connected to server
+2020-06-15 00:30:55.179551 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:31:13.531846 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54924 -> Reason: Connection was closed cleanly.
+2020-06-15 00:31:18.412599 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54939 Connected to server
+2020-06-15 00:31:23.968561 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:31:53.892795 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54939 -> Reason: Connection was closed cleanly.
+2020-06-15 00:32:09.543862 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:54977 Connected to server
+2020-06-15 00:32:13.940678 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:32:19.467606 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:33:40.885337 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:54977 -> Reason: Connection was closed cleanly.
+2020-06-15 00:33:52.541069 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55020 Connected to server
+2020-06-15 00:33:58.586922 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:34:03.731800 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:34:41.972960 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55020 -> Reason: Connection was closed cleanly.
+2020-06-15 00:37:07.283067 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55100 Connected to server
+2020-06-15 00:37:15.751260 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:37:22.828527 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:38:54.949310 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55100 -> Reason: Connection was closed cleanly.
+2020-06-15 00:38:58.383318 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55142 Connected to server
+2020-06-15 00:39:08.172457 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:39:13.017279 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:41:09.947209 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 00:41:09.947776 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 44837
+2020-06-15 00:41:10.149415 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 00:41:10.158867 | __main__ | INFO | Started
+2020-06-15 00:44:16.818756 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55314 Connected to server
+2020-06-15 00:44:22.644992 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 2 (char 1)
+2020-06-15 00:44:27.917634 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55314 -> Reason: Connection to the other side was lost in a non-clean fashion.
+2020-06-15 00:44:42.882996 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55331 Connected to server
+2020-06-15 00:44:47.569143 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:44:50.542087 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 00:50:10.925539 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55331 -> Reason: Connection was closed cleanly.
+2020-06-15 00:50:15.063644 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55479 Connected to server
+2020-06-15 00:50:23.289611 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:51:13.016041 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55479 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 00:52:54.667986 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 00:52:54.668718 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 40135
+2020-06-15 00:52:54.869246 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 00:52:54.878963 | __main__ | INFO | Started
+2020-06-15 00:53:25.168426 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55542 Connected to server
+2020-06-15 00:53:33.659456 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:53:54.451579 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55542 -> Reason: Connection was closed cleanly.
+2020-06-15 00:54:00.972622 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55572 Connected to server
+2020-06-15 00:54:06.652395 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:55:05.455707 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55572 -> Reason: Connection was closed cleanly.
+2020-06-15 00:55:09.253331 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55599 Connected to server
+2020-06-15 00:55:13.900959 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:55:40.095772 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55599 -> Reason: Connection was closed cleanly.
+2020-06-15 00:55:43.364061 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55619 Connected to server
+2020-06-15 00:55:47.701639 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:56:02.063424 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55619 -> Reason: Connection was closed cleanly.
+2020-06-15 00:56:05.563571 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55655 Connected to server
+2020-06-15 00:56:11.580969 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 00:56:42.239250 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55655 -> Reason: Connection was closed cleanly.
+2020-06-15 00:56:46.073221 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55674 Connected to server
+2020-06-15 00:56:51.012328 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:03:55.139101 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55674 -> Reason: Connection was closed cleanly.
+2020-06-15 01:06:53.892746 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55948 Connected to server
+2020-06-15 01:06:58.742099 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:07:49.045217 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55948 -> Reason: Connection was closed cleanly.
+2020-06-15 01:07:53.132452 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55985 Connected to server
+2020-06-15 01:07:59.057363 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:09:31.069683 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55985 -> Reason: Connection was closed cleanly.
+2020-06-15 01:09:34.322505 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56120 Connected to server
+2020-06-15 01:09:38.859295 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:10:16.426429 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56120 -> Reason: Connection was closed cleanly.
+2020-06-15 01:10:18.482638 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56181 Connected to server
+2020-06-15 01:10:23.429932 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:12:16.932684 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56181 -> Reason: Connection was closed cleanly.
+2020-06-15 01:12:20.132572 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56233 Connected to server
+2020-06-15 01:12:24.739560 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:13:16.492183 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56233 -> Reason: Connection was closed cleanly.
+2020-06-15 01:13:19.812613 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56254 Connected to server
+2020-06-15 01:13:23.155723 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:13:44.162937 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56254 -> Reason: Connection was closed cleanly.
+2020-06-15 01:13:47.464373 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56267 Connected to server
+2020-06-15 01:13:51.791990 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:14:41.411100 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56267 -> Reason: Connection was closed cleanly.
+2020-06-15 01:14:44.623273 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56303 Connected to server
+2020-06-15 01:14:47.350483 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:15:07.397378 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56303 -> Reason: Connection was closed cleanly.
+2020-06-15 01:20:16.263243 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56499 Connected to server
+2020-06-15 01:20:21.189487 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:20:53.829110 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56499 -> Reason: Connection was closed cleanly.
+2020-06-15 01:20:57.883185 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56517 Connected to server
+2020-06-15 01:21:01.830527 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 01:21:10.851262 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56517 -> Reason: Connection was closed cleanly.
+2020-06-15 11:02:02.293197 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:52498 Connected to server
+2020-06-15 11:02:09.968929 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 11:02:28.942446 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:52498 -> Reason: Connection was closed cleanly.
+2020-06-15 11:50:04.593064 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55294 Connected to server
+2020-06-15 11:50:16.911235 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 11:55:00.167494 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55294 -> Reason: Connection was closed cleanly.
+2020-06-15 11:55:43.683219 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55408 Connected to server
+2020-06-15 11:55:49.851957 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 11:55:59.015760 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55408 -> Reason: Connection was closed cleanly.
+2020-06-15 11:56:31.243463 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55425 Connected to server
+2020-06-15 11:56:41.702508 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 11:57:18.986473 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55425 -> Reason: Connection was closed cleanly.
+2020-06-15 11:57:42.553293 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55466 Connected to server
+2020-06-15 11:57:50.123429 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:55478 Connected to server
+2020-06-15 11:57:54.551269 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 11:57:59.623123 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:55478 -> Reason: Connection was closed cleanly.
+2020-06-15 12:09:33.704442 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:56123 Connected to server
+2020-06-15 12:09:41.359471 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 12:39:56.995409 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 31.31.21.1:58629 Connected to server
+2020-06-15 12:40:25.505528 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 31.31.21.1:58629 -> Reason: Connection was closed cleanly.
+2020-06-15 12:40:44.873136 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 31.31.21.1:58905 Connected to server
+2020-06-15 13:00:41.192336 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:56123 -> Reason: Connection was closed cleanly.
+2020-06-15 13:16:21.353103 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:58830 Connected to server
+2020-06-15 13:16:27.019594 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 13:16:37.412065 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:58830 -> Reason: Connection was closed cleanly.
+2020-06-15 13:19:02.813225 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:58926 Connected to server
+2020-06-15 13:19:07.361250 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 13:19:24.722667 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:58926 -> Reason: Connection was closed cleanly.
+2020-06-15 17:17:41.078167 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:17:41.078715 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 40953
+2020-06-15 17:17:41.277213 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:17:41.286641 | __main__ | INFO | Started
+2020-06-15 17:17:47.313308 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:42802 Connected to server
+2020-06-15 17:17:51.042493 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:42802 -> Reason: Connection was closed cleanly.
+2020-06-15 17:17:53.610183 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.611774 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.613018 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.614225 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.615451 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.616657 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.617861 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.619085 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.620363 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.621632 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.622858 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.624119 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.625325 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.626527 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.627754 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.628962 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.630167 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.631450 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.632658 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.633883 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.635096 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:17:53.642889 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49596 Connected to server
+2020-06-15 17:18:04.969496 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:18:15.606248 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:18:15.613684 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:19:09.313625 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49596 -> Reason: Connection was closed cleanly.
+2020-06-15 17:19:51.987496 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:19:51.988235 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38263
+2020-06-15 17:19:52.190989 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:19:52.200192 | __main__ | INFO | Started
+2020-06-15 17:21:18.047467 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:21:18.048019 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33809
+2020-06-15 17:21:18.246856 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:21:18.255836 | __main__ | INFO | Started
+2020-06-15 17:21:27.070189 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.071882 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.073147 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.074374 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.075632 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.077167 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.078633 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.079899 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.081238 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.082513 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.083751 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.084985 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.086214 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.087447 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.088694 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.089918 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.091280 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.092512 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.093725 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.094939 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.096199 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:21:27.104167 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49622 Connected to server
+2020-06-15 17:21:29.367974 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:21:36.349920 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:21:36.360446 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:23:53.879999 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49622 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:24:04.108095 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:24:04.108787 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 42245
+2020-06-15 17:24:04.310446 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:24:04.319704 | __main__ | INFO | Started
+2020-06-15 17:24:06.540067 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.541728 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.543005 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.544243 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.545492 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.546737 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.547974 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.549193 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.550486 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.551736 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.552968 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.554190 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.555418 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.556645 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.557885 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.559108 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.560377 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.561625 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.562849 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.564068 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.565315 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:24:06.573082 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49660 Connected to server
+2020-06-15 17:24:11.440120 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:24:20.052641 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:24:20.057849 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:25:05.096338 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49660 -> Reason: Connection was closed cleanly.
+2020-06-15 17:27:48.448654 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:27:48.449337 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 35293
+2020-06-15 17:27:48.653147 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:27:48.662496 | __main__ | INFO | Started
+2020-06-15 17:27:48.764653 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.765361 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.765894 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.766418 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.766947 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.767472 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.768002 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.768523 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.769043 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.769661 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.770185 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.770816 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.771341 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.771855 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.772395 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.772907 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.773419 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.773931 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.774453 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.774975 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.775502 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:27:48.779004 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49694 Connected to server
+2020-06-15 17:27:53.199158 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:27:57.605258 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:27:57.613252 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:28:12.280522 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49694 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:29:11.177533 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:29:11.178256 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33751
+2020-06-15 17:29:11.381153 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:29:11.390184 | __main__ | INFO | Started
+2020-06-15 17:29:13.829847 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.831506 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.869570 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.871220 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.872610 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.873822 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.875014 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.876411 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.877751 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.878974 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.880164 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.881547 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.882731 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.883910 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.885106 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.886273 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.887441 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.888607 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.889777 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.891010 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.892217 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:29:13.899645 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49714 Connected to server
+2020-06-15 17:29:22.127919 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:29:26.001202 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:29:26.008352 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:33:14.057510 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49714 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:34:21.037696 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:34:21.038417 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 41631
+2020-06-15 17:34:21.238364 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:34:21.247615 | __main__ | INFO | Started
+2020-06-15 17:34:32.139742 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.141340 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.142589 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.143785 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.144987 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.146343 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.147578 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.148770 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.149957 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.151339 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.152534 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.153721 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.154894 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.156066 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.157259 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.158438 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.159614 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.160893 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.162146 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.163331 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.164532 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:34:32.172171 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49766 Connected to server
+2020-06-15 17:34:33.618174 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:34:37.836950 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:35:08.423691 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:35:08.441090 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:35:47.419719 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49766 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:36:44.157916 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:36:44.158473 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 43969
+2020-06-15 17:36:44.361321 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:36:44.370616 | __main__ | INFO | Started
+2020-06-15 17:36:50.700121 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.701735 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.702996 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.704220 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.705468 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.706703 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.707948 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.709168 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.710541 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.711845 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.713086 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.714329 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.715561 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.716778 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.718023 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.719243 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.720584 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.721810 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.723018 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.724218 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.725446 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:36:50.733264 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49812 Connected to server
+2020-06-15 17:36:54.010871 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:36:58.595723 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:36:58.604504 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:37:42.418996 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49812 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:37:53.067759 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:37:53.068317 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 33187
+2020-06-15 17:37:53.269175 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:37:53.278215 | __main__ | INFO | Started
+2020-06-15 17:37:58.320090 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.321775 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.333760 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.335357 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.336680 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.337929 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.339145 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.340481 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.341722 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.342937 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.344159 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.345377 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.346595 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.347803 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.349033 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.350240 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.351593 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.352803 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.354019 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.355236 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.356467 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:37:58.364637 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49818 Connected to server
+2020-06-15 17:38:00.117874 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:38:05.326405 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:38:05.334908 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:38:43.434045 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49818 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:38:54.647696 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:38:54.648416 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 38871
+2020-06-15 17:38:54.852103 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:38:54.861384 | __main__ | INFO | Started
+2020-06-15 17:40:31.776989 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:40:31.777721 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 40107
+2020-06-15 17:40:31.976427 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:40:31.985758 | __main__ | INFO | Started
+2020-06-15 17:40:35.400132 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.401762 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.403020 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.404250 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.405481 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.406734 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.407984 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.409209 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.410604 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.411902 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.413142 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.414370 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.415600 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.416821 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.418059 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.419275 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.420545 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.421774 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.422988 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.424198 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.425434 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:40:35.433151 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49892 Connected to server
+2020-06-15 17:40:37.083260 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:40:44.468454 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:40:44.478353 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:41:23.721476 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49892 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:42:44.367808 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:42:44.368526 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 45375
+2020-06-15 17:42:44.574507 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:42:44.583479 | __main__ | INFO | Started
+2020-06-15 17:42:50.909992 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.911593 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.912836 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.914051 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.915275 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.916499 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.917723 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.918934 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.920139 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.921480 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.922695 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.923893 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.925097 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.926300 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.927525 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.928723 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.929918 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.931179 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.932393 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.933601 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.934825 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:42:50.942529 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49906 Connected to server
+2020-06-15 17:42:52.451488 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:42:59.305759 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:42:59.314902 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:44:20.554041 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49906 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:44:33.708059 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:44:33.708777 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 41953
+2020-06-15 17:44:33.907344 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:44:33.916475 | __main__ | INFO | Started
+2020-06-15 17:44:42.989861 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.991436 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.992670 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.993857 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.995070 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.996339 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.997533 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.998724 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:42.999911 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.001181 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.002384 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.003575 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.004768 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.005961 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.007167 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.008485 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.009689 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.010991 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.012187 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.013372 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.014576 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:44:43.022166 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49928 Connected to server
+2020-06-15 17:44:44.778764 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:44:50.094100 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:44:50.104183 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:45:45.700638 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49928 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 17:45:59.277879 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 17:45:59.278423 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 44853
+2020-06-15 17:45:59.481391 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 17:45:59.490043 | __main__ | INFO | Started
+2020-06-15 17:46:05.589853 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.591421 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.592640 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.593828 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.595027 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.596234 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.597429 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.598619 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.599799 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.601065 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.602273 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.603459 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.604640 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.605883 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.607078 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.608258 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.609433 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.610666 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.611852 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.613024 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.614223 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 17:46:05.621699 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:49942 Connected to server
+2020-06-15 17:46:08.500026 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 17:46:13.697877 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton generated
+2020-06-15 17:46:13.708249 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Dungeon skeleton filled with mobs
+2020-06-15 17:51:29.925777 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:49942 -> Reason: Connection to the other side was lost in a non-clean fashion: Connection lost.
+2020-06-15 18:38:48.457444 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 18:38:48.458171 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 45145
+2020-06-15 18:38:48.662207 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 18:38:48.671104 | __main__ | INFO | Started
+2020-06-15 20:57:41.430156 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.431778 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.432996 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.434180 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.435375 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.436582 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.437773 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.438964 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.440178 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.441515 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.442717 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.443915 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.445104 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.446285 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.447488 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.448670 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.449848 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.451088 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.452284 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.453470 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.454704 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:57:41.462567 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:56730 Connected to server
+2020-06-15 20:59:06.697541 | <class 'src.DB.DBCore.DBCore'> | INFO | SSH Tunnel made
+2020-06-15 20:59:06.698284 | <class 'src.DB.DBCore.DBCore'> | INFO | Local bind port: 40459
+2020-06-15 20:59:06.900398 | <class 'src.DB.DBCore.DBCore'> | INFO | DataBase connection made
+2020-06-15 20:59:06.909253 | __main__ | INFO | Started
+2020-06-15 20:59:09.919879 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.921517 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.922752 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.923950 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.925143 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.926344 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.927534 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.928727 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.929935 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.931250 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.932488 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.933680 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.934880 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.936069 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.937279 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.938474 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.939656 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.940918 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.942128 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.943312 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.944493 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:09.952014 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 192.168.1.26:50032 Connected to server
+2020-06-15 20:59:11.976036 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 192.168.1.26:50032 -> Reason: Connection was closed cleanly.
+2020-06-15 20:59:25.229826 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.231379 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.232614 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.233834 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.235013 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.236212 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.237393 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.238572 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.239759 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.241023 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.242320 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.243520 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.244695 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.245867 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.247045 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.248250 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.249423 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.250666 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.251858 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.253054 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.254231 | <class 'src.Modules.DungeonSkeleton.DungeonSkeleton'> | INFO | Mobs Generated
+2020-06-15 20:59:25.256102 | <class 'src.Server.UserHandler.UserHandler'> | INFO | 89.28.115.50:53981 Connected to server
+2020-06-15 20:59:34.698058 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Player < test8 > successfully authorized
+2020-06-15 21:00:43.616372 | <class 'src.Server.UserHandler.UserHandler'> | INFO | Connection lost with 89.28.115.50:53981 -> Reason: Connection was closed cleanly.

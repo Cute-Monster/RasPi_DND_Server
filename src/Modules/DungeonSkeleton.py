@@ -11,7 +11,6 @@ __email__ = "ghostshow@yandex.ru "
 __status__ = "Developing"
 
 import copy
-
 from networkx.generators.random_graphs import erdos_renyi_graph
 import random
 
@@ -32,7 +31,7 @@ class DungeonSkeleton:
             class_name=self.__class__
         )
         self.cursor = cursor
-        self.all_mobs = self.generate_mobs()
+        self.all_mobs = self._generate_mobs()
 
     def final_dungeon_skeleton(self, player_data: UserModule) -> dict:
         """
@@ -42,7 +41,7 @@ class DungeonSkeleton:
         :return: Dictionary representing final dungeon structure for player
         """
 
-        graph_structure = self.generate_graph_structure()
+        graph_structure = self._generate_graph_structure()
 
         for room in graph_structure['rooms']:
             graph_structure['mobs'][room] = {}
@@ -58,14 +57,15 @@ class DungeonSkeleton:
                     range(player_data.level - 2, player_data.level)
                 )
 
-                # print(f"{uid} : {mob['stats']['hits']}")
                 mob['stats']['hits'] = mob['stats']['hits'] if player_data.level - 2 < 1 else mob['stats']['hits'] * 2.5
                 graph_structure['mobs'][room][mob_uid] = mob
-
+        self.log_file.log_all(
+            priority=3,
+            string=f"Dungeon skeleton filled with mobs"
+        )
         return graph_structure
 
-    @staticmethod
-    def generate_graph_structure() -> dict:
+    def _generate_graph_structure(self) -> dict:
         """
         Generate random graph structure with given number of nodes and % of routes
         :return: Dictionary representing graph structure
@@ -77,17 +77,22 @@ class DungeonSkeleton:
         edges = []
         for edge in graph.edges:
             edges.append(list(edge))
+        self.log_file.log_all(
+            priority=3,
+            string=f"Dungeon skeleton generated"
+        )
         return {
             "rooms": list(graph.nodes),
             "routes": edges,
             "mobs": {}
         }
 
-    def generate_mobs(self) -> dict:
+    def _generate_mobs(self) -> dict:
         """
         Generate mobs from available mobs in the DataBase
         :return: Dictionary of all available mobs
         """
+
         available_mobs = self.cursor.get_dungeon_mobs()
         all_vulnerabilities = self.cursor.get_mobs_vulnerabilities()
         all_attacks = self.cursor.get_mobs_attacks()
@@ -98,9 +103,9 @@ class DungeonSkeleton:
         for mob in available_mobs:
 
             mob_id = mob[list(mob)[0]]
-            mob_attacks = self.mob_data_parser(mob_id, all_attacks)
-            mob_vulnerabilities = self.mob_data_parser(mob_id, all_vulnerabilities)
-            mob_stats = self.mob_data_parser(mob_id, all_stats, stats_flag=True)
+            mob_attacks = self._mob_data_parser(mob_id, all_attacks)
+            mob_vulnerabilities = self._mob_data_parser(mob_id, all_vulnerabilities)
+            mob_stats = self._mob_data_parser(mob_id, all_stats, stats_flag=True)
             generated_mobs[mob['enemy_id']] = {
                 "name": mob['name'],
                 "desc": mob['description'],
@@ -109,12 +114,15 @@ class DungeonSkeleton:
                 "vulnerabilities": mob_vulnerabilities,
                 "inventory": {}
             }
-            # print(f"Generated: {uid+1}")
-            # pprint.pprint(generated_mobs[mob['enemy_id']])
+            self.log_file.log_all(
+                priority=3,
+                string=f"Mobs Generated"
+            )
+
         return generated_mobs
 
     @staticmethod
-    def mob_data_parser(mob_id: int, data: dict, stats_flag=False) -> dict:
+    def _mob_data_parser(mob_id: int, data: dict, stats_flag=False) -> dict:
         """
         Parsing data about mobs
         :param mob_id: Id of the mob
@@ -122,6 +130,7 @@ class DungeonSkeleton:
         :param stats_flag: Flag used to determine if stats dict is being parse
         :return:
         """
+
         end_data = {}
         for item in data:
             enemy_id = item[list(item)[0]]

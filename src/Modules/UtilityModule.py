@@ -48,7 +48,7 @@ def generate_response(action=None,
     response['action'] = action
     response['code'] = code
     response['code_desc'] = codes.get(code)
-    response['data'] = data
+    response['data'] = data if data else 0
 
     # json.dumps(response)
 

@@ -19,7 +19,10 @@ class BattleModule:
     Class defining battle module
     """
 
-    def __init__(self, player: UserModule, battle_data: dict):
+    def __init__(self,
+                 player: UserModule,
+                 battle_data: dict
+                 ):
         self.player = player
         self.attack_id = battle_data['player_attack_id']
         self.mob = battle_data['mob']
