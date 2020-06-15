@@ -1,3 +1,15 @@
+"""
+UserModule.py: Module which represents user in system
+"""
+__author__ = "Runtov Constantin, Mandrila Daniel"
+__copyright__ = "Copyright 2020, The Earth"
+__credits__ = ["Runtov Constantin", "Mandrila Daniel"]
+__license__ = "USM"
+__version__ = "0.2.5"
+__maintainer__ = "Gheorghe Latul"
+__email__ = "ghostshow@yandex.ru "
+__status__ = "Developing"
+
 from src.Models.Player import Player
 from src.Modules import UtilityModule
 
@@ -36,3 +48,33 @@ class UserModule(Player):
         self.animals = UtilityModule.serialize_data(player_data, 'animals')
         self.vulnerabilities = UtilityModule.serialize_data(player_data, 'vulnerabilities')
         self.attacks = UtilityModule.serialize_data(player_data, 'attacks')
+
+        self.base_exp_for_level = 300
+        self.exp_multiplier = 2.35
+
+    def level_up(self,
+                 received_experience: int
+                 ) -> dict:
+        """
+                Method for level up
+                :param received_experience:
+                :return:
+                """
+
+        got_new_level = False
+        exp_for_next_level = int(self.base_exp_for_level * (self.level ** self.exp_multiplier))
+        if self.experience + received_experience > exp_for_next_level:
+            self.level += 1
+            self.experience = received_experience - exp_for_next_level
+            got_new_level = True
+        else:
+            self.experience += received_experience
+        return {
+            "newLevel": got_new_level,
+            "currentPlayerLevel": self.level,
+            "receivedExperience": received_experience,
+            "expForNextLevel": int(self.base_exp_for_level * (
+                    self.level ** self.exp_multiplier
+            )),
+            "currentExperience": self.experience,
+        }

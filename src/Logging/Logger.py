@@ -21,13 +21,10 @@ class Log:
     """
 
     def __init__(self,
-                 class_name: __name__):
+                 class_name
+                 ):
         self.log_path = os.path.abspath("Logs")
-        # self.error_log_file = open("{}/errors.log".format(self.log_path), "a")
-        # self.access_log_file = open("{}/access.log".format(self.log_path), "a")
-
         self.class_name = class_name
-
         self.priority = {
             1: "CRITICAL",
             2: "WARNING",
@@ -42,13 +39,13 @@ class Log:
         """
         Writing log info to files specified by priority
         :param priority: Priority of info to be logged
-        :param string: Info to be writen to log file
+        :param string: Info to be written to log file
         :return:
         """
 
         with open("{}/{}.log".format(
                 self.log_path,
-                "access" if priority == 3 or 4 else "errors"
+                "access" if priority == 3 or priority == 4 else "errors"
         ),
                 "a") as f:
             f.writelines(

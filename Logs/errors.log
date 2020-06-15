@@ -457,3 +457,10 @@ Cursor is not connected
 2020-06-08 04:09:19.856608 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
 2020-06-09 02:53:22.793951 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
 2020-06-09 02:55:31.042024 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 17:21:31.233046 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 17:21:38.209063 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-15 17:35:12.825577 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
+2020-06-15 17:35:32.325494 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
+2020-06-15 17:37:03.005783 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
+2020-06-15 17:38:10.255338 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
+2020-06-15 17:40:49.687166 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'

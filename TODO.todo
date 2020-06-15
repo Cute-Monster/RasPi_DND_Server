@@ -5,7 +5,7 @@ TODO:
     [ ] Fight system
         [+] Dice module
         [-] Spell system
-    [ ] Generators
+    [+] Generators
         [+] dungeon skeleton
         [+] loot after passing dungeon
     [ ] User level system

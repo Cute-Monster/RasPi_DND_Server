@@ -32,7 +32,7 @@ class MySQLModule:
         self.computerAddress = self.get_ip_address()
 
         self.config = self.get_config()
-        if "armv7" in platform():
+        if ("armv7" in platform()) and ("178.132." not in self.computerAddress):
             self.raspberry = True
             self.ssh_connection = None
         else:
