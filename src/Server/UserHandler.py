@@ -101,11 +101,11 @@ class UserHandler(LineReceiver, ABC):
             },
         }
         self.log_to_debug(
-                line=f"{self.addr.host}:{self.addr.port} Connected..."
+                line=f"Connected to server..."
         )
         self.log_file.log_all(
             priority=3,
-            string=f"{self.addr.host}:{self.addr.port} Connected to server"
+            string=f"{self.addr.host}:{self.addr.port} Connected to server..."
         )
         self.send_one(
             response=UtilityModule.generate_response(
@@ -123,7 +123,7 @@ class UserHandler(LineReceiver, ABC):
         :param line:
         :return:
         """
-
+        # print(f"Before_Loads -> {line}")
         try:
             json_data = json.loads(line.decode("utf8"))
             action = json_data['action']
@@ -140,6 +140,7 @@ class UserHandler(LineReceiver, ABC):
                     )
 
             except Exception as exception:
+                # print("Exception -> ", exception)
                 self.log_file.log_all(
                     priority=2,
                     string=str(exception)
@@ -174,8 +175,7 @@ class UserHandler(LineReceiver, ABC):
 
         if self.connected_users and self.user_key in self.connected_users:
             self.log_to_debug(
-                line=f"DELETE CONNECTION WITH < {self.addr.host}:{self.addr.port} >"
-                     f" -> Reason: {reason.getErrorMessage()}"
+                line=f"DELETE CONNECTION.. -> Reason: {reason.getErrorMessage()}"
             )
             del self.connected_users[self.user_key]
             self.log_file.log_all(
@@ -322,6 +322,7 @@ class UserHandler(LineReceiver, ABC):
                     )
                 )
         except DBExceptions.QueryExecuteError as query_exec_error:
+            # print("Player_Auth_Err -> ", query_exec_error)
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,
@@ -346,22 +347,30 @@ class UserHandler(LineReceiver, ABC):
 
         try:
             if self.connected_users[self.user_key].get('authorized'):
-                skeleton = self.dungeon_generator.final_dungeon_skeleton(
-                    player_data=self.player
-                )
-                self.connected_users[self.user_key]['main']['dungeon'] = {
-                    'skeleton': skeleton,
-                    'passed': False
-                }
-                self.send_one(
-                    response=UtilityModule.generate_response(
-                        action=action,
-                        code=201,
-                        data={
-                            "dungeonSkeleton": skeleton
-                        }
+                if not self.connected_users[self.user_key]['main']['dungeon']: 
+                    skeleton = self.dungeon_generator.final_dungeon_skeleton(
+                        player_data=self.player
                     )
-                )
+                    self.connected_users[self.user_key]['main']['dungeon'] = {
+                        'skeleton': skeleton,
+                        'passed': False
+                    }
+                    self.send_one(
+                        response=UtilityModule.generate_response(
+                            action=action,
+                            code=201,
+                            data={
+                                "dungeonSkeleton": skeleton
+                            }
+                        )
+                    )
+                else:
+                    self.send_one(
+                            response=UtilityModule.generate_response(
+                                action=action,
+                                code=411
+                                )
+                            )
             else:
                 self.send_one(
                     response=UtilityModule.generate_response(
@@ -427,6 +436,7 @@ class UserHandler(LineReceiver, ABC):
                 result['level'] = self.player.level_up(
                     received_experience=result['level']
                 )
+                self.connected_users[self.user_key]['main']['dungeon'] = None
                 self.send_one(
                     response=UtilityModule.generate_response(
                         action=action,

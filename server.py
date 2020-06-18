@@ -18,10 +18,20 @@ if __name__ == '__main__':
     log_file = Log(
         class_name=__name__
     )
-    reactor.listenTCP(1309, ServerFactory())
+
+    reactor.listenTCP(1308, ServerFactory())
     try:
-        log_file.log_all(3, "Started")
+        log_file.log_all(
+            priority=3,
+            string="Started"
+        )
         reactor.run()
     except KeyboardInterrupt as e:
         reactor.close()
-        log_file.log_all(3, "Stopped")
+        log_file.log_all(
+            priority=3,
+            string="Stopped"
+        )
+        exit(0)
+        
+

@@ -268,7 +268,7 @@ class DBCore(MySQLModule):
         return self.select_query(f"""
             SELECT
                 `ca`.`attack_id`,
-                `a`.`name` AS `attack_name`,
+                `a`.`attack_name`,
                 `a`.`lvl`,
                 `a`.`type_attack`,
                 `a`.`count_of_random`,

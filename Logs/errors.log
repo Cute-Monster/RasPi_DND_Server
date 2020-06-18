@@ -464,3 +464,32 @@ Cursor is not connected
 2020-06-15 17:37:03.005783 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
 2020-06-15 17:38:10.255338 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
 2020-06-15 17:40:49.687166 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for <<: 'int' and 'float'
+2020-06-16 21:22:36.075239 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 01:44:18.690395 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 02:13:30.410863 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'a.name' in 'field list'
+2020-06-18 02:13:30.820637 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1054, "1054 (42S22): Unknown column 'a.name' in 'field list'", '42S22'))
+2020-06-18 02:13:45.889487 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 02:15:08.926906 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'a.name' in 'field list'
+2020-06-18 02:15:08.929021 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1054, "1054 (42S22): Unknown column 'a.name' in 'field list'", '42S22'))
+2020-06-18 02:19:24.729924 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'a.name' in 'field list'
+2020-06-18 02:19:25.135799 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1054, "1054 (42S22): Unknown column 'a.name' in 'field list'", '42S22'))
+2020-06-18 02:23:56.468279 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'a.name' in 'field list'
+2020-06-18 02:23:56.470679 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1054, "1054 (42S22): Unknown column 'a.name' in 'field list'", '42S22'))
+2020-06-18 02:38:19.379732 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 02:40:54.197561 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 02:41:17.614266 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 14:33:40.271062 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 14:36:08.759428 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 14:36:41.791583 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 14:37:36.687819 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 15:05:09.004574 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2020-06-18 16:37:05.074881 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 16:37:25.779832 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 16:38:06.636780 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 16:39:42.601689 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 16:40:39.163586 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 16:42:20.522930 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | Can not reconnect to MySQL after 10 attempt(s): 2013: Lost connection to MySQL server during query
+2020-06-18 20:21:33.760941 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-18 21:49:30.708646 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Cannot choose from an empty sequence
+2020-06-18 22:14:41.023129 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting property name enclosed in double quotes: line 5 column 27 (char 94)
+2020-06-18 22:17:09.767757 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting property name enclosed in double quotes: line 5 column 27 (char 94)

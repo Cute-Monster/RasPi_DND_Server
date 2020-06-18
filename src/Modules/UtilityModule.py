@@ -20,7 +20,8 @@ codes = {
     407: "player not logged now",
     408: "wrong username or password",
     409: "player already logged",
-    410: "no completed dungeon "
+    410: "no completed dungeon ",
+    411: "you already have a dungeon"
 }
 
 response = {
