@@ -21,7 +21,7 @@ class DBCore(MySQLModule):
 
     def __init__(self):
         super(DBCore, self).__init__()
-        self.log = Log(self.__class__)
+        self._log = Log(self.__class__)
 
     def database_info(self):
         """
@@ -29,8 +29,8 @@ class DBCore(MySQLModule):
         :return:
         """
 
-        self.log.log_all(3, "Connected to MariaDB version: " + self.database_connection.get_server_info())
-        self.log.log_all(3, "Connected to Database: " + self.db_name)
+        self._log.log_all(3, "Connected to MariaDB version: " + self._database_connection.get_server_info())
+        self._log.log_all(3, "Connected to Database: " + self._db_name)
 
     def get_animals(self):
         """

@@ -24,41 +24,41 @@ class MySQLModule:
     Class which describes behaviour of connection to the DataBase
     """
     def __init__(self):
-        self.log = Log(self.__class__)
+        self._log = Log(self.__class__)
 
-        self.db_port = 3306
+        self._db_port = 3306
 
         # Getting computer WAN address
-        self.computerAddress = self.get_ip_address()
+        self._computerAddress = self._get_ip_address()
 
-        self.config = self.get_config()
-        if ("armv7" in platform()) and ("178.132." not in self.computerAddress):
-            self.raspberry = True
-            self.ssh_connection = None
+        self._config = self._get_config()
+        if ("armv7" in platform()) and ("178.132." not in self._computerAddress):
+            self._raspberry = True
+            self._ssh_connection = None
         else:
-            self.raspberry = False
-            self.ssh_host = self.config['Connection']['SSH']['host']
-            self.ssh_port = self.config['Connection']['SSH']['port']
-            self.ssh_username = self.config['Connection']['SSH']['username']
-            self.ssh_password = self.config['Connection']['SSH']['password']
-            self.ssh_connection = self.ssh_connect()
+            self._raspberry = False
+            self._ssh_host = self._config['Connection']['SSH']['host']
+            self._ssh_port = self._config['Connection']['SSH']['port']
+            self._ssh_username = self._config['Connection']['SSH']['username']
+            self._ssh_password = self._config['Connection']['SSH']['password']
+            self._ssh_connection = self._ssh_connect()
 
-            if self.ssh_connection is not None:
-                self.db_port = self.ssh_connection.local_bind_port
-                self.log.log_all(3, "Local bind port: " + str(self.ssh_connection.local_bind_port))
+            if self._ssh_connection is not None:
+                self._db_port = self._ssh_connection.local_bind_port
+                self._log.log_all(3, "Local bind port: " + str(self._ssh_connection.local_bind_port))
 
-        self.db_host = self.config['Connection']['DataBase']['host']
-        self.db_username = self.config['Connection']['DataBase']['username']
-        self.db_password = self.config['Connection']['DataBase']['password']
-        self.db_name = self.config['Connection']['DataBase']['database_name']
+        self._db_host = self._config['Connection']['DataBase']['host']
+        self._db_username = self._config['Connection']['DataBase']['username']
+        self._db_password = self._config['Connection']['DataBase']['password']
+        self._db_name = self._config['Connection']['DataBase']['database_name']
 
-        self.database_connection = self.database_connect()
-        self.cursor = (
-            self.database_connection.cursor(dictionary=True) if self.database_connection.is_connected() else None
+        self._database_connection = self._database_connect()
+        self._cursor = (
+            self._database_connection.cursor(dictionary=True) if self._database_connection.is_connected() else None
         )
 
     @staticmethod
-    def get_ip_address() -> str:
+    def _get_ip_address() -> str:
         """
         Method to get ip address of the device on which script is being start
         :return:
@@ -67,7 +67,7 @@ class MySQLModule:
         from requests import get
         return get('https://api.ipify.org').text
 
-    def get_config(self) -> dict:
+    def _get_config(self) -> dict:
         """
         Method which gets config file based on ip address of  the device
         :return:
@@ -77,46 +77,46 @@ class MySQLModule:
             with open(
                     "{}/{}.json".format(
                         os.path.abspath('src/Config'),
-                        ("home_connection_config" if "178.132." in self.computerAddress else "config")),
+                        ("home_connection_config" if "178.132." in self._computerAddress else "config")),
                     "r") as file:
                 config = json.load(file)
             return config
         except IOError as io_error:
-            self.log.log_all(1, str(io_error))
+            self._log.log_all(1, str(io_error))
             # print(io_error)
 
-    def database_connect(self) -> maria_db.connect:
+    def _database_connect(self) -> maria_db.connect:
         """
         Method to connect to the DataBase
         :return: database connection object
         """
 
         try:
-            self.database_connection = maria_db.connect(
-                host=self.db_host,
-                database=self.db_name,
-                user=self.db_username,
-                password=self.db_password,
-                port=self.db_port
+            self._database_connection = maria_db.connect(
+                host=self._db_host,
+                database=self._db_name,
+                user=self._db_username,
+                password=self._db_password,
+                port=self._db_port
             )
-            self.log.log_all(3, "DataBase connection made")
-            return self.database_connection
+            self._log.log_all(3, "DataBase connection made")
+            return self._database_connection
 
         except maria_db.Error as e:
-            self.log.log_all(1, f"Connection error: {str(e)}")
+            self._log.log_all(1, f"Connection error: {str(e)}")
             self.disconnect()
             return None
 
-    def check_database_connection(self):
+    def _check_database_connection(self):
         """
         Method to check database connection
         :return:
         """
 
-        if not self.database_connection.is_connected():
-            self.database_connection.reconnect(10, 1)
+        if not self._database_connection.is_connected():
+            self._database_connection.reconnect(10, 1)
 
-    def ssh_connect(self):
+    def _ssh_connect(self):
         """
         Method by which SSH tunnel is create
         :return: SSHTunnelForwarder if connection created or None
@@ -126,22 +126,22 @@ class MySQLModule:
             from sshtunnel import SSHTunnelForwarder, BaseSSHTunnelForwarderError
             try:
                 ssh_connection = SSHTunnelForwarder(
-                    (self.ssh_host, self.ssh_port),
-                    ssh_username=self.ssh_username,
-                    ssh_password=self.ssh_password,
+                    (self._ssh_host, self._ssh_port),
+                    ssh_username=self._ssh_username,
+                    ssh_password=self._ssh_password,
                     remote_bind_address=(
-                        self.config['Connection']['SSH']['remote_bind_address']['host'],
-                        self.config['Connection']['SSH']['remote_bind_address']['port']
+                        self._config['Connection']['SSH']['remote_bind_address']['host'],
+                        self._config['Connection']['SSH']['remote_bind_address']['port']
                     )
                 )
                 ssh_connection.start()
-                self.log.log_all(3, "SSH Tunnel made")
+                self._log.log_all(3, "SSH Tunnel made")
                 return ssh_connection
             except BaseSSHTunnelForwarderError as ssh_error:
-                self.log.log_all(2, str(ssh_error))
+                self._log.log_all(2, str(ssh_error))
                 return None
         except ImportError as import_error:
-            self.log.log_all(1, str(import_error))
+            self._log.log_all(1, str(import_error))
 
     def disconnect(self):
         """
@@ -149,17 +149,17 @@ class MySQLModule:
         :return:
         """
 
-        if self.database_connection.is_connected():
-            self.cursor.close()
-            self.database_connection.close()
-            self.log.log_all(3, "Database Connection closed")
+        if self._database_connection.is_connected():
+            self._cursor.close()
+            self._database_connection.close()
+            self._log.log_all(3, "Database Connection closed")
         try:
-            if (not self.raspberry) or self.ssh_connection:
-                if self.ssh_connection.is_active:
-                    self.ssh_connection.close()
-                    self.log.log_all(3, "SSH tunnel closed")
+            if (not self._raspberry) or self._ssh_connection:
+                if self._ssh_connection.is_active:
+                    self._ssh_connection.close()
+                    self._log.log_all(3, "SSH tunnel closed")
         except AttributeError as e:
-            self.log.log_all(1, str(e))
+            self._log.log_all(1, str(e))
 
     def select_query(self, query):
         """
@@ -169,12 +169,11 @@ class MySQLModule:
         """
 
         try:
-            self.check_database_connection()
-            self.cursor.execute(query)
-            return self.cursor.fetchall()
+            self._check_database_connection()
+            self._cursor.execute(query)
+            return self._cursor.fetchall()
         except maria_db.Error as error:
-            self.log.log_all(1, str(error))
-            # raise custom_error_exception("Error to execute query", error)
+            self._log.log_all(1, str(error))
             raise DBExceptions.QueryExecuteError("Error to execute query:", error)
 
     def insert_query(self, query) -> int:
@@ -185,11 +184,10 @@ class MySQLModule:
         """
 
         try:
-            self.check_database_connection()
-            self.cursor.execute(query)
-            self.database_connection.commit()
+            self._check_database_connection()
+            self._cursor.execute(query)
+            self._database_connection.commit()
             return 1
         except maria_db.Error as error:
-            self.log.log_all(1, str(error))
-            # raise custom_error_exception("Error to execute query", error)
+            self._log.log_all(1, str(error))
             raise DBExceptions.QueryExecuteError("Error to execute query:", error)

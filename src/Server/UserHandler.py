@@ -51,6 +51,7 @@ class UserHandler(LineReceiver, ABC):
             "playerRegistration": self.player_registration,
             "playerAuthorization": self.player_authorization,
             "getDungeonSkeleton": self.get_dungeon_skeleton,
+            "regenerateDungeonSkeleton": self.regen_dungeon_skeleton,
             "startBattle": self.start_battle,
             "getLoot": self.generate_loot,
             "sendChatMessage": self.send_chat_message,
@@ -140,7 +141,7 @@ class UserHandler(LineReceiver, ABC):
                     )
 
             except Exception as exception:
-                # print("Exception -> ", exception)
+                print("Exception -> ", exception)
                 self.log_file.log_all(
                     priority=2,
                     string=str(exception)
@@ -369,6 +370,52 @@ class UserHandler(LineReceiver, ABC):
                             response=UtilityModule.generate_response(
                                 action=action,
                                 code=411
+                                )
+                            )
+            else:
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=406
+                    )
+                )
+
+        except Exception as exception:
+            self.log_file.log_all(
+                priority=2,
+                string=str(exception)
+            )
+            self.send_one(
+                response=UtilityModule.generate_response(
+                    action=action,
+                    code=400
+                )
+            )
+
+    def regen_dungeon_skeleton(self,
+                               action: str,
+                               json_data: Any
+                               ) -> None:
+        """
+        Generate and send dungeon skeleton for the player
+        :param action: String used to generate response
+        :param json_data: Received data from the client
+        :return:
+        """
+
+        try:
+            if self.connected_users[self.user_key].get('authorized'):
+                if self.connected_users[self.user_key]['main']['dungeon']:
+                    self.connected_users[self.user_key]['main']['dungeon'] = None
+                    self.get_dungeon_skeleton(
+                        action=action,
+                        json_data=json_data
+                    )
+                else:
+                    self.send_one(
+                            response=UtilityModule.generate_response(
+                                action=action,
+                                code=410
                                 )
                             )
             else:

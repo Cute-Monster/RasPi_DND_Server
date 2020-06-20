@@ -4,3 +4,4 @@ mysql-connector-python-rf
 requests
 twisted
 networkx
+scipy

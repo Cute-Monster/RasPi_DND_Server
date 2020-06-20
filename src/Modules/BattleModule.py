@@ -32,17 +32,13 @@ class BattleModule:
         Method which return result of the battle between player and mob
         :return:
         """
-        # print(f"Player_Hits_at_start: {self.player.hits}\n"
-        #       f"Mob_Hits_at_start: {self.mob['stats']['hits']}")
 
-        player_hit_result = self.hit_result("player")
+        player_hit_result = self._hit_result("player")
         self.mob['stats']['hits'] -= player_hit_result['damage_given']
 
-        mob_hit_result = self.hit_result("mob")
+        mob_hit_result = self._hit_result("mob")
         self.player.hits -= mob_hit_result['damage_given']
 
-        # print(f"Player_Hits_at_end: {self.player.hits}\n"
-        #       f"Mob_Hits_at_end: {self.mob['stats']['hits']}")
         return {
             "attack": player_hit_result['attack'],
             "mob": self.mob,
@@ -53,9 +49,9 @@ class BattleModule:
         }
 
     @staticmethod
-    def dice(side_counter: int,
-             throw_counter: int
-             ) -> int:
+    def _dice(side_counter: int,
+              throw_counter: int
+              ) -> int:
         """
         Method for rolling dice
         :param side_counter: Number of sides
@@ -69,21 +65,20 @@ class BattleModule:
 
         return sum(dices)
 
-    def hit_result(self, whose_turn: str) -> dict:
+    def _hit_result(self,
+                    whose_turn: str
+                    ) -> dict:
         """
         Method which implements battle between the player and mob
         :param whose_turn: Who is hitting now
         :return:
         """
 
-        hit_chance = int
-        modifier = int
-        attack = dict
-        attack_successful = False
-        damage_given = 0
-        dice_result = self.dice(20, 1)
+        dice_result = self._dice(20, 1)
 
-        if whose_turn == "player":
+        def player_attack() -> dict:
+            modifier = 0
+            damage_given = 0
             attack = self.player.attacks[self.attack_id]
             if attack['type_attack'] == 'Melee':
                 modifier = round((self.player.strength + self.player.dexterity) / 3) - 5
@@ -96,15 +91,21 @@ class BattleModule:
                     or dice_result == 1:
                 attack_successful = False
             else:
-                attack_dice = self.dice(attack['random_diapason'], attack['count_of_random'])
+                attack_dice = self._dice(attack['random_diapason'], attack['count_of_random'])
                 attack_successful = True
                 damage_given += attack_dice
 
                 for uid, item in self.player.weapons.items():
-                    # print(item)
                     damage_given += choice(range(item['damage_min'], item['damage_max']))
+            return {
+                "attack": attack,
+                "attack_successful": str(attack_successful),
+                "damage_given": damage_given,
+            }
 
-        else:
+        def mob_attack() -> dict:
+            modifier = 0
+            damage_given = 0
             attack = self.mob['attacks'][choice(list(self.mob['attacks'].keys()))]
             if attack['type_attack'] == 'Melee':
                 modifier = round((self.mob['stats']['strength'] + self.mob['stats']['dexterity']) / 3) - 5
@@ -117,16 +118,22 @@ class BattleModule:
                     or dice_result == 1:
                 attack_successful = False
             else:
-                attack_dice = self.dice(attack['random_diapason'], attack['count_of_random'])
+                attack_dice = self._dice(attack['random_diapason'], attack['count_of_random'])
                 attack_successful = True
                 damage_given += int((attack_dice * 0.3) + (0.1 * self.player.hits))
+            return {
+                "attack": attack,
+                "attack_successful": str(attack_successful),
+                "damage_given": damage_given,
+            }
 
-                # TODO
-                # for item in self.player.weapons:
-                #     damage_given += choice(range(item['damage_min'], item['damage_max']))
-
+        attacks = {
+            "player": player_attack,
+            "mob": mob_attack
+        }
+        result = attacks.get(whose_turn)()
         return {
-            "attack": attack,
-            "attack_successful": str(attack_successful),
-            "damage_given": damage_given,
+            "attack": result.get('attack'),
+            "attack_successful": result.get('attack_successful'),
+            "damage_given": result.get('damage_given'),
         }

@@ -23,9 +23,9 @@ class Log:
     def __init__(self,
                  class_name
                  ):
-        self.log_path = os.path.abspath("Logs")
-        self.class_name = class_name
-        self.priority = {
+        self._log_path = os.path.abspath("Logs")
+        self._class_name = class_name
+        self._priority = {
             1: "CRITICAL",
             2: "WARNING",
             3: "INFO",
@@ -44,15 +44,15 @@ class Log:
         """
 
         with open("{}/{}.log".format(
-                self.log_path,
+                self._log_path,
                 "access" if priority == 3 or priority == 4 else "errors"
         ),
                 "a") as f:
             f.writelines(
                 "{} | {} | {} | {}\n".format(
                     datetime.now(),
-                    self.class_name,
-                    self.priority.get(priority),
+                    self._class_name,
+                    self._priority.get(priority),
                     string
                 )
             )

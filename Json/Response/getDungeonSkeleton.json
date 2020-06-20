@@ -131,8 +131,7 @@
             "desc": "Medium Humanoid",
             "inventory": {},
             "mob_level": 1,
-            "name": "Red-Marked ",
-            "Cutthroat",
+            "name": "Red-Marked Cutthroat",
             "stats": {
               "armor_class": 2,
               "chance": 0.0,
@@ -231,8 +230,7 @@
             "desc": "Medium Humanoid",
             "inventory": {},
             "mob_level": 1,
-            "name": "Red-Marked ",
-            "Cutthroat"
+            "name": "Red-Marked Cutthroat",
             "stats": {
               "armor_class": 2,
               "chance": 0.0,
