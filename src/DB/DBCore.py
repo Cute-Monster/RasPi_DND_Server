@@ -39,7 +39,7 @@ class DBCore(MySQLModule):
         """
 
         animals = self.select_query("""
-        SELECT name, price, speed, capacity FROM Animals;
+        SELECT animal_name, animal_price, animal_speed, animal_capacity FROM Animals;
         """)
         return animals
 
@@ -134,9 +134,16 @@ class DBCore(MySQLModule):
 
         return exists[0]['exists']
 
-    def add_player(self, name, password, class_id, race_id):
+    def add_player(self,
+                   name: str,
+                   password: str,
+                   class_id: int,
+                   race_id: int,
+                   avatar: str
+                   ):
         """
         Adding player to the DataBase
+        :param avatar:
         :param name: Player name
         :param password: Player password
         :param class_id: Player class id
@@ -145,8 +152,8 @@ class DBCore(MySQLModule):
         """
 
         return self.insert_query(f"""
-            INSERT INTO Players (player_name, player_password, lvl, experience, class_id, race_id) 
-            VALUES('{name}', '{password}', 1, 0, {class_id}, {race_id})
+            INSERT INTO Players (player_name, player_password, lvl, experience, class_id, race_id, avatar) 
+            VALUES('{name}', '{password}', 1, 0, {class_id}, {race_id}, '{avatar}')
         """)
 
     def get_player_main_data(self, name):
@@ -164,6 +171,7 @@ class DBCore(MySQLModule):
             `p`.`class_id`,
             `c`.`class_name`,
             `p`.`race_id`,
+            `p`.`avatar`,
             `r`.`name` AS `race`,
             `s`.*
         FROM
@@ -175,7 +183,9 @@ class DBCore(MySQLModule):
             player_name = '{name}'
         """)
 
-    def get_player_food(self, player_id):
+    def get_player_food(self,
+                        player_id
+                        ):
         """
         Getting players food from DataBase
         :param player_id: Player id
@@ -185,14 +195,15 @@ class DBCore(MySQLModule):
         return self.select_query(f"""
             SELECT
                 `fe`.`food_id`,
-                `f`.`name` AS `food_name`,
-                `f`.`price` AS `food_price`
+                `f`.`food_name`,
+                `f`.`food_price`,
+                `f`.`food_lvl`
             FROM
                 `Food_Equipment` AS `fe`
                 INNER JOIN `Food` AS `f` ON `f`.`food_id` = `fe`.`food_id`
             WHERE
                 `fe`.`equipment_id` = '{player_id}'
-        """)
+        """ )
 
     def get_player_armor(self, player_id):
         """
@@ -204,15 +215,16 @@ class DBCore(MySQLModule):
         return self.select_query(f"""
             SELECT
                 `ae`.`armor_id`,
-                `a`.`name` AS `armor_name`,
+                `a`.`armor_name`,
+                `a`.`armor_lvl`,
                 `a`.`armor_weight`,
-                `a`.`armor_price` 
+                `a`.`armor_price`
             FROM
                 `Armor_Equipment` AS `ae`
                 INNER JOIN `Armor` AS `a` ON `a`.`armor_id` = `ae`.`armor_id` 
             WHERE
                 `ae`.`equipment_id` = '{player_id}'
-        """)
+        """ )
 
     def get_player_weapons(self, player_id):
         """
@@ -223,15 +235,16 @@ class DBCore(MySQLModule):
 
         return self.select_query(f"""
             SELECT
-                `we`.`weapons_id`,
-                `w`.`name` AS `weapon_name`,
-                `w`.`price` AS `weapon_price`,
-                `w`.`damage_min`,
-                `w`.`damage_max`,
-                `w`.`weight` AS `weapon_weight`
+                `we`.`weapon_id`,
+                `w`.`weapon_name`,
+                `w`.`weapon_price`,
+                `w`.`weapon_lvl`,
+                `w`.`weapon_damage_min`,
+                `w`.`weapon_damage_max`,
+                `w`.`weapon_weight`
             FROM
                 `Weapon_Equipment` AS `we`
-                INNER JOIN `Weapons` AS `w` ON `w`.weapons_id = `we`.`weapons_id` 
+                INNER JOIN `Weapons` AS `w` ON `w`.`weapon_id` = `we`.`weapon_id` 
             WHERE
                 `we`.`equipment_id` = '{player_id}'
         """ )
@@ -246,16 +259,17 @@ class DBCore(MySQLModule):
         return self.select_query(f"""
             SELECT
                 `ae`.`animal_id`,
-                `a`.`name` AS `animal_name`,
-                `a`.`price` AS `animal_price`,
-                `a`.`speed` AS `animal_speed`,
-                `a`.`capacity` AS `animal_capacity`
+                `a`.`animal_name`,
+                `a`.`animal_lvl`,
+                `a`.`animal_price`,
+                `a`.`animal_speed`,
+                `a`.`animal_capacity`
             FROM
                 `Animals_Equipment` AS `ae`
                 INNER JOIN `Animals` AS `a` ON `a`.`animal_id` = `ae`.`animal_id` 
             WHERE
                 `ae`.`equipment_id` = '{player_id}'
-        """)
+        """ )
 
     def get_player_attacks(self, class_id, lvl):
         """
@@ -269,19 +283,19 @@ class DBCore(MySQLModule):
             SELECT
                 `ca`.`attack_id`,
                 `a`.`attack_name`,
-                `a`.`lvl`,
-                `a`.`type_attack`,
+                `a`.`attack_lvl`,
+                `a`.`attack_type`,
                 `a`.`count_of_random`,
-                `a`.`cooldown`,
+                `a`.`attack_cooldown`,
                 `a`.`random_diapason`,
-                `a`.`effect` 
+                `a`.`attack_effect` 
             FROM
                 `Classes_Attacks` AS `ca`
                 INNER JOIN `Attacks` AS `a` ON `ca`.`attack_id` = `a`.`attack_id` 
             WHERE
                 `ca`.`class_id` = '{class_id}' 
-                AND `a`.`lvl` <= '{lvl}'
-        """)
+                AND `a`.attack_lvl <= '{lvl}'
+        """ )
 
     def get_player_vulnerabilities(self, player_id):
         """
@@ -302,7 +316,9 @@ class DBCore(MySQLModule):
                 `pv`.`player_id` = '{player_id}'
         """)
 
-    def get_player(self, player_name):
+    def get_player(self,
+                   player_name: str
+                   ) -> dict:
         """
         Getting player info from DataBase
         :param player_name: Player name
@@ -376,7 +392,7 @@ class DBCore(MySQLModule):
 
     def get_loot(self):
         return {
-            "weapons": self.get_weapons(),
+            "weapon": self.get_weapons(),
             "armor": self.get_armor(),
             "food": self.get_food()
         }

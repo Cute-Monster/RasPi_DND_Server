@@ -40,3 +40,6 @@ class ServerFactory(Factory):
             users=self.authorized_users,
             addr=addr
         )
+
+    def doStop(self):
+        self.cursor.disconnect()

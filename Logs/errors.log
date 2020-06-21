@@ -501,3 +501,26 @@ Cursor is not connected
 2020-06-19 00:12:27.927074 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
 2020-06-20 18:02:15.221483 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for +=: 'type' and 'int'
 2020-06-20 18:04:56.757353 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | unsupported operand type(s) for +=: 'type' and 'int'
+2020-06-20 18:22:40.827120 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-21 13:54:52.724617 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'avatar'
+2020-06-21 13:56:42.678638 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting property name enclosed in double quotes: line 1 column 112 (char 111)
+2020-06-21 13:57:29.342918 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1054 (42S22): Unknown column 'Elf_1' in 'field list'
+2020-06-21 13:57:29.345660 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1054, "1054 (42S22): Unknown column 'Elf_1' in 'field list'", '42S22'))
+2020-06-21 13:59:58.691324 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | add_player() got an unexpected keyword argument 'avatar'
+2020-06-21 14:01:50.317210 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | [Errno 13] Permission denied: 'Logs/user_registry.log'
+2020-06-21 15:14:56.494624 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                `Food_Equipment` AS `fe`
+                INNER JOIN `Food` ' at line 6
+2020-06-21 15:14:56.497240 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1064, "1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM\n                `Food_Equipment` AS `fe`\n                INNER JOIN `Food` ' at line 6", '42000'))
+2020-06-21 15:26:22.264850 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                `Food_Equipment` AS `fe`
+                INNER JOIN `Food` ' at line 6
+2020-06-21 15:26:22.267335 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1064, "1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM\n                `Food_Equipment` AS `fe`\n                INNER JOIN `Food` ' at line 6", '42000'))
+2020-06-21 16:41:28.750818 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'avatar'
+2020-06-21 16:42:37.005567 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))
+2020-06-21 16:42:37.008065 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))', '23000'))
+2020-06-21 16:44:58.991973 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))
+2020-06-21 16:44:58.994722 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))', '23000'))
+2020-06-21 16:46:04.238315 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))
+2020-06-21 16:46:04.241169 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))', '23000'))
+2020-06-21 16:49:12.942791 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)

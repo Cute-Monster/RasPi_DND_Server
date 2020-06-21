@@ -1,7 +1,8 @@
 # Project exclude paths
 /RemoteDBvenv
-ForTesting/
+/Tests/
 
 /.scannerwork/
+/sonar-project.properties
 /Json.zip
-src/Modules/UserLevelModule.py
+/src/Config/

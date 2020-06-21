@@ -31,6 +31,7 @@ class UserModule(Player):
         self.class_name = player_data.get('main')[0]['class_name']
         self.race_id = player_data.get('main')[0]['race_id']
         self.race = player_data.get('main')[0]['race']
+        self.avatar = player_data.get('main')[0]['avatar']
 
         self.armor_class = player_data.get('main')[0]['armor_class']
         self.hits = player_data.get('main')[0]['hits']
@@ -48,9 +49,12 @@ class UserModule(Player):
         self.animals = UtilityModule.serialize_data(player_data, 'animals')
         self.vulnerabilities = UtilityModule.serialize_data(player_data, 'vulnerabilities')
         self.attacks = UtilityModule.serialize_data(player_data, 'attacks')
+        self._base_exp_for_level = 300
+        self._exp_multiplier = 2.35
+        self.exp_for_next_level = self._calculate_exp_for_next_level()
 
-        self.base_exp_for_level = 300
-        self.exp_multiplier = 2.35
+    def _calculate_exp_for_next_level(self) -> int:
+        return self._base_exp_for_level * (self.level ** self._exp_multiplier)
 
     def level_up(self,
                  received_experience: int
@@ -62,19 +66,16 @@ class UserModule(Player):
                 """
 
         got_new_level = False
-        exp_for_next_level = int(self.base_exp_for_level * (self.level ** self.exp_multiplier))
-        if self.experience + received_experience > exp_for_next_level:
+        if self.experience + received_experience > self.exp_for_next_level:
             self.level += 1
-            self.experience = received_experience - exp_for_next_level
+            self.experience = received_experience - self.exp_for_next_level
             got_new_level = True
         else:
             self.experience += received_experience
         return {
-            "newLevel": got_new_level,
+            "gotNewLevel": got_new_level,
             "currentPlayerLevel": self.level,
             "receivedExperience": received_experience,
-            "expForNextLevel": int(self.base_exp_for_level * (
-                    self.level ** self.exp_multiplier
-            )),
+            "expForNextLevel": self._calculate_exp_for_next_level(),
             "currentExperience": self.experience,
         }

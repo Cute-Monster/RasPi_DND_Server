@@ -124,7 +124,7 @@ class UserHandler(LineReceiver, ABC):
         :param line:
         :return:
         """
-        # print(f"Before_Loads -> {line}")
+
         try:
             json_data = json.loads(line.decode("utf8"))
             action = json_data['action']
@@ -141,7 +141,6 @@ class UserHandler(LineReceiver, ABC):
                     )
 
             except Exception as exception:
-                print("Exception -> ", exception)
                 self.log_file.log_all(
                     priority=2,
                     string=str(exception)
@@ -213,9 +212,9 @@ class UserHandler(LineReceiver, ABC):
                         player_password=json_data['data']['player_password']
                     ),
                     class_id=json_data['data']['class_id'],
-                    race_id=json_data['data']['race_id']
+                    race_id=json_data['data']['race_id'],
+                    avatar=json_data['data']['avatar']
             ) == 1:
-
                 self.send_one(
                     response=UtilityModule.generate_response(
                         action=action,
@@ -323,7 +322,6 @@ class UserHandler(LineReceiver, ABC):
                     )
                 )
         except DBExceptions.QueryExecuteError as query_exec_error:
-            # print("Player_Auth_Err -> ", query_exec_error)
             self.send_one(
                 response=UtilityModule.generate_response(
                     action=action,

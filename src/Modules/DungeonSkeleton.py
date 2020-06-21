@@ -121,7 +121,10 @@ class DungeonSkeleton:
         return generated_mobs
 
     @staticmethod
-    def _mob_data_parser(mob_id: int, data: dict, stats_flag=False) -> dict:
+    def _mob_data_parser(mob_id: int,
+                         data: dict,
+                         stats_flag=False
+                         ) -> dict:
         """
         Parsing data about mobs
         :param mob_id: Id of the mob

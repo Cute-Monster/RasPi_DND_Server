@@ -86,7 +86,7 @@ class LootModule:
 
             if count_weapons-1 > len(final_weapons):
                 final_weapons[item_id] = self._generate_item(
-                    item_type="weapons"
+                    item_type="weapon"
                 )
 
             if count_food > len(final_food):
