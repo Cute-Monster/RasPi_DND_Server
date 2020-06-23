@@ -1,1 +1,6 @@
-{"action":"sendChatMessage","data":{"message": "Hi"}}
+{
+  "action": "sendChatMessage",
+  "data": {
+    "message": "Hi"
+  }
+}

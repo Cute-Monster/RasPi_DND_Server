@@ -1,1 +1,3 @@
-{"action":"getLoot"}
+{
+  "action": "getLoot"
+}

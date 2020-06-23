@@ -1,1 +1,7 @@
-{"action":"sendPrivateMessage","data":{"to": "test6","message": "Private shit"}}
+{
+  "action": "sendPrivateMessage",
+  "data": {
+    "to": "username",
+    "message": "Private message"
+  }
+}

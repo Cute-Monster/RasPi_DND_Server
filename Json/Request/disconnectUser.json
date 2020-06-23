@@ -1,1 +1,9 @@
-{"action": "disconnectUser", "data": {"player_names": ["alina", "tt"]}}
+{
+  "action": "disconnectUser",
+  "data": {
+    "player_names": [
+      "user1",
+      "user2"
+    ]
+  }
+}

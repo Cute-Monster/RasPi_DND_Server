@@ -1,4 +1,6 @@
-{"action": "connectToServer",
- "code": 100,
- "code_desc": "successfully connected",
- "data": None}
+{
+  "action": "connectToServer",
+  "code": 100,
+  "code_desc": "successfully connected",
+  "data": null
+}

@@ -3,8 +3,8 @@
   "code": 200,
   "code_desc": "request success",
   "data": {
-    "from": "test4",
-    "message": "Private shit",
+    "from": "username",
+    "message": "Private message",
     "to": "test6"
   }
 }

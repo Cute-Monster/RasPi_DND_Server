@@ -1,6 +1,6 @@
 {
-  "action": None,
+  "action": null,
   "code": 401,
   "code_desc": "invalid json format",
-  "data": None
+  "data": null
 }

@@ -2,5 +2,5 @@
   "action": "playerRegistration",
   "code": 202,
   "code_desc": "player successfully registered",
-  "data": None
+  "data": null
 }

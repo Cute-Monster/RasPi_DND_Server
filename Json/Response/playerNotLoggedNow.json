@@ -2,5 +2,5 @@
   "action": "sendPrivateMessage",
   "code": 407,
   "code_desc": "player not logged now",
-  "data": None
+  "data": null
 }
