@@ -55,7 +55,9 @@ class UserHandler(LineReceiver, ABC):
             "startBattle": self.start_battle,
             "getLoot": self.generate_loot,
             "sendChatMessage": self.send_chat_message,
-            "sendPrivateMessage": self.send_private_message
+            "sendPrivateMessage": self.send_private_message,
+            "showLoggedUsers": self.show_logged_users,
+            "disconnectUser": self.disconnect_user,
         }
 
     def log_to_debug(self,
@@ -182,6 +184,104 @@ class UserHandler(LineReceiver, ABC):
                 priority=3,
                 string=f"Connection lost with {self.addr.host}:{self.addr.port} "
                        f"-> Reason: {reason.getErrorMessage()}"
+            )
+
+    def _update_logged_users(self) -> dict:
+        """
+        Method to generate a dictionary containing authorized users
+        :return: Dictionary containing authorized users and count of them
+        """
+
+        users = {}
+        for uid, user in self.connected_users.items():
+            if user['authorized']:
+                users[uid] = {
+                    "player_name": user['main']['player_name'],
+                    "has_dungeon": True if user['main']['dungeon'] else False
+                }
+        users['loggedCounter'] = len(users)
+        return users
+
+    def show_logged_users(self,
+                          action: str,
+                          json_data: Any
+                          ):
+        """
+        Method to check for authorized users from the admin
+        :param action:
+        :param json_data:
+        :return:
+        """
+
+        if self.player.player_name == "admin":
+            self.send_one(
+                response=UtilityModule.generate_response(
+                    action=action,
+                    code=206,
+                    data=self._update_logged_users()
+                )
+            )
+        else:
+            self.send_one(
+                response=UtilityModule.generate_response(
+                    action=action,
+                    code=412
+                )
+            )
+
+    def disconnect_user(self,
+                        action: str,
+                        json_data: Any
+                        ):
+        """
+        Method to disconnect users from admin user
+        :param action:
+        :param json_data:
+        :return:
+        """
+
+        if self.player.player_name == "admin":
+            users_to_disconnect = []
+
+            for user_key in self.connected_users:
+
+                if self.connected_users[user_key]['authorized'] \
+                        and self.connected_users[user_key]['main']['player_name'] in json_data['data']['player_names']:
+                    users_to_disconnect.append({
+                        "key": user_key,
+                        "player_name": self.connected_users[user_key]['main']['player_name']
+                    })
+
+            for user in users_to_disconnect:
+                self.connected_users[user['key']]['main']['base'].transport.loseConnection()
+                self.send_one(
+                    response=UtilityModule.generate_response(
+                        action=action,
+                        code=207,
+                        data={
+                            "disconnectedUser": users_to_disconnect
+                        }
+                    )
+                )
+            # for uid, user in self.connected_users.items():
+            #     if user['authorized'] and user['main']['player_name'] == json_data['data']['player_name']:
+            #         user['main']['base'].transport.loseConnection()
+            #         self.send_one(
+            #             response=UtilityModule.generate_response(
+            #                 action=action,
+            #                 code=207,
+            #                 data={
+            #                     "disconnectedUser": json_data['data']['player_name']
+            #                 }
+            #             )
+            #         )
+            #         break
+        else:
+            self.send_one(
+                response=UtilityModule.generate_response(
+                    action=action,
+                    code=412
+                )
             )
 
     def player_registration(self,

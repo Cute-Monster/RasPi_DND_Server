@@ -278,7 +278,7 @@ class DBCore(MySQLModule):
         :param lvl: lvl
         :return:
         """
-
+        # AND `a`.attack_lvl <= '{lvl}'  <= for comparing with a player lvl
         return self.select_query(f"""
             SELECT
                 `ca`.`attack_id`,
@@ -294,8 +294,7 @@ class DBCore(MySQLModule):
                 INNER JOIN `Attacks` AS `a` ON `ca`.`attack_id` = `a`.`attack_id` 
             WHERE
                 `ca`.`class_id` = '{class_id}' 
-                AND `a`.attack_lvl <= '{lvl}'
-        """ )
+        """)
 
     def get_player_vulnerabilities(self, player_id):
         """

@@ -77,14 +77,19 @@ class BattleModule:
         dice_result = self._dice(20, 1)
 
         def player_attack() -> dict:
+            """
+            Battle behaviour on player move
+            :return:
+            """
+
             modifier = 0
             damage_given = 0
             attack = self.player.attacks[self.attack_id]
-            if attack['type_attack'] == 'Melee':
+            if attack['attack_type'] == 'Melee':
                 modifier = round((self.player.strength + self.player.dexterity) / 3) - 5
-            elif attack['type_attack'] == 'Long Range':
+            elif attack['attack_type'] == 'Long Range':
                 modifier = round((self.player.strength + self.player.chance) / 3) - 5
-            elif attack['type_attack'] == 'Magic':
+            elif attack['attack_type'] == 'Magic':
                 modifier = round((self.player.intelligence + self.player.wisdom) / 3) - 5
 
             if modifier + dice_result < self.mob['stats']['armor_class']\
@@ -96,7 +101,7 @@ class BattleModule:
                 damage_given += attack_dice
 
                 for uid, item in self.player.weapons.items():
-                    damage_given += choice(range(item['damage_min'], item['damage_max']))
+                    damage_given += choice(range(item['weapon_damage_min'], item['weapon_damage_max']))
             return {
                 "attack": attack,
                 "attack_successful": str(attack_successful),
@@ -104,14 +109,19 @@ class BattleModule:
             }
 
         def mob_attack() -> dict:
+            """
+            Battle behaviour on a mob move
+            :return:
+            """
+
             modifier = 0
             damage_given = 0
             attack = self.mob['attacks'][choice(list(self.mob['attacks'].keys()))]
-            if attack['type_attack'] == 'Melee':
+            if attack['attack_type'] == 'Melee':
                 modifier = round((self.mob['stats']['strength'] + self.mob['stats']['dexterity']) / 3) - 5
-            elif attack['type_attack'] == 'Long Range':
+            elif attack['attack_type'] == 'Long Range':
                 modifier = round((self.mob['stats']['strength'] + self.mob['stats']['chance']) / 3) - 5
-            elif attack['type_attack'] == 'Magic':
+            elif attack['attack_type'] == 'Magic':
                 modifier = round((self.mob['stats']['intelligence'] + self.mob['stats']['wisdom']) / 3) - 5
 
             if modifier + dice_result < self.player.armor_class\

@@ -41,5 +41,4 @@ class ServerFactory(Factory):
             addr=addr
         )
 
-    def doStop(self):
-        self.cursor.disconnect()
+

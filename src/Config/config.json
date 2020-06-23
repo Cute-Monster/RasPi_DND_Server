@@ -1,10 +1,10 @@
 {
   "Connection": {
     "SSH": {
-      "host": "178.132.***.***",
-      "port": *****,
-      "username": "***",
-      "password": "******",
+      "host": "178.132.156.98",
+      "port": 22458,
+      "username": "pi",
+      "password": "lafMNGQ4",
       "remote_bind_address": {
         "host": "localhost",
         "port": 3306
@@ -12,9 +12,9 @@
     },
     "DataBase": {
       "host": "localhost",
-      "database_name": "******",
-      "username": "******",
-      "password": "******"
+      "database_name": "CodeDungeon",
+      "username": "CodeDungeon",
+      "password": "CodeDungeon"
     }
   }
 }

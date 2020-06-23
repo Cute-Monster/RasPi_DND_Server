@@ -10,6 +10,8 @@ codes = {
     203: "successfully authorized",
     204: "loot generated successfully",
     205: "battle successful",
+    206: "logged users list",
+    207: "user disconnected successfully",
 
     400: "server error",
     401: "invalid json format",
@@ -21,7 +23,8 @@ codes = {
     408: "wrong username or password",
     409: "player already logged",
     410: "no completed dungeon ",
-    411: "you already have a dungeon"
+    411: "you already have a dungeon",
+    412: "you don't have permissions to do that"
 }
 
 response = {

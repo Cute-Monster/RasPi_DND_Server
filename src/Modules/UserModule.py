@@ -18,6 +18,8 @@ class UserModule(Player):
     """
     Class which represents UserModule
     """
+    _base_exp_for_level = 300
+    _exp_multiplier = 2.35
 
     def __init__(self,
                  player_data: dict
@@ -49,8 +51,7 @@ class UserModule(Player):
         self.animals = UtilityModule.serialize_data(player_data, 'animals')
         self.vulnerabilities = UtilityModule.serialize_data(player_data, 'vulnerabilities')
         self.attacks = UtilityModule.serialize_data(player_data, 'attacks')
-        self._base_exp_for_level = 300
-        self._exp_multiplier = 2.35
+
         self.exp_for_next_level = self._calculate_exp_for_next_level()
 
     def _calculate_exp_for_next_level(self) -> int:

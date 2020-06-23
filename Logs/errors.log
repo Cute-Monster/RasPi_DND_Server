@@ -524,3 +524,75 @@ Cursor is not connected
 2020-06-21 16:46:04.238315 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))
 2020-06-21 16:46:04.241169 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players_Vulnerabilities`, CONSTRAINT `Players_Vulnerabilities_player_id_FK` FOREIGN KEY (`player_id`) REFERENCES `Players` (`player_id`))', '23000'))
 2020-06-21 16:49:12.942791 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-21 17:20:48.453022 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:20:48.455746 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:21:34.213493 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:21:34.216110 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:28:06.219237 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:28:06.225842 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:38:22.555290 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:38:22.557698 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:39:16.807407 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:39:16.810180 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:41:45.663604 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:41:45.666087 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:46:12.793515 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 17:46:12.796239 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 17:54:13.863490 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1146 (42S02): Table 'CodeDungeon.Food_Equipment' doesn't exist
+2020-06-21 17:54:13.865990 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', ProgrammingError(1146, "1146 (42S02): Table 'CodeDungeon.Food_Equipment' doesn't exist", '42S02'))
+2020-06-21 18:02:58.712850 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 18:02:58.716305 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 18:03:45.741755 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'
+2020-06-21 18:03:45.744590 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1062, "1062 (23000): Duplicate entry '1-0' for key 'PRIMARY'", '23000'))
+2020-06-21 18:18:58.695011 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-21 18:18:58.697415 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-21 18:34:23.161855 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Unterminated string starting at: line 1 column 88 (char 87)
+2020-06-21 19:24:58.488620 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'weapons_id'
+2020-06-21 19:29:00.172852 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'weapons_id'
+2020-06-21 19:33:38.085445 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'weapon'
+2020-06-21 19:58:08.427825 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'type_attack'
+2020-06-21 19:59:12.300073 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'type_attack'
+2020-06-21 20:27:22.497217 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'damage_min'
+2020-06-21 20:27:41.365044 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'damage_min'
+2020-06-21 20:30:57.451057 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'attack_type'
+2020-06-21 20:39:53.325573 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | -1
+2020-06-21 20:41:20.883661 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | -1
+2020-06-21 20:41:30.307997 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | -1
+2020-06-21 23:14:05.169443 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | -1
+2020-06-22 18:24:57.197423 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 18:24:57.200062 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 18:25:53.907081 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 18:25:53.909630 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 18:26:19.795164 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 18:26:19.797963 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 18:27:02.612051 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 18:27:02.614726 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 19:02:53.094897 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 19:02:53.097868 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 19:06:38.997598 | <class 'src.DB.DBCore.DBCore'> | CRITICAL | 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))
+2020-06-22 19:06:39.000434 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | ('Error to execute query:', IntegrityError(1452, '1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`CodeDungeon`.`Players`, CONSTRAINT `Players_race_id_FK` FOREIGN KEY (`race_id`) REFERENCES `Races` (`race_id`))', '23000'))
+2020-06-22 21:07:40.930936 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-23 15:15:19.277448 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-24 00:43:39.603148 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 00:45:44.703909 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 00:48:43.206326 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 00:52:07.305043 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-24 00:52:29.753795 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-24 00:55:50.867698 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-24 00:56:09.775404 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 00:59:20.095225 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 01:01:42.108289 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 01:03:36.242760 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 01:06:05.238439 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 01:07:44.985895 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'authorized'
+2020-06-24 01:11:11.246733 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | Expecting value: line 1 column 1 (char 0)
+2020-06-24 01:12:07.425513 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-24 01:15:43.137610 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-24 01:17:36.512477 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | string indices must be integers
+2020-06-24 01:19:17.908098 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'UserHandler' object has no attribute 'conected_users'
+2020-06-24 01:22:20.577021 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'player_name'
+2020-06-24 01:36:42.769236 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'player_name'
+2020-06-24 01:41:04.091381 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | 'player_name'
+2020-06-24 01:42:26.934039 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | module 'twisted.internet.error' has no attribute 'getErrorMessage'
+2020-06-24 01:46:28.585762 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | module 'twisted.internet.error' has no attribute 'getErrorMessage'
+2020-06-24 01:48:02.302816 | <class 'src.Server.UserHandler.UserHandler'> | WARNING | module 'twisted.internet.error' has no attribute 'getErrorMessage'
