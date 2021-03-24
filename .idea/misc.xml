@@ -3,5 +3,5 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.7.0 (sftp://pi@192.168.1.123:22/home/pi/Desktop/DND_Server/venv/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (RasPi_DND_Server)" project-jdk-type="Python SDK" />
 </project>
