@@ -19,13 +19,12 @@ class ServerFactory(Factory):
     """
     Module used for twisted listenTCP method as factory
     """
+
     def __init__(self):
-        self.cursor = DBCore()
+        self.cursor: DBCore = DBCore()
         self.authorized_users = {}
 
-    def buildProtocol(self,
-                      addr
-                      ) -> UserHandler:
+    def buildProtocol(self, addr) -> UserHandler:
         """
         Create an instance of a subclass of Protocol.
         The returned instance will handle input on an incoming server
@@ -35,10 +34,4 @@ class ServerFactory(Factory):
         :return: Instance will handle input on an incoming server connection
         """
 
-        return UserHandler(
-            cursor=self.cursor,
-            users=self.authorized_users,
-            addr=addr
-        )
-
-
+        return UserHandler(cursor=self.cursor, users=self.authorized_users, addr=addr)

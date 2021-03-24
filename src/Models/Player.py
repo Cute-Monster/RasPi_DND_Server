@@ -21,17 +21,17 @@ class Player(Entity):
     def __init__(self):
         super().__init__()
 
-        self.player_id = int
-        self.player_name = str
-        self.class_id = int
-        self.race_id = int
+        self.player_id: int
+        self.player_name: str
+        self.class_id: int
+        self.race_id: int
 
-        self.food = {}
-        self.armor = {}
-        self.weapons = {}
-        self.animals = {}
-        self.vulnerabilities = {}
-        self.attacks = {}
+        self.food: dict
+        self.armor: dict
+        self.weapons: dict
+        self.animals: dict
+        self.vulnerabilities: dict
+        self.attacks: dict
 
     def get_player(self) -> dict:
         """

@@ -18,18 +18,15 @@ from src.Modules.UserModule import UserModule
 from src.DB.DBCore import DBCore
 from src.Logging.Logger import Log
 
+
 class DungeonSkeleton:
     """
     Module which generates random dungeon skeleton with mobs for player
     """
 
-    def __init__(self,
-                 cursor: DBCore
-                 ):
-        self.log_file = Log(
-            class_name=self.__class__
-        )
-        self.cursor = cursor
+    def __init__(self, cursor: DBCore):
+        self.log_file = Log(class_name=self.__class__)
+        self.cursor: DBCore = cursor
         self.all_mobs = self._generate_mobs()
 
     def final_dungeon_skeleton(self, player_data: UserModule) -> dict:
@@ -40,28 +37,28 @@ class DungeonSkeleton:
         :return: Dictionary representing final dungeon structure for player
         """
 
-        graph_structure = self._generate_graph_structure()
+        graph_structure: dict = self._generate_graph_structure()
 
-        for room in graph_structure['rooms']:
-            graph_structure['mobs'][room] = {}
+        for room in graph_structure["rooms"]:
+            graph_structure["mobs"][room]: dict = {}
             for mob_uid in range(0, random.choice([1, 2, 3])):
-                mob = copy.deepcopy(self.all_mobs[random.choice(
-                    range(
-                        1,
-                        len(self.all_mobs.keys())
-                    )
-                )])
-
-                mob['mob_level'] = 1 if player_data.level - 2 < 1 else random.choice(
-                    range(player_data.level - 2, player_data.level)
+                mob: dict = copy.deepcopy(
+                    self.all_mobs[random.choice(range(1, len(self.all_mobs.keys())))]
                 )
 
-                mob['stats']['hits'] = mob['stats']['hits'] if player_data.level - 2 < 1 else mob['stats']['hits'] * 2.5
-                graph_structure['mobs'][room][mob_uid] = mob
-        self.log_file.log_all(
-            priority=3,
-            string=f"Dungeon skeleton filled with mobs"
-        )
+                mob["mob_level"] = (
+                    1
+                    if player_data.level - 2 < 1
+                    else random.choice(range(player_data.level - 2, player_data.level))
+                )
+
+                mob["stats"]["hits"] = (
+                    mob["stats"]["hits"]
+                    if player_data.level - 2 < 1
+                    else mob["stats"]["hits"] * 2.5
+                )
+                graph_structure["mobs"][room][mob_uid] = mob
+        self.log_file.log_all(priority=3, string=f"Dungeon skeleton filled with mobs")
         return graph_structure
 
     def _generate_graph_structure(self) -> dict:
@@ -70,21 +67,14 @@ class DungeonSkeleton:
         :return: Dictionary representing graph structure
         """
 
-        nodes_counter = random.choice(range(5, 10))
-        percent_of_routes = 0.4
+        nodes_counter: int = random.choice(range(5, 10))
+        percent_of_routes: float = 0.4
         graph = erdos_renyi_graph(nodes_counter, percent_of_routes)
-        edges = []
+        edges: list = []
         for edge in graph.edges:
             edges.append(list(edge))
-        self.log_file.log_all(
-            priority=3,
-            string=f"Dungeon skeleton generated"
-        )
-        return {
-            "rooms": list(graph.nodes),
-            "routes": edges,
-            "mobs": {}
-        }
+        self.log_file.log_all(priority=3, string=f"Dungeon skeleton generated")
+        return {"rooms": list(graph.nodes), "routes": edges, "mobs": {}}
 
     def _generate_mobs(self) -> dict:
         """
@@ -97,7 +87,7 @@ class DungeonSkeleton:
         all_attacks = self.cursor.get_mobs_attacks()
         all_stats = self.cursor.get_mobs_stats()
 
-        generated_mobs = {}
+        generated_mobs: dict = {}
 
         for mob in available_mobs:
 
@@ -105,26 +95,20 @@ class DungeonSkeleton:
             mob_attacks = self._mob_data_parser(mob_id, all_attacks)
             mob_vulnerabilities = self._mob_data_parser(mob_id, all_vulnerabilities)
             mob_stats = self._mob_data_parser(mob_id, all_stats, stats_flag=True)
-            generated_mobs[mob['enemy_id']] = {
-                "name": mob['name'],
-                "desc": mob['description'],
+            generated_mobs[mob["enemy_id"]]: dict = {
+                "name": mob["name"],
+                "desc": mob["description"],
                 "attacks": mob_attacks,
                 "stats": mob_stats,
                 "vulnerabilities": mob_vulnerabilities,
-                "inventory": {}
+                "inventory": {},
             }
-            self.log_file.log_all(
-                priority=3,
-                string=f"Mobs Generated"
-            )
+            self.log_file.log_all(priority=3, string=f"Mobs Generated")
 
         return generated_mobs
 
     @staticmethod
-    def _mob_data_parser(mob_id: int,
-                         data: dict,
-                         stats_flag=False
-                         ) -> dict:
+    def _mob_data_parser(mob_id: int, data: dict, stats_flag: bool = False) -> dict:
         """
         Parsing data about mobs
         :param mob_id: Id of the mob
@@ -133,7 +117,7 @@ class DungeonSkeleton:
         :return:
         """
 
-        end_data = {}
+        end_data: dict = {}
         for item in data:
             enemy_id = item[list(item)[0]]
             stats_id = item[list(item)[1]]

@@ -20,22 +20,17 @@ class Log:
     Class for logging executing of the code
     """
 
-    def __init__(self,
-                 class_name
-                 ):
-        self._log_path = os.path.abspath("Logs")
-        self._class_name = class_name
-        self._priority = {
+    def __init__(self, class_name: __class__):
+        self._log_path: str = os.path.abspath("Logs")
+        self._class_name: __class__ = class_name
+        self._priority: dict[int, str] = {
             1: "CRITICAL",
             2: "WARNING",
             3: "INFO",
-            4: "DEBUG"
+            4: "DEBUG",
         }
 
-    def log_all(self,
-                priority: int,
-                string: str
-                ):
+    def log_all(self, priority: int, string: str):
         """
         Writing log info to files specified by priority
         :param priority: Priority of info to be logged
@@ -43,16 +38,17 @@ class Log:
         :return:
         """
 
-        with open("{}/{}.log".format(
-                self._log_path,
-                "access" if priority == 3 or priority == 4 else "errors"
-        ),
-                "a") as f:
+        with open(
+            "{}/{}.log".format(
+                self._log_path, "access" if priority == 3 or priority == 4 else "errors"
+            ),
+            "a",
+        ) as f:
             f.writelines(
                 "{} | {} | {} | {}\n".format(
                     datetime.now(),
                     self._class_name,
                     self._priority.get(priority),
-                    string
+                    string,
                 )
             )

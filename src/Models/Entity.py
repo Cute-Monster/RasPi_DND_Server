@@ -15,19 +15,20 @@ class Entity:
     """
     Base class for entity
     """
+
     def __init__(self):
         # Physical stats
-        self.race = None
-        self.class_name = None
-        self.armor_class = None
-        self.hits = None
-        self.speed = None
-        self.strength = None
-        self.dexterity = None
-        self.intelligence = None
-        self.wisdom = None
-        self.chance = None
-        self.constitution = None
+        self.race: str
+        self.class_name: str
+        self.armor_class: int
+        self.hits: int
+        self.speed: float
+        self.strength: float
+        self.dexterity: float
+        self.intelligence: float
+        self.wisdom: float
+        self.chance: float
+        self.constitution: float
         # Level stats
-        self.level = None
-        self.experience = None
+        self.level: int
+        self.experience: int

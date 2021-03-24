@@ -1,9 +1,9 @@
 import hashlib
 import json
+from typing import Union
 
-codes = {
+codes: dict = {
     100: "successfully connected",
-
     200: "request success",
     201: "dungeon skeleton generated successfully",
     202: "player successfully registered",
@@ -12,7 +12,6 @@ codes = {
     205: "battle successful",
     206: "logged users list",
     207: "user disconnected successfully",
-
     400: "server error",
     401: "invalid json format",
     402: "failed to check user",
@@ -24,20 +23,22 @@ codes = {
     409: "player already logged",
     410: "no completed dungeon ",
     411: "you already have a dungeon",
-    412: "you don't have permissions to do that"
+    412: "you don't have permissions to do that",
 }
 
-response = {
-    'action': None,
-    'code': None,
-    'code_desc': None,
-    'data': None,
+response: dict[str, Union[str, int, dict, None]] = {
+    "action": None,
+    "code": None,
+    "code_desc": None,
+    "data": None,
 }
 
 
-def generate_response(action=None,
-                      code=None,
-                      data=None) -> bytes:
+def generate_response(
+    action: Union[str, None] = None,
+    code: Union[int, None] = None,
+    data: Union[dict, None] = None,
+) -> bytes:
     """
     Method to generate response
     :param action: Invoked action
@@ -49,22 +50,17 @@ def generate_response(action=None,
     global codes
     global response
 
-    response['action'] = action
-    response['code'] = code
-    response['code_desc'] = codes.get(code)
-    response['data'] = data if data else 0
+    response["action"]: str = action
+    response["code"]: int = code
+    response["code_desc"]: str = codes.get(code)
+    response["data"]: Union[int, dict] = data if data else 0
 
     # json.dumps(response)
 
-    return bytes(
-        str(json.dumps(response)),
-        "utf8"
-    )
+    return bytes(str(json.dumps(response)), "utf8")
 
 
-def serialize_data(data,
-                   column: str
-                   ) -> dict:
+def serialize_data(data, column: str) -> dict:
     """
     Method for serializing user data taken from DataBase
     :param data: Data to serialize
@@ -72,7 +68,7 @@ def serialize_data(data,
     :return:
     """
 
-    end_data = {}
+    end_data: dict = {}
 
     for items in data.get(column):
         item_id = items[list(items)[0]]
@@ -90,12 +86,9 @@ def encrypt_password(player_password: str):
     :return: Encrypted password
     """
 
-    salt = 'c;]¥Îdå<}Òux¶zCnÖÉóL×ð«&hBè~§Á[ÃF¡v©"Õ,(/P,' \
-           'M}Dbëç³çÚ^}°*çµ¹rbÔÁi)xÚè¨2iûÿVLE9)®8ó¥ðt@Ô.]×nïf"ÏC`vzínÑÁpFôwVWÆ6;á©>_À¼mjû¿úõM\'R:7 '
+    salt = (
+        'c;]¥Îdå<}Òux¶zCnÖÉóL×ð«&hBè~§Á[ÃF¡v©"Õ,(/P,'
+        "M}Dbëç³çÚ^}°*çµ¹rbÔÁi)xÚè¨2iûÿVLE9)®8ó¥ðt@Ô.]×nïf\"ÏC`vzínÑÁpFôwVWÆ6;á©>_À¼mjû¿úõM'R:7 "
+    )
 
-    return hashlib.md5(
-        bytes(
-            "{}".format(salt + player_password),
-            "utf-8"
-        )
-    ).hexdigest()
+    return hashlib.md5(bytes("{}".format(salt + player_password), "utf-8")).hexdigest()
